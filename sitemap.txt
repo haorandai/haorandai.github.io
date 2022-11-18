@@ -1,11 +1,4 @@
-http://example.com/2022/11/18/blog/
-http://example.com/blog/jave.html
-http://example.com/2022/11/18/hello-world/
-http://example.com/2022/11/18/jave/
-http://example.com/blog/index.html
-http://example.com/research/index.html
-http://example.com/events/index.html
-http://example.com/team/index.html
-http://example.com/2022/11/18/java/
 http://example.com/2022/11/18/about/
+http://example.com/blog/java.html
+http://example.com/2022/11/18/jave/
 http://example.com/
