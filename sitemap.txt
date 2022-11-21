@@ -1,4 +1,8 @@
+http://example.com/team/index.html
+http://example.com/research/index.html
 http://example.com/2022/11/18/about/
+http://example.com/blog/index.html
 http://example.com/blog/java.html
 http://example.com/2022/11/18/jave/
+http://example.com/events/index.html
 http://example.com/
