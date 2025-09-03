@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Website of Haoran Dai</title>
+  <icon>https://haorandai.github.io/icon.png</icon>
+  <subtitle>Haoran Website</subtitle>
+  <link href="https://haorandai.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://haorandai.github.io/"/>
+  <updated>2025-09-02T06:35:29.847Z</updated>
+  <id>https://haorandai.github.io/</id>
+  
+  <author>
+    <name>Haoran Dai</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Welcome to My Website</title>
+    <link href="https://haorandai.github.io/2025/09/02/welcome/"/>
+    <id>https://haorandai.github.io/2025/09/02/welcome/</id>
+    <published>2025-09-02T05:18:30.000Z</published>
+    <updated>2025-09-02T06:35:29.847Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to my personal website! I am a second year Ph.D student in Computer Science at the Illinois Institute of Technology, under the supervision of Professor Binghui Wang. </p><p>My research addresses critical security and safety challenges within the domain of multimodal AI. Specifically, I investigate the vulnerabilities of large multimodal models by designing and evaluating novel backdoor attacks against Vision Language Models (VLMs) and Text-to-Image diffusion models (TTI).</p><p>Stay tuned for more updates about my research and academic journey!</p>]]></content>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to my personal website! I am a second year Ph.D student in Computer Science at the Illinois Institute of Technology, under the</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
