@@ -33,6 +33,14 @@ banner:
 <div class="pub-abstract">While diffusion models have revolutionized visual content generation, their rapid adoption has underscored the critical need to investigate vulnerabilities, e.g., to backdoor attacks. In multimodal diffusion models, it is natural to expect that attacking multiple modalities simultaneously (e.g., text and image) would yield complementary effects and strengthen the overall backdoor. In this paper, we challenge this assumption by investigating the phenomenon of Backdoor Modality Collapse, a scenario where the backdoor mechanism degenerates to rely predominantly on a subset of modalities, rendering others redundant. To rigorously quantify this behavior, we introduce two novel metrics: Trigger Modality Attribution (TMA) and Cross-Trigger Interaction (CTI). Through extensive experiments across diverse training configurations in multimodal conditional diffusion, we consistently observe a "winner-takes-all" dynamic in backdoor behavior. Our results reveal that (1) attacks often collapse into subset-modality dominance, and (2) cross-modal interaction is negligible or even negative, contradicting the intuition of synergistic vulnerability. These findings highlight a critical blind spot in current assessments, suggesting that high attack success rates often mask a fundamental reliance on a subset of modalities. This establishes a principled foundation for mechanistic analysis and future defense development.</div>
 </div>
 
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2602.21416">WildSVG: Towards Reliable SVG Generation Under Real-World Conditions</a></div>
+<div class="pub-meta">Marco Terral, Haotian Zhang, Tianyang Zhang, Meng Lin, Xiaoqing Xie, <strong>Haoran Dai</strong>, Darsh Kaushik, Pai Peng, Nicklas Scharpff, David Vazquez, Joan Rodriguez</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-tldr">A benchmark for extracting scalable vector graphics from real images, where noise, clutter, and domain shift break current multimodal models.</div>
+<div class="pub-abstract">We introduce the task of SVG extraction, which consists in translating specific visual inputs from an image into scalable vector graphics. Existing multimodal models achieve strong results when generating SVGs from clean renderings or textual descriptions, but they fall short in real-world scenarios where natural images introduce noise, clutter, and domain shifts. A central challenge in this direction is the lack of suitable benchmarks. To address this need, we introduce the WildSVG Benchmark, formed by two complementary datasets: Natural WildSVG, built from real images containing company logos paired with their SVG annotations, and Synthetic WildSVG, which blends complex SVG renderings into real scenes to simulate difficult conditions. We benchmark state-of-the-art multimodal models and find that current approaches perform well below what is needed for reliable SVG extraction in real scenarios.</div>
+</div>
+
 ## 2025
 
 <div class="pub-item">
@@ -51,4 +59,24 @@ banner:
 <div class="pub-venue">Cybersecurity, vol. 7, article 70, 2024</div>
 <div class="pub-tldr">A fuzzing method that automatically finds prompts driving text-to-image models to generate inappropriate content.</div>
 <div class="pub-abstract">Text-to-image (TTI) models provide huge innovation ability for many industries, while the content security triggered by them has also attracted wide attention. Considerable research has focused on content security threats of large language models (LLMs), yet comprehensive studies on the content security of TTI models are notably scarce. This paper introduces a systematic tool, named EvilPromptFuzzer, designed to fuzz evil prompts in TTI models. For 15 kinds of fine-grained risks, EvilPromptFuzzer employs the strong knowledge-mining ability of LLMs to construct seed banks, in which the seeds cover various types of characters, interrelations, actions, objects, expressions, body parts, locations, surroundings, etc. Subsequently, these seeds are fed into the LLMs to build scene-diverse prompts, which can weaken the semantic sensitivity related to the fine-grained risks. Hence, the prompts can bypass the content audit mechanism of the TTI model, and ultimately help to generate images with inappropriate content. For the risks of violence, horrible, disgusting, animal cruelty, religious bias, political symbol, and extremism, the efficiency of EvilPromptFuzzer for generating inappropriate images based on DALL-E 3 is greater than 30%, namely, more than 30 generated images are malicious among 100 prompts. Specifically, the efficiency of horrible, disgusting, political symbols, and extremism reaches up to 58%, 64%, 71%, and 50%, respectively. Additionally, we analyzed the vulnerability of existing popular content audit platforms, including Amazon, Google, Azure, and Baidu. Even the most effective Google SafeSearch cloud platform identifies only 33.85% of malicious images across three distinct categories.</div>
+</div>
+
+## 2023
+
+<div class="pub-item">
+<div class="pub-title">Registration-Free Hybrid Learning Empowers Simple Multimodal Imaging System for High-quality Fusion Detection</div>
+<div class="pub-meta">Yinghan Guan, <strong>Haoran Dai</strong>, Zekuan Yu, ..., Yuanjie Gu</div>
+<div class="pub-venue">Preprint, 2023</div>
+<div class="pub-tldr">A registration-free hybrid-learning method that fuses unregistered multimodal images, removing the need for a costly pre-registration imaging system.</div>
+<div class="pub-abstract">Multimodal fusion detection always places high demands on the imaging system and image pre-processing, while either a high-quality pre-registration system or image registration processing is costly. Unfortunately, the existing fusion methods are designed for registered source images, which limits their use in simple, low-cost imaging setups.</div>
+</div>
+
+## 2021
+
+<div class="pub-item">
+<div class="pub-title"><a href="https://doi.org/10.1109/aiid51893.2021.9456576">RDUnet-A: A Deep Neural Network Method with Attention for Fabric Defect Segmentation Based on Autoencoder</a></div>
+<div class="pub-meta">Huaijing Chen, Dengke Chen, <strong>Haoran Dai</strong></div>
+<div class="pub-venue">IEEE AIID 2021</div>
+<div class="pub-tldr">An attention-augmented autoencoder (RDUnet-A) that automatically segments fabric defects, reducing the errors of manual inspection.</div>
+<div class="pub-abstract">In industrial production, fabric products inevitably show flaws due to uncontrollable factors such as production and transportation. However, there are many problems with the manual inspection methods used by manufacturers, such as low efficiency, a high false-detection rate, and a high missed-detection rate.</div>
 </div>
