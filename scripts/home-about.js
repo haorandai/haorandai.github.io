@@ -30,5 +30,5 @@ const HOME_ABOUT = `
 
 hexo.extend.filter.register('after_render:html', function (html, data) {
   if (data.path !== 'index.html') return html;
-  return html.replace(/(<div class="trm-content[^"]*"[^>]*>)/, '$1' + HOME_ABOUT);
+  return html.replace(/(<div[^>]*\bclass="trm-content"[^>]*>)/, '$1' + HOME_ABOUT);
 }, 15);
