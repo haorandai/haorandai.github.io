@@ -17,13 +17,29 @@
   --preloader-background: #0d1117;
 }
 
-/* Clean GitHub/Apple-style flat-dark hero.
+/* Clean GitHub/Apple-style dark hero.
    Replaces the theme's teal mountain photo (banner.png) with a neutral
-   near-black canvas (#0d1117, GitHub's dark canvas). Near-white hero text
-   keeps strong contrast. */
+   near-black canvas (#0d1117) plus a soft blue accent glow and a faint
+   dot grid that fades toward the edges. Near-white hero text keeps AAA
+   contrast. */
 .trm-banner {
   background-color: #0d1117;
+  background-image:
+    radial-gradient(72% 120% at 78% 6%, rgba(9, 105, 218, 0.24), transparent 55%),
+    radial-gradient(64% 110% at 6% 104%, rgba(33, 139, 255, 0.10), transparent 55%);
 }
 .trm-banner .trm-banner-cover {
   display: none;
+}
+/* faint structured dot grid, masked so it fades out near the edges */
+.trm-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1.4px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(118% 92% at 72% 18%, #000 38%, transparent 84%);
+  mask-image: radial-gradient(118% 92% at 72% 18%, #000 38%, transparent 84%);
 }
