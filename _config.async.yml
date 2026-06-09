@@ -59,6 +59,9 @@ sidebar:
     - name: Github
       icon: fab fa-github
       url: https://github.com/haorandai
+    - name: LinkedIn
+      icon: fab fa-linkedin
+      url: https://www.linkedin.com/in/haorandai
     - name: Email
       icon: far fa-envelope
       url: mailto:haorand16@gmail.com
