@@ -121,3 +121,8 @@
   margin-top: 8px;
   max-width: 78ch;
 }
+/* The publications page has no covering card, so cancel the theme's -40px
+   content overlap that would otherwise pull the heading onto the dark hero. */
+.trm-content:has(.pub-note) {
+  margin-top: 24px !important;
+}
