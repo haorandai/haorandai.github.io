@@ -4,21 +4,27 @@ date: 2025-09-02 10:00:00
 layout: about
 ---
 
-I am an AI Researcher at Quiver AI and a Ph.D student in Computer Science at the Illinois Institute of Technology, under the supervision of Professor Binghui Wang.
+I am Haoran Dai, a Computer Science PhD candidate at the Illinois Institute of Technology, advised by Professor Binghui Wang, and a Research Scientist Intern at Quiver AI. My work centers on the trustworthiness and security of multimodal AI: I study the vulnerabilities of large multimodal models and design and evaluate backdoor attacks against Vision-Language Models (VLMs) and Text-to-Image diffusion models, with the goal of informing robust countermeasures and building a foundation for trustworthy multimodal systems. I am based in Chicago, Illinois.
 
 ## Research Interests
 
-My research addresses critical security and safety challenges within the domain of multimodal AI. Specifically, I investigate the vulnerabilities of large multimodal models by designing and evaluating novel backdoor attacks against:
+- Trustworthy and secure AI
+- Backdoor attacks and defenses for Vision-Language Models (VLMs)
+- Vulnerabilities of Text-to-Image diffusion models (TTI)
+- Multimodal machine learning
 
-- Vision Language Models (VLMs)
-- Text-to-Image diffusion models (TTI)
+## Experience
 
-The objective of my work is to characterize these emergent threats to inform the development of robust countermeasures and establish a foundation for trustworthy multimodal systems.
+- **Research Scientist Intern**, Quiver AI (Oct 2025 - Present). Research and engineering on multimodal machine learning.
+- **Machine Learning Engineer Intern**, Revery AI (YC S21) (Jan 2024 - Aug 2024).
+- **Software Engineer**, China National Petroleum Corporation (Jul 2021 - Aug 2022).
 
 ## Education
 
-- **Ph.D in Computer Science** (Fall 2024 – Present) — Illinois Institute of Technology. Advisor: Professor Binghui Wang.
+- **PhD, Computer Science**, Illinois Institute of Technology (Aug 2024 - Jun 2028). Advisor: Professor Binghui Wang.
+- **MS, Computer Science**, Boston University (Aug 2022 - Jun 2024).
+- **BE, Computer Software Engineering**, China University of Petroleum, Beijing (Sep 2017 - Jun 2021).
 
 ## Contact
 
-Feel free to reach out at [haorand16@gmail.com](mailto:haorand16@gmail.com).
+Reach me at [haorand16@gmail.com](mailto:haorand16@gmail.com), or connect on [LinkedIn](https://www.linkedin.com/in/haorandai) and [GitHub](https://github.com/haorandai).

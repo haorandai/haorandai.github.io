@@ -8,7 +8,7 @@ user:
   email: haorand16@gmail.com
   domain: haorandai.com
   avatar: /img/avatar.jpg
-  describe: AI Researcher & CS PhD Student — Trustworthy & Secure AI
+  describe: AI/ML Researcher, CS PhD Candidate at Illinois Tech, Research Scientist Intern at Quiver AI
 
 favicon:
   visibilitychange: true
@@ -45,14 +45,16 @@ banner:
 sidebar:
   typed_text_prefix: ''
   typed_text:
-    - AI Researcher @ Quiver AI
-    - CS PhD @ Illinois Tech
-    - Trustworthy & Secure AI
+    - AI/ML Researcher
+    - CS PhD Candidate @ Illinois Tech
+    - Research Scientist Intern @ Quiver AI
   info:
     - key: Focus
-      val: AI Security
+      val: Trustworthy AI
     - key: Advisor
       val: Binghui Wang
+    - key: Location
+      val: Chicago, IL
   social:
     - icon: fas fa-rss
       url: /atom.xml
