@@ -126,6 +126,27 @@
 .trm-content:has(.pub-note) {
   margin-top: 24px !important;
 }
+/* Small Code button on publication entries */
+.pub-links {
+  margin-top: 7px;
+}
+.pub-links a {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--primary);
+  border: 1px solid var(--primary-30);
+  border-radius: 999px;
+  padding: 4px 11px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.pub-links a:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 /* Make the author's own name stand out in the publication list */
 .pub-me {
   font-weight: 800;
@@ -150,6 +171,26 @@
 .home-about ul { padding-left: 20px; line-height: 1.7; margin: 0 0 6px; }
 .home-about li { margin: 3px 0; }
 .home-about a { color: var(--primary); }
+/* News list: muted fixed-width date column, no bullets */
+.home-about ul.home-news {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 10px;
+}
+.home-news li {
+  display: flex;
+  gap: 14px;
+  margin: 5px 0;
+  line-height: 1.6;
+}
+.home-news .news-date {
+  flex: 0 0 76px;
+  font-size: 13px;
+  color: var(--body-color);
+  opacity: 0.6;
+  white-space: nowrap;
+  padding-top: 2px;
+}
 /* hide the category cards / post list / paginator that follow the About on home */
 .home-about ~ * { display: none !important; }
 /* keep the homepage content off the dark hero (same as the publications page) */

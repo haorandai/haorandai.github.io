@@ -4,6 +4,16 @@ const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
   <p><strong>Haoran (Harry) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. His research examines the security and efficiency of modern AI systems. On the security side, he develops and evaluates backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, together with defenses against them. On the efficiency side, he studies reasoning models and large language models, focusing on test-time inference scaling and the attention and quantization behavior underlying their inference stability. At Quiver AI, he works on SVG generation systems, spanning inference optimization, model post-training, data curation, and the internal tooling that supports them. He is based in Chicago, Illinois.</p>
+  <h3>News</h3>
+  <ul class="home-news">
+    <li><span class="news-date">May 2026</span><span><a href="https://arxiv.org/abs/2605.17887">Attention Sinks and Outliers in Attention Residuals</a> released on arXiv.</span></li>
+    <li><span class="news-date">Apr 2026</span><span><a href="https://iclr.cc/virtual/2026/10013309">TIDES</a> presented as a poster at the ICLR 2026 Workshop on Efficient Spatial Reasoning.</span></li>
+    <li><span class="news-date">Mar 2026</span><span><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All</a> accepted at the ICLR 2026 Workshop on Principled Design for Trustworthy AI.</span></li>
+    <li><span class="news-date">Feb 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a> and <a href="https://arxiv.org/abs/2602.21416">WildSVG</a>, two benchmarks for SVG generation, released on arXiv.</span></li>
+    <li><span class="news-date">Oct 2025</span><span>Joined <a href="https://quiver.ai/">Quiver AI</a> as a Research Scientist, working on SVG generation systems.</span></li>
+    <li><span class="news-date">Aug 2025</span><span><a href="https://arxiv.org/abs/2508.01605">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a> released on arXiv.</span></li>
+    <li><span class="news-date">Aug 2024</span><span>Started the PhD in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</span></li>
+  </ul>
   <h3>Research Interests</h3>
   <ul>
     <li>Reasoning models and test-time inference scaling</li>
