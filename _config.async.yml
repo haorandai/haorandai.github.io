@@ -1,0 +1,116 @@
+# hexo-theme-async config for Haoran Dai
+# Based on dracewang's Async setup, customized. Keys follow async v2.2.7 (snake_case).
+
+user:
+  name: Haoran Dai
+  first_name: Dai
+  last_name: Haoran
+  email: haorand16@gmail.com
+  domain: haorandai.com
+  avatar: /img/avatar.jpg
+  describe: AI Researcher & CS PhD Student — Trustworthy & Secure AI
+
+favicon:
+  visibilitychange: true
+  show_text: Welcome back~
+  hide_text: (●—●) You can't see me!
+
+# Top navigation
+top_bars:
+  - title: menu.home
+    url: /
+  - title: menu.archives
+    url: /archives/
+    children:
+      - title: Tags
+        url: /tags/
+      - title: Categories
+        url: /categories/
+  - title: menu.about
+    url: /about/
+
+# Hero banner text per page
+banner:
+  index:
+    banner_title: Trustworthy &amp;<br>Secure AI.
+    banner_text: Hi, I'm Haoran Dai!
+  archive:
+    banner_title: The Archive.
+    banner_text: All my posts
+  about:
+    banner_title: About Me.
+    banner_text: Who I am
+
+# Sidebar profile card
+sidebar:
+  typed_text_prefix: ''
+  typed_text:
+    - AI Researcher @ Quiver AI
+    - CS PhD @ Illinois Tech
+    - Trustworthy & Secure AI
+  info:
+    - key: Focus
+      val: AI Security
+    - key: Advisor
+      val: Binghui Wang
+  social:
+    - icon: fas fa-rss
+      url: /atom.xml
+    - name: Github
+      icon: fab fa-github
+      url: https://github.com/haorandai
+    - name: Email
+      icon: far fa-envelope
+      url: mailto:haorand16@gmail.com
+
+# About page
+about:
+  insert: none
+  title: Trustworthy & Secure AI
+  introduction: >-
+    Hi, I'm <strong>Haoran Dai</strong>, an AI Researcher at Quiver AI and a CS
+    PhD student at the Illinois Institute of Technology, advised by Professor
+    Binghui Wang. My research addresses security and safety challenges in
+    multimodal AI.
+  blog: '<ul class="trm-list"><li>Built with Hexo</li><li>Theme: hexo-theme-async</li></ul>'
+  privacy: This website does not track visitors and does not collect any personal information.
+
+footer:
+  powered:
+    enable: true
+  beian:
+    enable: false
+  copyright_year: 2026
+  live_time:
+    enable: false
+
+# Local search
+search:
+  enable: true
+  type: local
+  preload: true
+  trigger: auto
+
+creative_commons:
+  license: by-nc-sa
+  language: deed.en
+  post: true
+  clipboard: true
+
+# Smooth page transitions
+swup: true
+
+toc:
+  enable: true
+  list_number: true
+  max_depth: 6
+  min_depth: 1
+
+rightside:
+  readmode: true
+  aside: true
+
+# Light/dark, allow toggle
+theme:
+  enable: true
+  default: auto
