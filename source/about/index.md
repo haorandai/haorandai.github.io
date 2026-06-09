@@ -17,7 +17,7 @@ The objective of my work is to characterize these emergent threats to inform the
 
 ## Education
 
-- **Ph.D in Computer Science** (2023 – Present) — Illinois Institute of Technology. Advisor: Professor Binghui Wang.
+- **Ph.D in Computer Science** (Fall 2024 – Present) — Illinois Institute of Technology. Advisor: Professor Binghui Wang.
 
 ## Contact
 
