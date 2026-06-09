@@ -34,6 +34,14 @@ banner:
 </div>
 
 <div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2603.29852">VectorGym: A Multitask Benchmark for SVG Code Generation, Sketching, and Editing</a></div>
+<div class="pub-meta">Juan Rodriguez, Haotian Zhang, Abhay Puri, Tianyang Zhang, Rishav Pramanik, Meng Lin, Xiaoqing Xie, Marco Terral, <strong>Haoran Dai</strong>, Darsh Kaushik, Aly Shariff, Perouz Taslakian, Spandana Gella, Sai Rajeswar, David Vazquez, Christopher Pal, Marco Pedersoli</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-tldr">A multi-task benchmark for SVG generation, sketching, editing, and captioning, with a multi-task reinforcement-learning method on rendering-based rewards.</div>
+<div class="pub-abstract">We introduce VectorGym, a comprehensive benchmark suite for Scalable Vector Graphics (SVG) that spans generation from text and sketches, complex editing, and visual understanding. VectorGym addresses the lack of realistic, challenging benchmarks aligned with professional design workflows. Our benchmark comprises four tasks with expert human-authored annotations: the novel Sketch2SVG task (VG-Sketch); a new SVG editing dataset (VG-Edit) featuring complex, multi-step edits with higher-order primitives; Text2SVG generation (VG-Text); and SVG captioning (VG-Cap). We also propose a multi-task reinforcement learning approach that jointly optimizes across all four tasks using rendering-based rewards. Our method, built on GRPO with curriculum learning, trains a Qwen3-VL 8B model that achieves state-of-the-art performance among open-source models, surpassing much larger models including Qwen3-VL 235B and matching GPT-4o.</div>
+</div>
+
+<div class="pub-item">
 <div class="pub-title"><a href="https://arxiv.org/abs/2602.21416">WildSVG: Towards Reliable SVG Generation Under Real-World Conditions</a></div>
 <div class="pub-meta">Marco Terral, Haotian Zhang, Tianyang Zhang, Meng Lin, Xiaoqing Xie, <strong>Haoran Dai</strong>, Darsh Kaushik, Pai Peng, Nicklas Scharpff, David Vazquez, Joan Rodriguez</div>
 <div class="pub-venue">arXiv preprint, 2026</div>
@@ -64,11 +72,27 @@ banner:
 ## 2023
 
 <div class="pub-item">
-<div class="pub-title">Registration-Free Hybrid Learning Empowers Simple Multimodal Imaging System for High-quality Fusion Detection</div>
-<div class="pub-meta">Yinghan Guan, <strong>Haoran Dai</strong>, Zekuan Yu, ..., Yuanjie Gu</div>
-<div class="pub-venue">Preprint, 2023</div>
-<div class="pub-tldr">A registration-free hybrid-learning method that fuses unregistered multimodal images, removing the need for a costly pre-registration imaging system.</div>
-<div class="pub-abstract">Multimodal fusion detection always places high demands on the imaging system and image pre-processing, while either a high-quality pre-registration system or image registration processing is costly. Unfortunately, the existing fusion methods are designed for registered source images, which limits their use in simple, low-cost imaging setups.</div>
+<div class="pub-title"><a href="https://arxiv.org/abs/2307.03425">Registration-Free Hybrid Learning Empowers Simple Multimodal Imaging System for High-quality Fusion Detection</a></div>
+<div class="pub-meta">Yinghan Guan, <strong>Haoran Dai</strong>, Zekuan Yu, Shouyu Wang, Yuanjie Gu</div>
+<div class="pub-venue">arXiv preprint, 2023</div>
+<div class="pub-tldr">IA-VFDnet, a CNN-Transformer hybrid that performs infrared-aware visible fusion detection on unregistered images, applied to smoke and wildfire detection.</div>
+<div class="pub-abstract">Multimodal fusion detection always places high demands on the imaging system and image pre-processing, while either a high-quality pre-registration system or image registration processing is costly. Unfortunately, the existing fusion methods are designed for registered source images, and the fusion of inhomogeneous features, which denotes a pair of features at the same spatial location that expresses different semantic information, cannot achieve satisfactory performance via these methods. As a result, we propose IA-VFDnet, a CNN-Transformer hybrid learning framework with a unified high-quality multimodal feature matching module (AKM) and a fusion module (WDAF), which work in synergy to perform high-quality infrared-aware visible fusion detection that can be applied to smoke and wildfire detection. Experiments on the M3FD dataset validate the superiority of the proposed method, and the first unregistered multimodal smoke and wildfire detection benchmark is openly available.</div>
+</div>
+
+<div class="pub-item">
+<div class="pub-title"><a href="https://doi.org/10.1117/1.oe.62.8.083101">Physics-driven Deep Retinex Fusion for Adaptive Infrared and Visible Image Fusion</a></div>
+<div class="pub-meta">Yuanjie Gu, Zhibo Xiao, Yinghan Guan, <strong>Haoran Dai</strong>, Cheng Liu, Liang Xue, Shouyu Wang</div>
+<div class="pub-venue">Optical Engineering, 2023</div>
+<div class="pub-tldr">A physics-driven, Retinex-based deep model that adaptively fuses infrared and visible images.</div>
+</div>
+
+## 2022
+
+<div class="pub-item">
+<div class="pub-title"><a href="https://doi.org/10.1117/1.oe.61.12.123103">Deep Fusion Prior for Plenoptic Super-resolution All-in-focus Imaging</a></div>
+<div class="pub-meta">Yuanjie Gu, Yinghan Guan, Zhibo Xiao, <strong>Haoran Dai</strong>, Cheng Liu, Shouyu Wang</div>
+<div class="pub-venue">Optical Engineering, 2022</div>
+<div class="pub-tldr">A deep fusion prior for plenoptic super-resolution that reconstructs high-resolution all-in-focus images.</div>
 </div>
 
 ## 2021
