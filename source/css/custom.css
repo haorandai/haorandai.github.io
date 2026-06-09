@@ -12,4 +12,18 @@
 
   /* category / cover badge: match the accent instead of orange */
   --card-top-bg-color: #0969da;
+
+  /* near-black loading screen instead of teal */
+  --preloader-background: #0d1117;
+}
+
+/* Clean GitHub/Apple-style flat-dark hero.
+   Replaces the theme's teal mountain photo (banner.png) with a neutral
+   near-black canvas (#0d1117, GitHub's dark canvas). Near-white hero text
+   keeps strong contrast. */
+.trm-banner {
+  background-color: #0d1117;
+}
+.trm-banner .trm-banner-cover {
+  display: none;
 }
