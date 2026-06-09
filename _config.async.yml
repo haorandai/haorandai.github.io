@@ -77,8 +77,7 @@ about:
   blog: '<ul class="trm-list"><li>Built with Hexo</li><li>Theme: hexo-theme-async</li></ul>'
   privacy: This website does not track visitors and does not collect any personal information.
 
-# Footer fully disabled (no copyright, powered-by, or theme line);
-# the empty footer card itself is hidden in source/css/custom.css.
+# Minimal footer: a single custom line, no powered-by or theme credit.
 footer:
   powered:
     enable: false
@@ -87,6 +86,7 @@ footer:
   copyright_year:
   live_time:
     enable: false
+  custom_text: '© Haoran Dai'
 
 # Local search
 search:
