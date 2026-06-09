@@ -171,6 +171,27 @@
 .home-about ul { padding-left: 20px; line-height: 1.7; margin: 0 0 6px; }
 .home-about li { margin: 3px 0; }
 .home-about a { color: var(--primary); }
+/* Coffee chat button under the bio (Google Calendar booking page) */
+.home-chat { margin: 16px 0 4px; }
+.home-about .home-chat a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--primary);
+  border: 1px solid var(--primary-30);
+  border-radius: 999px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.home-about .home-chat a:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 /* News list: muted fixed-width date column, no bullets */
 .home-about ul.home-news {
   list-style: none;
