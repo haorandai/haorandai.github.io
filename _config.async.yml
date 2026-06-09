@@ -2,7 +2,7 @@
 # Based on dracewang's Async setup, customized. Keys follow async v2.2.7 (snake_case).
 
 user:
-  name: Haoran Dai
+  name: Haoran (Harry) Dai
   first_name: Dai
   last_name: Haoran
   email: haorand16@gmail.com
@@ -37,7 +37,7 @@ top_bars:
 banner:
   index:
     banner_title: Trustworthy &amp;<br>Secure AI.
-    banner_text: Hi, I'm Haoran Dai!
+    banner_text: Hi, I'm Haoran (Harry) Dai!
   archive:
     banner_title: The Archive.
     banner_text: All my posts
