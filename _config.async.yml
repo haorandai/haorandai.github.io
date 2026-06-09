@@ -7,10 +7,14 @@ user:
   last_name: Haoran
   email: haorand16@gmail.com
   domain: haorandai.com
-  avatar: /img/avatar.jpg
-  describe: AI/ML Researcher, CS PhD Candidate at Illinois Tech, Research Scientist Intern at Quiver AI
+  avatar: /img/haoran.jpg
+  describe: AI/ML Researcher, CS PhD Candidate at Illinois Tech, Research Scientist at Quiver AI
 
 favicon:
+  logo: /img/logo.svg
+  icon16: /img/logo.svg
+  icon32: /img/logo.svg
+  apple_touch_icon: /img/logo.svg
   visibilitychange: true
   show_text: Welcome back~
   hide_text: (●—●) You can't see me!
@@ -47,7 +51,7 @@ sidebar:
   typed_text:
     - AI/ML Researcher
     - CS PhD Candidate @ Illinois Tech
-    - Research Scientist Intern @ Quiver AI
+    - Research Scientist @ Quiver AI
   info:
     - key: Focus
       val: Trustworthy AI
