@@ -118,4 +118,13 @@ banner:
 <div class="pub-tldr">An attention-augmented autoencoder (RDUnet-A) that automatically segments fabric defects, reducing the errors of manual inspection.</div>
 <div class="pub-abstract">In industrial production, fabric products inevitably show flaws due to uncontrollable factors such as production and transportation. However, there are many problems with the manual inspection methods used by manufacturers, such as low efficiency, a high false-detection rate, and a high missed-detection rate.</div>
 </div>
+
+<div class="pub-item">
+<div class="pub-title"><a href="https://doi.org/10.1088/1742-6596/1738/1/012123">Analysis of Design Points of Deep Learning Supported by Maker Space</a></div>
+<div class="pub-meta"><a class="pub-me" href="/">Haoran Dai</a>, Yuanjie Gu</div>
+<div class="pub-venue">Journal of Physics: Conference Series, vol. 1738, 012123, 2021</div>
+<div class="pub-links"><a href="https://doi.org/10.1088/1742-6596/1738/1/012123">Paper</a></div>
+<div class="pub-tldr">An education study on maker spaces ("creator zones") as a setting that supports students' deep learning, in the pedagogical sense.</div>
+<div class="pub-abstract">The creator zone was a combination of practical meaning and ideas of reform and innovations. It pursued a cultural pattern of sharing, development, innovations, improvement. In the current stage of the education reform, the creator zone always supported students' deep learning and lifelong learning concept training. It constantly broadened the new territory in the students' main consciousness, and combined the classroom resources with the network resources, so that students could understand the knowledge from different angles and layers. Compared with the traditional teaching method, the creator zone education had an undeniable advantage. It could show the status of the student as the main body, stimulate the student's interest in learning, and make the student turn from a passive accepting to an active inquiring person. For this reason, based on the experience of the creator zone education, this article talked about the relationship between the creator zone and the deep learning, and provided a new teaching idea for other teachers.</div>
+</div>
 -->

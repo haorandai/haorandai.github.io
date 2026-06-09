@@ -23,11 +23,6 @@ const HOME_ABOUT = `
     <li>Backdoor attacks and defenses for diffusion models (text-to-image, multimodal) and vision-language models</li>
     <li>Trustworthy and secure AI</li>
   </ul>
-  <h3>Currently</h3>
-  <ul>
-    <li><strong>Research Scientist</strong>, <a href="https://quiver.ai/">Quiver AI</a> (Oct 2025 - Now). SVG generation: inference optimization, post-training, data optimization, and internal tooling.</li>
-    <li><strong>PhD, Computer Science</strong>, Illinois Institute of Technology (Aug 2024 - Now). Advisor: <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</li>
-  </ul>
 </div>
 `;
 
