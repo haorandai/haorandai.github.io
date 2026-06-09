@@ -5,8 +5,6 @@ banner:
   banner_text: Selected papers and preprints
 ---
 
-<p class="pub-note">* denotes equal contribution.</p>
-
 ## 2026
 
 <div class="pub-item">
