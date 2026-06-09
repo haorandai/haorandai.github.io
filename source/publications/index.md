@@ -107,6 +107,7 @@ banner:
 <div class="pub-abstract">Plenoptic imaging offers not only two-dimensional projections but also adds light array directions, thus supporting single-shot all-in-focus imaging. Its poor spatial resolution becomes an obstacle to high-quality all-in-focus imaging performance. Although various super-resolution (SR) methods have been designed and combined with multifocus image fusion (MFIF), high-quality multifocus fused SR images can be reconstructed for various applications, almost all of them deal with MFIF and SR separately. To our best knowledge, we first unify MFIF and SR problems as the multifocus image SR fusion (MFISRF) in the optical perspective and thus propose a dataset-free unsupervised framework named deep fusion prior (DFP) to address such MFISRF, particularly for plenoptic SR all-in-focus imaging. Both numerical and practical experiments have proved that our proposed DFP approaches or even outperforms those state-of-the-art MFIF and SR method combinations. Therefore, we believe DFP can be potentially used in various computational photography applications. The DFP codes are open source and available at http://github.com/GuYuanjie/DeepFusionPrior.</div>
 </div>
 
+<!-- Hidden at the author's request (2026-06-09); restore by removing this comment wrapper.
 ## 2021
 
 <div class="pub-item">
@@ -117,3 +118,4 @@ banner:
 <div class="pub-tldr">An attention-augmented autoencoder (RDUnet-A) that automatically segments fabric defects, reducing the errors of manual inspection.</div>
 <div class="pub-abstract">In industrial production, fabric products inevitably show flaws due to uncontrollable factors such as production and transportation. However, there are many problems with the manual inspection methods used by manufacturers, such as low efficiency, a high false-detection rate, and a high missed-detection rate.</div>
 </div>
+-->
