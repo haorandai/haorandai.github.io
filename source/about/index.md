@@ -4,14 +4,14 @@ date: 2025-09-02 10:00:00
 layout: about
 ---
 
-I am Haoran (Harry) Dai, a Computer Science PhD candidate at the Illinois Institute of Technology, advised by [Professor Binghui Wang](https://wangbinghui.net/), and a Research Scientist at [Quiver AI](https://quiver.ai/). My work centers on the trustworthiness and security of multimodal AI: I study the vulnerabilities of large multimodal models and design and evaluate backdoor attacks against Vision-Language Models (VLMs) and Text-to-Image diffusion models, with the goal of informing robust countermeasures and building a foundation for trustworthy multimodal systems. I am based in Chicago, Illinois.
+I am Haoran (Harry) Dai, a Computer Science PhD candidate at the Illinois Institute of Technology, advised by [Professor Binghui Wang](https://wangbinghui.net/), and a Research Scientist at [Quiver AI](https://quiver.ai/). My research spans the security and efficiency of modern AI systems. On the security side, I design and evaluate backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, and study how to defend against them. On the efficiency side, I work on reasoning models and large language models, including test-time inference scaling and the attention and quantization behavior that governs their inference stability. I am based in Chicago, Illinois.
 
 ## Research Interests
 
+- Reasoning models and test-time inference scaling
+- Efficiency and robustness of large language models
+- Backdoor attacks and defenses for diffusion models (text-to-image, multimodal) and vision-language models
 - Trustworthy and secure AI
-- Backdoor attacks and defenses for Vision-Language Models (VLMs)
-- Vulnerabilities of Text-to-Image diffusion models (TTI)
-- Multimodal machine learning
 
 ## Experience
 
