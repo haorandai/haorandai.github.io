@@ -32,8 +32,6 @@ top_bars:
         url: /tags/
       - title: Categories
         url: /categories/
-  - title: menu.about
-    url: /about/
 
 # Hero banner text per page
 banner:

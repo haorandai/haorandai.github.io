@@ -126,3 +126,31 @@
 .trm-content:has(.pub-note) {
   margin-top: 24px !important;
 }
+/* Make the author's own name stand out in the publication list */
+.pub-me {
+  font-weight: 800;
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid var(--primary-50);
+}
+.pub-me:hover {
+  border-bottom-color: var(--primary);
+}
+
+/* Homepage About block (injected by scripts/home-about.js) */
+.home-about { max-width: 80ch; }
+.home-about-heading { font-size: 24px; font-weight: 800; margin: 0 0 14px; }
+.home-about h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 22px 0 8px;
+  color: var(--theme-color);
+}
+.home-about p { line-height: 1.7; margin: 0 0 12px; }
+.home-about ul { padding-left: 20px; line-height: 1.7; margin: 0 0 6px; }
+.home-about li { margin: 3px 0; }
+.home-about a { color: var(--primary); }
+/* hide the category cards / post list / paginator that follow the About on home */
+.home-about ~ * { display: none !important; }
+/* keep the homepage content off the dark hero (same as the publications page) */
+.trm-content:has(.home-about) { margin-top: 24px !important; }
