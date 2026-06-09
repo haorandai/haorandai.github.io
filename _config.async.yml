@@ -36,7 +36,7 @@ top_bars:
 # Hero banner text per page
 banner:
   index:
-    banner_title: Trustworthy &amp;<br>Secure AI.
+    banner_title: 'Trustworthy &amp;<br>Secure AI.<span class="trm-hero-kw"><span>Adversarial ML</span><span>Backdoor Attacks</span><span>Vision-Language Models</span><span>Diffusion Models</span><span>Multimodal AI</span></span>'
     banner_text: Hi, I'm Haoran (Harry) Dai!
   archive:
     banner_title: The Archive.
