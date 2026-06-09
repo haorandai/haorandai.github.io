@@ -207,8 +207,9 @@
   white-space: nowrap;
   padding-top: 2px;
 }
-/* hide the category cards / post list / paginator that follow the About on home */
-.home-about ~ * { display: none !important; }
+/* hide the category cards / post list / paginator that follow the About on home,
+   but keep the footer and its divider */
+.home-about ~ *:not(.trm-footer-card):not(.footer-divider) { display: none !important; }
 /* More page reuses the About styles; space out its section headings */
 .more-page .home-about-heading { margin-top: 30px; }
 .more-page .home-about-heading:first-child { margin-top: 0; }
