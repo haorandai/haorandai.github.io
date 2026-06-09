@@ -214,6 +214,9 @@
 }
 /* hide the category cards / post list / paginator that follow the About on home */
 .home-about ~ * { display: none !important; }
+/* More page reuses the About styles; space out its section headings */
+.more-page .home-about-heading { margin-top: 30px; }
+.more-page .home-about-heading:first-child { margin-top: 0; }
 /* keep the homepage content off the dark hero (same as the publications page) */
 .trm-content:has(.home-about) { margin-top: 24px !important; }
 /* Hide the "HOME / INDEX.HTML" breadcrumb pill in the hero */

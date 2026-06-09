@@ -23,6 +23,8 @@ top_bars:
     url: /
   - title: Publications
     url: /publications/
+  - title: More
+    url: /more/
 
 # Hero banner text per page
 banner:
