@@ -11,7 +11,7 @@ banner:
 
 <div class="pub-item">
 <div class="pub-title"><a href="https://arxiv.org/abs/2605.17887">Attention Sinks and Outliers in Attention Residuals</a></div>
-<div class="pub-meta">Haozheng Luo, <a class="pub-me" href="/">Haoran Dai</a>, Shaoyang Zhang, Xi Chen, Eric Hanchen Jiang, Yijiang Li, Jingyuan Huang, Chenghao Qiu, Chenwei Xu, Zhenyu Pan, Haotian Zhang, Binghui Wang, Yan Chen</div>
+<div class="pub-meta">Haozheng Luo*, <a class="pub-me" href="/">Haoran Dai</a>*, Shaoyang Zhang, Xi Chen, Eric Hanchen Jiang, Yijiang Li, Jingyuan Huang, Chenghao Qiu, Chenwei Xu, Zhenyu Pan, Haotian Zhang, Binghui Wang, Yan Chen</div>
 <div class="pub-venue">arXiv preprint, 2026</div>
 <div class="pub-links"><a href="https://arxiv.org/abs/2605.17887">Paper</a></div>
 <div class="pub-tldr">OASIS suppresses attention sinks and activation outliers in attention-residual transformers, improving inference stability and quantization robustness.</div>
@@ -20,7 +20,7 @@ banner:
 
 <div class="pub-item">
 <div class="pub-title"><a href="https://iclr.cc/virtual/2026/10013309">TIDES: Test-time Inference Drift Exploitation via Scaling</a></div>
-<div class="pub-meta"><a class="pub-me" href="/">Haoran Dai</a>, Haozheng Luo, Haotian Zhang, Meng Lin, Yan Chen, Binghui Wang</div>
+<div class="pub-meta"><a class="pub-me" href="/">Haoran Dai</a>*, Haozheng Luo*, Haotian Zhang, Meng Lin, Yan Chen, Binghui Wang</div>
 <div class="pub-venue">ICLR 2026 Workshop on Efficient Spatial Reasoning (poster)</div>
 <div class="pub-links"><a href="https://iclr.cc/virtual/2026/10013309">Paper</a></div>
 <div class="pub-tldr">A reasoning attack exposing a failure mode of test-time scaling: extending reasoning depth degrades accuracy rather than improving it.</div>
@@ -80,7 +80,7 @@ banner:
 
 <div class="pub-item">
 <div class="pub-title"><a href="https://arxiv.org/abs/2307.03425">Registration-Free Hybrid Learning Empowers Simple Multimodal Imaging System for High-quality Fusion Detection</a></div>
-<div class="pub-meta">Yinghan Guan, <a class="pub-me" href="/">Haoran Dai</a>, Zekuan Yu, Shouyu Wang, Yuanjie Gu</div>
+<div class="pub-meta">Yinghan Guan*, <a class="pub-me" href="/">Haoran Dai</a>*, Zekuan Yu, Shouyu Wang, Yuanjie Gu</div>
 <div class="pub-venue">arXiv preprint, 2023</div>
 <div class="pub-links"><a href="https://arxiv.org/abs/2307.03425">Paper</a></div>
 <div class="pub-tldr">IA-VFDnet, a CNN-Transformer hybrid that performs infrared-aware visible fusion detection on unregistered images, applied to smoke and wildfire detection.</div>
