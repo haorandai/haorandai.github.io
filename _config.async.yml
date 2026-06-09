@@ -15,9 +15,7 @@ favicon:
   icon16: /img/logo.svg
   icon32: /img/logo.svg
   apple_touch_icon: /img/logo.svg
-  visibilitychange: true
-  show_text: Welcome back~
-  hide_text: (●—●) You can't see me!
+  visibilitychange: false
 
 # Top navigation
 top_bars:
