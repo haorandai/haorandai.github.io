@@ -154,3 +154,5 @@
 .home-about ~ * { display: none !important; }
 /* keep the homepage content off the dark hero (same as the publications page) */
 .trm-content:has(.home-about) { margin-top: 24px !important; }
+/* Hide the "HOME / INDEX.HTML" breadcrumb pill in the hero */
+.trm-breadcrumbs { display: none !important; }

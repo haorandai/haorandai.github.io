@@ -23,8 +23,6 @@ const HOME_ABOUT = `
     <li><strong>MS, Computer Science</strong>, Boston University (Aug 2022 - Jun 2024).</li>
     <li><strong>BE, Computer Software Engineering</strong>, China University of Petroleum, Beijing (Sep 2017 - Jun 2021).</li>
   </ul>
-  <h3>Contact</h3>
-  <p>Reach me at <a href="mailto:haorand16@gmail.com">haorand16@gmail.com</a>, or connect on <a href="https://www.linkedin.com/in/haorandai">LinkedIn</a> and <a href="https://github.com/haorandai">GitHub</a>.</p>
 </div>
 `;
 

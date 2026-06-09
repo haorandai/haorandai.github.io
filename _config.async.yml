@@ -103,8 +103,8 @@ search:
 creative_commons:
   license: by-nc-sa
   language: deed.en
-  post: true
-  clipboard: true
+  post: false
+  clipboard: false
 
 # Smooth page transitions
 swup: true
