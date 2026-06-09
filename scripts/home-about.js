@@ -3,7 +3,7 @@
 const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
-  <p>I am <strong>Haoran (Harry) Dai</strong>, a Computer Science PhD candidate at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. My research spans the security and efficiency of modern AI systems. On the security side, I design and evaluate backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, and study how to defend against them. On the efficiency side, I work on reasoning models and large language models, including test-time inference scaling and the attention and quantization behavior that governs their inference stability. I am based in Chicago, Illinois.</p>
+  <p><strong>Haoran (Harry) Dai</strong> is a Computer Science PhD candidate at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. His research addresses the security and efficiency of modern AI systems. On the security side, he designs and evaluates backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, and develops defenses against them. On the efficiency side, he studies reasoning models and large language models, with a focus on test-time inference scaling and the attention and quantization behavior that governs their inference stability. He is based in Chicago, Illinois.</p>
   <h3>Research Interests</h3>
   <ul>
     <li>Reasoning models and test-time inference scaling</li>
