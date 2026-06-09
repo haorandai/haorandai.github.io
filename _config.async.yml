@@ -23,13 +23,6 @@ top_bars:
     url: /
   - title: Publications
     url: /publications/
-  - title: menu.archives
-    url: /archives/
-    children:
-      - title: Tags
-        url: /tags/
-      - title: Categories
-        url: /categories/
 
 # Hero banner text per page
 banner:
