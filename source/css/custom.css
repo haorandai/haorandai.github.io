@@ -1,0 +1,15 @@
+/* Custom accent — Apple/GitHub-style blue.
+   Overrides the theme's default olive (#afb42b) across light and dark.
+   One accent, locked across the whole site. */
+:root,
+:root.dark {
+  --primary: #0969da;
+  --primary-70: rgba(9, 105, 218, 0.7);
+  --primary-50: rgba(9, 105, 218, 0.5);
+  --primary-30: rgba(9, 105, 218, 0.3);
+  --primary-weak: #218bff;
+  --primary-weak-50: rgba(33, 139, 255, 0.5);
+
+  /* category / cover badge: match the accent instead of orange */
+  --card-top-bg-color: #0969da;
+}
