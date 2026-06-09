@@ -216,3 +216,5 @@
 .trm-content:has(.home-about) { margin-top: 24px !important; }
 /* Hide the "HOME / INDEX.HTML" breadcrumb pill in the hero */
 .trm-breadcrumbs { display: none !important; }
+/* Footer is disabled in _config.async.yml; hide the leftover empty card */
+.trm-footer-card { display: none !important; }

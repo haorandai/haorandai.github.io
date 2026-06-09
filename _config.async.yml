@@ -77,12 +77,14 @@ about:
   blog: '<ul class="trm-list"><li>Built with Hexo</li><li>Theme: hexo-theme-async</li></ul>'
   privacy: This website does not track visitors and does not collect any personal information.
 
+# Footer fully disabled (no copyright, powered-by, or theme line);
+# the empty footer card itself is hidden in source/css/custom.css.
 footer:
   powered:
-    enable: true
+    enable: false
   beian:
     enable: false
-  copyright_year: 2026
+  copyright_year:
   live_time:
     enable: false
 
