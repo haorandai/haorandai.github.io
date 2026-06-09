@@ -7,12 +7,11 @@ const HOME_ABOUT = `
   <p class="home-chat"><a href="https://calendar.app.google/PJjm8BtGCkiXdk3x9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>Coffee chat</a></p>
   <h3>Research Interests</h3>
   <ul>
-    <li>Reasoning Models</li>
-    <li>Model Inference</li>
-    <li>SVG Generation</li>
-    <li>LLM Efficiency</li>
-    <li>Diffusion Models Safety</li>
-    <li>VLM Safety</li>
+    <li>Reasoning Models and Test-Time Scaling</li>
+    <li>Efficient LLM Inference</li>
+    <li>Vector Graphics (SVG) Generation</li>
+    <li>Diffusion Model Safety</li>
+    <li>Vision-Language Model Safety</li>
   </ul>
   <h3>News</h3>
   <ul class="home-news">
