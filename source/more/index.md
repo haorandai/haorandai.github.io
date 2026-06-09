@@ -15,7 +15,7 @@ banner:
   <h2 class="home-about-heading">Education</h2>
   <ul>
     <li><strong>PhD, Computer Science</strong>, Illinois Institute of Technology (Aug 2024 - Now). Advisor: <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</li>
-    <li><strong>MS, Computer Science</strong>, Boston University (Aug 2022 - Jun 2024).</li>
+    <li><strong>MS, Computer Science</strong>, Boston University (Aug 2022 - Jan 2024).</li>
     <li><strong>BE, Computer Software Engineering</strong>, China University of Petroleum, Beijing (Sep 2017 - Jun 2021).</li>
   </ul>
 </div>
