@@ -75,13 +75,49 @@
   display: none;
 }
 
-/* Small, muted abstract text under each publication entry */
+/* Publications list */
+.pub-note {
+  font-size: 12.5px;
+  opacity: 0.6;
+  margin: 0 0 6px;
+}
+.pub-item {
+  margin: 0 0 28px;
+  padding-left: 18px;
+  border-left: 2px solid var(--primary-30);
+}
+.pub-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.pub-title a { color: var(--theme-color); }
+.pub-title a:hover { color: var(--primary); }
+.pub-meta {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--body-color);
+  opacity: 0.88;
+  margin-top: 5px;
+}
+.pub-venue {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--body-color);
+  opacity: 0.6;
+  margin-top: 2px;
+}
+.pub-tldr {
+  font-size: 14px;
+  line-height: 1.55;
+  margin-top: 10px;
+  max-width: 78ch;
+}
 .pub-abstract {
-  display: block;
-  max-width: 76ch;
-  margin: 7px 0 2px;
-  font-size: 13px;
+  font-size: 12.5px;
   line-height: 1.65;
   color: var(--body-color);
-  opacity: 0.66;
+  opacity: 0.58;
+  margin-top: 8px;
+  max-width: 78ch;
 }

@@ -5,40 +5,50 @@ banner:
   banner_text: Selected papers and preprints
 ---
 
-\* denotes equal contribution.
+<p class="pub-note">* denotes equal contribution.</p>
 
 ## 2026
 
-**Attention Sinks and Outliers in Attention Residuals**<br>
-Haozheng Luo, **Haoran Dai**, Shaoyang Zhang, Xi Chen, Eric Hanchen Jiang, Yijiang Li, Jingyuan Huang, Chenghao Qiu, Chenwei Xu, Zhenyu Pan, Haotian Zhang, Binghui Wang, Yan Chen<br>
-arXiv preprint, 2026. [arXiv](https://arxiv.org/abs/2605.17887)<br>
-*OASIS suppresses attention sinks and activation outliers in attention-residual transformers, improving inference stability and quantization robustness.*
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2605.17887">Attention Sinks and Outliers in Attention Residuals</a></div>
+<div class="pub-meta">Haozheng Luo, <strong>Haoran Dai</strong>, Shaoyang Zhang, Xi Chen, Eric Hanchen Jiang, Yijiang Li, Jingyuan Huang, Chenghao Qiu, Chenwei Xu, Zhenyu Pan, Haotian Zhang, Binghui Wang, Yan Chen</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-tldr">OASIS suppresses attention sinks and activation outliers in attention-residual transformers, improving inference stability and quantization robustness.</div>
 <div class="pub-abstract">We propose OASIS, an outlier- and sink-aware technique built on inter-layer null signaling. As AttnResidual architectures introduce an additional depth-wise normalization channel, they improve inter-layer routing flexibility but also exacerbate attention sinks, activation outliers, and the resulting degradation in inference stability and quantization robustness. OASIS addresses this issue by introducing a Softmax1-based null space and coupling token-level null evidence to depth routing through an inter-layer null signal, thereby reducing sink-dominated routing and improving structural robustness. Theoretically, we show that the dual-normalization design of AttnResidual intensifies sink formation and quantization brittleness. Experimentally, we compare OASIS against five baselines on three real-world datasets and observe consistent improvements in both attention sink and post-quantization performance. Notably, OASIS achieves an average reduction of 9.26% in maximum infinity norm and 2.60% in average kurtosis across the evaluated settings, while lowering perplexity by 75.85% under W8A8 and improving GSM8K Pass@1 by 12.42% under W4A4.</div>
+</div>
 
-**TIDES: Test-time Inference Drift Exploitation via Scaling**<br>
-**Haoran Dai**, Haozheng Luo, Haotian Zhang, Meng Lin, Yan Chen, Binghui Wang<br>
-ICLR 2026 Workshop on Efficient Spatial Reasoning (poster). [Page](https://iclr.cc/virtual/2026/10013309)<br>
-*A reasoning attack exposing a failure mode of test-time scaling: extending reasoning depth degrades accuracy rather than improving it.*
-<div class="pub-abstract">We propose TIDES, a reasoning-attacking method that exposes a previously unrecognized failure of test-time scaling: as reasoning traces lengthen, model performance degrades sharply rather than improves. Unlike prior attacks on large reasoning models (LRMs), TIDES exploits the intrinsic properties of test-time scaling laws to manipulate reasoning trace length, producing degradations that are inherently difficult to detect. Methodologically, we define Depth-Guided Latent Tracker (DLT), a depth-based tracker that injects microscopic steering vectors into intermediate reasoning traces stealthily and combines them with on-policy distillation to precisely position LRMs under test-time scaling. Theoretically, we model latent space as a depth-indexed dynamic process and prove that under test-time scaling, small bounded perturbations introduced at intermediate layers induce non-vanishing trajectory drift, explaining why DLT remains effective yet difficult to detect in large reasoning models. Empirically, we evaluate TIDES on multiple reasoning benchmarks using two strong reasoning models, DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B, where it consistently outperforms state-of-the-art reasoning attack methods such as DecepChain and BadChain. Notably, TIDES delivers an average 30.3% improvement in attack performance over the baselines.</div>
+<div class="pub-item">
+<div class="pub-title"><a href="https://iclr.cc/virtual/2026/10013309">TIDES: Test-time Inference Drift Exploitation via Scaling</a></div>
+<div class="pub-meta"><strong>Haoran Dai</strong>, Haozheng Luo, Haotian Zhang, Meng Lin, Yan Chen, Binghui Wang</div>
+<div class="pub-venue">ICLR 2026 Workshop on Efficient Spatial Reasoning (poster)</div>
+<div class="pub-tldr">A reasoning attack exposing a failure mode of test-time scaling: extending reasoning depth degrades accuracy rather than improving it.</div>
+<div class="pub-abstract">We propose TIDES, a reasoning-attacking method that exposes a previously unrecognized failure of test-time scaling: as reasoning traces lengthen, model performance degrades sharply rather than improves. Unlike prior attacks on large reasoning models (LRMs), TIDES exploits the intrinsic properties of test-time scaling laws to manipulate reasoning trace length, producing degradations that are inherently difficult to detect. Methodologically, we define Depth-Guided Latent Tracker (DLT), a depth-based tracker that injects microscopic steering vectors into intermediate reasoning traces stealthily and combines them with on-policy distillation to precisely position LRMs under test-time scaling. Theoretically, we model latent space as a depth-indexed dynamic process and prove that under test-time scaling, small bounded perturbations introduced at intermediate layers induce non-vanishing trajectory drift, explaining why DLT remains effective yet difficult to detect in large reasoning models. Empirically, we evaluate TIDES on multiple reasoning benchmarks using two strong reasoning models, DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B, where it consistently outperforms state-of-the-art reasoning attack methods such as DecepChain and BadChain, delivering an average 30.3% improvement in attack performance over the baselines.</div>
+</div>
 
-**When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models**<br>
-Qitong Wang\*, **Haoran Dai**\*, Haotian Zhang, Christopher Rasmussen, Binghui Wang<br>
-ICLR 2026 Workshop on Principled Design for Trustworthy AI. [arXiv](https://arxiv.org/abs/2603.06508)<br>
-*Reveals "modality collapse" in multimodal diffusion backdoors: poisoning several modalities makes one dominate rather than reinforcing the attack.*
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models</a></div>
+<div class="pub-meta">Qitong Wang*, <strong>Haoran Dai</strong>*, Haotian Zhang, Christopher Rasmussen, Binghui Wang</div>
+<div class="pub-venue">ICLR 2026 Workshop on Principled Design for Trustworthy AI</div>
+<div class="pub-tldr">Reveals "modality collapse" in multimodal diffusion backdoors: poisoning several modalities makes one dominate rather than reinforcing the attack.</div>
 <div class="pub-abstract">While diffusion models have revolutionized visual content generation, their rapid adoption has underscored the critical need to investigate vulnerabilities, e.g., to backdoor attacks. In multimodal diffusion models, it is natural to expect that attacking multiple modalities simultaneously (e.g., text and image) would yield complementary effects and strengthen the overall backdoor. In this paper, we challenge this assumption by investigating the phenomenon of Backdoor Modality Collapse, a scenario where the backdoor mechanism degenerates to rely predominantly on a subset of modalities, rendering others redundant. To rigorously quantify this behavior, we introduce two novel metrics: Trigger Modality Attribution (TMA) and Cross-Trigger Interaction (CTI). Through extensive experiments across diverse training configurations in multimodal conditional diffusion, we consistently observe a "winner-takes-all" dynamic in backdoor behavior. Our results reveal that (1) attacks often collapse into subset-modality dominance, and (2) cross-modal interaction is negligible or even negative, contradicting the intuition of synergistic vulnerability. These findings highlight a critical blind spot in current assessments, suggesting that high attack success rates often mask a fundamental reliance on a subset of modalities. This establishes a principled foundation for mechanistic analysis and future defense development.</div>
+</div>
 
 ## 2025
 
-**Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models**<br>
-**Haoran Dai**, Jiawen Wang, Ruo Yang, Manali Sharma, Zhonghao Liao, Yuan Hong, Binghui Wang<br>
-arXiv preprint, 2025. [arXiv](https://arxiv.org/abs/2508.01605)<br>
-*A backdoor attack on text-to-image diffusion models that uses natural, readable prompts, transfers across models, and evades current defenses.*
+<div class="pub-item">
+<div class="pub-title"><a href="https://arxiv.org/abs/2508.01605">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a></div>
+<div class="pub-meta"><strong>Haoran Dai</strong>, Jiawen Wang, Ruo Yang, Manali Sharma, Zhonghao Liao, Yuan Hong, Binghui Wang</div>
+<div class="pub-venue">arXiv preprint, 2025</div>
+<div class="pub-tldr">A backdoor attack on text-to-image diffusion models that uses natural, readable prompts, transfers across models, and evades current defenses.</div>
 <div class="pub-abstract">Text-to-image diffusion models (T2I DMs) have achieved remarkable success in generating high-quality and diverse images from text prompts, yet recent studies have revealed their vulnerability to backdoor attacks. Existing attack methods suffer from critical limitations: 1) they rely on unnatural adversarial prompts that lack human readability and require massive poisoned data; 2) their effectiveness is typically restricted to specific models, lacking generalizability; and 3) they can be mitigated by recent backdoor defenses. To overcome these challenges, we propose a novel backdoor attack framework that achieves three key properties: 1) Practicality: our attack requires only a few stealthy backdoor samples to generate arbitrary attacker-chosen target images, while ensuring high-quality image generation in benign scenarios. 2) Generalizability: the attack is applicable across multiple T2I DMs without requiring model-specific redesign. 3) Robustness: the attack remains effective against existing backdoor defenses and adaptive defenses. Our extensive experimental results on multiple T2I DMs demonstrate that with only 10 carefully crafted backdoored samples, our attack method achieves over 90% attack success rate with negligible degradation in benign image generation quality. We also conduct human evaluation to validate our attack effectiveness. Recent backdoor detection and mitigation methods, as well as adaptive defenses tailored to our attack, are not sufficiently effective, highlighting the pressing need for more robust defense mechanisms.</div>
+</div>
 
 ## 2024
 
-**EvilPromptFuzzer: Generating Inappropriate Content Based on Text-to-Image Models**<br>
-Juntao He, **Haoran Dai**, Runqi Sui, Xuejing Yuan, Dun Liu, Hao Feng, Xinyue Liu, Wenchuan Yang, Baojiang Cui, Kedan Li<br>
-Cybersecurity, vol. 7, article 70, 2024. [Paper](https://link.springer.com/article/10.1186/s42400-024-00279-9)<br>
-*A fuzzing method that automatically finds prompts driving text-to-image models to generate inappropriate content.*
+<div class="pub-item">
+<div class="pub-title"><a href="https://link.springer.com/article/10.1186/s42400-024-00279-9">EvilPromptFuzzer: Generating Inappropriate Content Based on Text-to-Image Models</a></div>
+<div class="pub-meta">Juntao He, <strong>Haoran Dai</strong>, Runqi Sui, Xuejing Yuan, Dun Liu, Hao Feng, Xinyue Liu, Wenchuan Yang, Baojiang Cui, Kedan Li</div>
+<div class="pub-venue">Cybersecurity, vol. 7, article 70, 2024</div>
+<div class="pub-tldr">A fuzzing method that automatically finds prompts driving text-to-image models to generate inappropriate content.</div>
 <div class="pub-abstract">Text-to-image (TTI) models provide huge innovation ability for many industries, while the content security triggered by them has also attracted wide attention. Considerable research has focused on content security threats of large language models (LLMs), yet comprehensive studies on the content security of TTI models are notably scarce. This paper introduces a systematic tool, named EvilPromptFuzzer, designed to fuzz evil prompts in TTI models. For 15 kinds of fine-grained risks, EvilPromptFuzzer employs the strong knowledge-mining ability of LLMs to construct seed banks, in which the seeds cover various types of characters, interrelations, actions, objects, expressions, body parts, locations, surroundings, etc. Subsequently, these seeds are fed into the LLMs to build scene-diverse prompts, which can weaken the semantic sensitivity related to the fine-grained risks. Hence, the prompts can bypass the content audit mechanism of the TTI model, and ultimately help to generate images with inappropriate content. For the risks of violence, horrible, disgusting, animal cruelty, religious bias, political symbol, and extremism, the efficiency of EvilPromptFuzzer for generating inappropriate images based on DALL-E 3 is greater than 30%, namely, more than 30 generated images are malicious among 100 prompts. Specifically, the efficiency of horrible, disgusting, political symbols, and extremism reaches up to 58%, 64%, 71%, and 50%, respectively. Additionally, we analyzed the vulnerability of existing popular content audit platforms, including Amazon, Google, Azure, and Baidu. Even the most effective Google SafeSearch cloud platform identifies only 33.85% of malicious images across three distinct categories.</div>
+</div>
