@@ -34,7 +34,7 @@ top_bars:
 # Hero banner text per page
 banner:
   index:
-    banner_title: 'Trustworthy &amp;<br>Secure AI.<span class="trm-hero-kw"><span>Reasoning Models</span><span>Test-time Scaling</span><span>SVG Generation</span><span>Reinforcement Learning</span><span>Backdoor Attacks</span><span>Diffusion Models</span><span>Vision-Language Models</span><span>LLM Efficiency</span></span>'
+    banner_title: 'Trustworthy &amp; Efficient<br>Generative AI.<span class="trm-hero-kw"><span>SVG &amp; Vector Graphics</span><span>Reasoning Models</span><span>Test-time Scaling</span><span>Diffusion Models</span><span>Vision-Language Models</span><span>Backdoor Attacks</span><span>LLM Efficiency</span></span>'
     banner_text: Hi, I'm Haoran (Harry) Dai!
   archive:
     banner_title: The Archive.

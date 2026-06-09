@@ -3,18 +3,18 @@
 const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
-  <p><strong>Haoran (Harry) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. His research examines the security and efficiency of modern AI systems. On the security side, he develops and evaluates backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, together with defenses against them. On the efficiency side, he studies reasoning models and large language models, focusing on test-time inference scaling and the attention and quantization behavior underlying their inference stability. At Quiver AI, he works on SVG generation systems, spanning inference optimization, reinforcement-learning post-training, data curation, and the internal tooling that supports them. He is based in Chicago, Illinois.</p>
+  <p><strong>Haoran (Harry) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. His research examines the security and efficiency of modern AI systems. On the security side, he develops and evaluates backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, together with defenses against them. On the efficiency side, he studies reasoning models and large language models, focusing on test-time inference scaling and the attention and quantization behavior underlying their inference stability. At Quiver AI, he works on SVG generation systems, spanning inference optimization, model post-training, data curation, and the internal tooling that supports them. He is based in Chicago, Illinois.</p>
   <h3>Research Interests</h3>
   <ul>
     <li>Reasoning models and test-time inference scaling</li>
-    <li>Vector graphics (SVG) generation and reinforcement-learning post-training</li>
+    <li>Vector graphics (SVG) generation</li>
     <li>Efficiency and robustness of large language models</li>
     <li>Backdoor attacks and defenses for diffusion models (text-to-image, multimodal) and vision-language models</li>
     <li>Trustworthy and secure AI</li>
   </ul>
   <h3>Experience</h3>
   <ul>
-    <li><strong>Research Scientist</strong>, <a href="https://quiver.ai/">Quiver AI</a> (Oct 2025 - Present). SVG generation: inference optimization, reinforcement-learning post-training, data optimization, and internal tooling.</li>
+    <li><strong>Research Scientist</strong>, <a href="https://quiver.ai/">Quiver AI</a> (Oct 2025 - Present). SVG generation: inference optimization, post-training, data optimization, and internal tooling.</li>
     <li><strong>Machine Learning Engineer Intern</strong>, Revery AI (YC S21) (Jan 2024 - Aug 2024).</li>
     <li><strong>Software Engineer</strong>, China National Petroleum Corporation (Jul 2021 - Aug 2022).</li>
   </ul>
