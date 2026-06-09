@@ -67,3 +67,10 @@
 @media (max-width: 992px) {
   .trm-hero-kw { display: none; }
 }
+
+/* Hide the theme's heavy date/time/author cards at the top of each post.
+   The date and author still appear in the post's copyright block and in
+   the homepage post list, so no information is lost. */
+.trm-post-info {
+  display: none;
+}
