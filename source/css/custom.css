@@ -74,3 +74,14 @@
 .trm-post-info {
   display: none;
 }
+
+/* Small, muted abstract text under each publication entry */
+.pub-abstract {
+  display: block;
+  max-width: 76ch;
+  margin: 7px 0 2px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--body-color);
+  opacity: 0.66;
+}
