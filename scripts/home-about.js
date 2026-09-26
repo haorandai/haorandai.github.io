@@ -34,10 +34,13 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
       .sort((a, b) => idx(a.start) - idx(b.start))
       .map((e) => {
         if (e.minor) {
+          // brief early role: same anatomy as the others, drawn faded, label below
           const ms = Math.max(idx(e.start), firstYear * 12);
           const mt = e.end ? idx(e.end) : nowIdx;
           return `<div class="jr-item jr-minor jr-below" style="--s:${pct(ms)};--w:${(((mt - ms) / (axisEnd - axisStart)) * 100).toFixed(3)}%;--i:0" tabindex="0">`
-            + `<span class="jr-bar"></span><span class="jr-pin" aria-hidden="true"></span>`
+            + `<span class="jr-bar"></span>`
+            + `<span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
+            + `<span class="jr-text"><b>${esc(e.short)}</b><small>${e.start[0]}</small></span>`
             + `<span class="jr-card" role="tooltip"><b>${esc(e.role)}</b><span>${esc(e.org)}</span><em>${fmt(e.start)} – ${fmt(e.end)}</em></span>`
             + `</div>`;
         }

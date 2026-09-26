@@ -674,14 +674,16 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   .cv-timeline, .cv-timeline-heading { display: none; }
 }
 
-/* Minor entries (e.g. a short early internship): present but understated */
-.jr-minor .jr-bar { height: 4px; margin-top: -2px; background: #c9c3b8 !important; opacity: 0.8; }
-.jr-minor .jr-pin {
-  left: -6px; margin-top: -6px; width: 12px; height: 12px;
-  background: #d9d3c8; border: 2px solid var(--theme-bg2-color); box-shadow: none;
+/* Minor entries (e.g. a short early internship): same anatomy, faded */
+.jr-minor .jr-bar {
+  background: linear-gradient(90deg, rgba(255, 107, 53, 0.12), rgba(255, 107, 53, 0.5)) !important;
 }
-.jr-minor .jr-card { left: -12px; }
-.jr-minor:hover .jr-pin, .jr-minor:focus .jr-pin { background: #ff6b35; transform: scale(1.15); }
+.jr-minor .jr-pin { left: -14px; margin-top: -14px; width: 28px; height: 28px; opacity: 0.75; }
+.jr-minor .jr-pin img { width: 16px; height: 16px; }
+.jr-minor .jr-text { opacity: 0.62; left: 20px; }
+.jr-minor .jr-card { left: -14px; }
+.jr-minor:hover .jr-pin, .jr-minor:focus .jr-pin { opacity: 1; }
+.jr-minor:hover .jr-text, .jr-minor:focus .jr-text { opacity: 1; }
 .jr-v-minor { opacity: 0.7; }
 .jr-v-minor .jr-pin img { width: 18px; height: 18px; }
 .cv-item.cv-minor { opacity: 0.72; }
