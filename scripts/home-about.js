@@ -5,8 +5,9 @@
    vertical list. Positions are computed from real start/end months. */
 const JOURNEY = [
   { lane: 'edu',  start: [2017, 9],  end: [2021, 6], logo: 'cupb.svg',   short: 'CUP Beijing',       org: 'China University of Petroleum, Beijing', role: 'BE, Computer Software Engineering' },
-  { lane: 'edu',  start: [2022, 8],  end: [2024, 1], logo: 'bu.svg',     short: 'Boston University', org: 'Boston University',                      role: 'MS, Computer Science' },
-  { lane: 'edu',  start: [2024, 8],  end: null,      logo: 'iit.png',    short: 'Illinois Tech',     org: 'Illinois Institute of Technology',       role: 'PhD, Computer Science' },
+  { lane: 'edu',  start: [2022, 8],  end: [2024, 1], logo: 'bu.svg',     short: 'Boston University', org: 'Boston University',                      role: 'MS, Computer Science', extra: 'Research Assistant' },
+  { lane: 'edu',  start: [2024, 8],  end: null,      logo: 'iit.png',    short: 'Illinois Tech',     org: 'Illinois Institute of Technology',       role: 'PhD, Computer Science', extra: 'Teaching Assistant' },
+  { lane: 'work', start: [2020, 7],  end: [2020, 8], logo: 'datacom.png', short: 'China DataCom',     org: 'China DataCom Corporation Limited',     role: 'SDE Intern', minor: true },
   { lane: 'work', start: [2021, 7],  end: [2022, 8], logo: 'cnpc.svg',   short: 'CNPC',              org: 'China National Petroleum Corporation',   role: 'Software Engineer' },
   { lane: 'work', start: [2024, 1],  end: [2024, 8], logo: 'revery.png', short: 'Revery AI',         org: 'Revery AI (YC S21)',                     role: 'Machine Learning Engineer Intern', roleShort: 'ML Engineer Intern' },
   { lane: 'work', start: [2025, 10], end: null,      logo: 'quiver.svg', short: 'Quiver AI',         org: 'Quiver AI',                              role: 'Research Scientist' },
@@ -28,9 +29,19 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
   const fmt = (d) => (d ? `${MONTHS[d[1] - 1]} ${d[0]}` : 'Now');
 
   const lanes = [['edu', 'Academia'], ['work', 'Industry']].map(([lane, label]) => {
+    let seq = 0;
     const items = JOURNEY.filter((e) => e.lane === lane)
       .sort((a, b) => idx(a.start) - idx(b.start))
-      .map((e, i) => {
+      .map((e) => {
+        if (e.minor) {
+          const ms = Math.max(idx(e.start), firstYear * 12);
+          const mt = e.end ? idx(e.end) : nowIdx;
+          return `<div class="jr-item jr-minor jr-below" style="--s:${pct(ms)};--w:${(((mt - ms) / (axisEnd - axisStart)) * 100).toFixed(3)}%;--i:0" tabindex="0">`
+            + `<span class="jr-bar"></span><span class="jr-pin" aria-hidden="true"></span>`
+            + `<span class="jr-card" role="tooltip"><b>${esc(e.role)}</b><span>${esc(e.org)}</span><em>${fmt(e.start)} – ${fmt(e.end)}</em></span>`
+            + `</div>`;
+        }
+        const i = seq++;
         const s = Math.max(idx(e.start), firstYear * 12);
         const clipped = idx(e.start) < firstYear * 12 ? ' jr-clipped' : '';
         const t = e.end ? idx(e.end) : nowIdx;
@@ -40,7 +51,7 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
           + `<span class="jr-bar"></span>`
           + `<span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
           + `<span class="jr-text"><b>${esc(e.short)}</b><small>${e.start[0]} – ${e.end ? e.end[0] : 'now'}</small></span>`
-          + `<span class="jr-card" role="tooltip"><b>${esc(e.role)}</b><span>${esc(e.org)}</span><em>${fmt(e.start)} – ${fmt(e.end)}</em></span>`
+          + `<span class="jr-card" role="tooltip"><b>${esc(e.role)}</b><span>${esc(e.org)}</span>${e.extra ? `<span class="jr-extra">${esc(e.extra)}</span>` : ''}<em>${fmt(e.start)} – ${fmt(e.end)}</em></span>`
           + `</div>`;
       }).join('');
     return `<div class="jr-lane jr-${lane}"><span class="jr-lane-label">${label}</span><div class="jr-track">${items}</div></div>`;
@@ -56,8 +67,8 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
 
   const vertical = [...JOURNEY]
     .sort((a, b) => idx(b.start) - idx(a.start))
-    .map((e) => `<li class="jr-v-item jr-${e.lane}"><span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
-      + `<div><em>${fmt(e.start)} – ${fmt(e.end)}</em><b>${esc(e.role)}</b><span>${esc(e.org)}</span></div></li>`)
+    .map((e) => `<li class="jr-v-item jr-${e.lane}${e.minor ? ' jr-v-minor' : ''}"><span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
+      + `<div><em>${fmt(e.start)} – ${fmt(e.end)}</em><b>${esc(e.role)}</b><span>${esc(e.org)}</span>${e.extra ? `<span class="jr-extra">${esc(e.extra)}</span>` : ''}</div></li>`)
     .join('');
 
   return `
