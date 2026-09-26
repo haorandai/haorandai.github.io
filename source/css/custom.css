@@ -539,3 +539,10 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   .cv-date { grid-column: 1 / -1; padding-top: 0; }
   .cv-logo { width: 48px; height: 48px; padding: 6px; }
 }
+
+/* Phones: the theme's 10px side gutter is too tight; match the project
+   pages' ~22px. Applies to header, hero, content and footer containers. */
+@media (max-width: 640px) {
+  .container,
+  .trm-app-frame .trm-content-start .container { padding-left: 22px; padding-right: 22px; }
+}
