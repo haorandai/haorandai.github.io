@@ -1,5 +1,79 @@
 /* Inject the About content into the homepage's main content area (keeping the
    theme's profile card and hero). Server-side, so it ships in the HTML. */
+/* Education & experience timeline (built at deploy time, so "Now" advances
+   with each build). Desktop: a horizontal axis with two lanes; phones: a
+   vertical list. Positions are computed from real start/end months. */
+const JOURNEY = [
+  { lane: 'edu',  start: [2017, 9],  end: [2021, 6], logo: 'cupb.svg',   short: 'CUP Beijing',       org: 'China University of Petroleum, Beijing', role: 'BE, Computer Software Engineering' },
+  { lane: 'edu',  start: [2022, 8],  end: [2024, 1], logo: 'bu.svg',     short: 'Boston University', org: 'Boston University',                      role: 'MS, Computer Science' },
+  { lane: 'edu',  start: [2024, 8],  end: null,      logo: 'iit.png',    short: 'Illinois Tech',     org: 'Illinois Institute of Technology',       role: 'PhD, Computer Science' },
+  { lane: 'work', start: [2021, 7],  end: [2022, 8], logo: 'cnpc.svg',   short: 'CNPC',              org: 'China National Petroleum Corporation',   role: 'Software Engineer' },
+  { lane: 'work', start: [2024, 1],  end: [2024, 8], logo: 'revery.png', short: 'Revery AI',         org: 'Revery AI (YC S21)',                     role: 'Machine Learning Engineer Intern', roleShort: 'ML Engineer Intern' },
+  { lane: 'work', start: [2025, 10], end: null,      logo: 'quiver.svg', short: 'Quiver AI',         org: 'Quiver AI',                              role: 'Research Scientist' },
+];
+const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+function journeyHTML() {
+  const today = new Date();
+  const idx = ([y, m]) => y * 12 + (m - 1);
+  const nowIdx = today.getFullYear() * 12 + today.getMonth();
+  // Start the axis at 2020 so recent years get the space; earlier roles
+  // are clipped at the left edge and fade in to show they began before.
+  const firstYear = 2020;
+  const lastYear = today.getFullYear() + 1;
+  const axisStart = firstYear * 12;
+  const axisEnd = lastYear * 12;
+  const pct = (i) => (((i - axisStart) / (axisEnd - axisStart)) * 100).toFixed(3) + '%';
+  const fmt = (d) => (d ? `${MONTHS[d[1] - 1]} ${d[0]}` : 'Now');
+
+  const lanes = [['edu', 'Education'], ['work', 'Industry']].map(([lane, label]) => {
+    const items = JOURNEY.filter((e) => e.lane === lane)
+      .sort((a, b) => idx(a.start) - idx(b.start))
+      .map((e, i) => {
+        const s = Math.max(idx(e.start), firstYear * 12);
+        const clipped = idx(e.start) < firstYear * 12 ? ' jr-clipped' : '';
+        const t = e.end ? idx(e.end) : nowIdx;
+        const place = i % 2 === 0 ? 'above' : 'below';
+        const ongoing = e.end ? '' : ' jr-ongoing';
+        const flip = e.end ? '' : ' jr-flip';
+        return `<div class="jr-item jr-${place}${ongoing}${flip}${clipped}" style="--s:${pct(s)};--w:${(((t - s) / (axisEnd - axisStart)) * 100).toFixed(3)}%;--i:${i}" tabindex="0">`
+          + `<span class="jr-bar"></span>`
+          + `<span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
+          + `<span class="jr-text"><b>${esc(e.short)}</b><small>${e.start[0]} – ${e.end ? e.end[0] : 'now'}</small></span>`
+          + `<span class="jr-card" role="tooltip"><b>${esc(e.role)}</b><span>${esc(e.org)}</span><em>${fmt(e.start)} – ${fmt(e.end)}</em></span>`
+          + `</div>`;
+      }).join('');
+    return `<div class="jr-lane jr-${lane}"><span class="jr-lane-label">${label}</span><div class="jr-track">${items}</div></div>`;
+  }).join('');
+
+  let ticks = '';
+  let years = '';
+  for (let y = firstYear; y <= lastYear; y++) {
+    ticks += `<span class="jr-tick" style="--x:${pct(y * 12)}"></span>`;
+    years += `<span class="jr-year" style="--x:${pct(y * 12)}">${y}</span>`;
+  }
+  const now = `<span class="jr-now" style="--x:${pct(nowIdx)}"><span>Now</span></span>`;
+
+  const vertical = [...JOURNEY]
+    .sort((a, b) => idx(b.start) - idx(a.start))
+    .map((e) => `<li class="jr-v-item jr-${e.lane}"><span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
+      + `<div><em>${fmt(e.start)} – ${fmt(e.end)}</em><b>${esc(e.role)}</b><span>${esc(e.org)}</span></div></li>`)
+    .join('');
+
+  return `
+  <h3>Education &amp; Experience</h3>
+  <div class="journey" aria-label="Education and industry timeline">
+    <div class="jr-grid">
+      <div class="jr-overlay">${ticks}${now}</div>
+      ${lanes}
+      <div class="jr-axis">${years}</div>
+    </div>
+    <ol class="jr-vertical">${vertical}</ol>
+    <a class="jr-more" href="/more/">Details →</a>
+  </div>`;
+}
+
 const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
@@ -28,6 +102,7 @@ const HOME_ABOUT = `
       <li><span class="news-date">Aug 2024</span><span>Started the PhD in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</span></li>
     </ul>
   </details>
+${journeyHTML()}
 </div>
 `;
 
