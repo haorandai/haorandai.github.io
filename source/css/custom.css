@@ -367,3 +367,111 @@ details.pub-abstract p {
   .pub-grid .pub-item.has-thumb { grid-template-columns: 1fr; gap: 14px; }
   .pub-grid .pub-thumb { max-width: none; }
 }
+
+/* ===================================================================
+   Clean, personal look: borrows the project pages' Geist type, hairline
+   rules and flat cards, but keeps it warm: cream paper, brand-blue buttons
+   and a soft blue/orange glow taken from the HD logo. Light mode only.
+   =================================================================== */
+:root:not(.dark) {
+  --theme-bg-color: #fdfcf9;
+  --theme-bg-color-80: rgba(253, 252, 249, 0.8);
+  --theme-bg2-color: #f6f4ef;
+  --theme-color: #1f2328;
+  --body-color: #5a5a5a;
+  --border-dotted: solid 1px #ebe7df;
+  --box-shadow: none;
+  --box-shadow-hover: none;
+  --top-bar-box-shadow: 0 1px 0 #ebe7df;
+  --card-border-radius: 14px;
+}
+body, h1, h2, h3, h4, h5, h6, .trm-label, .trm-btn, .home-about, .pub-item {
+  font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+}
+h1, h2, h3, .home-about-heading, .pub-title { letter-spacing: -0.025em; }
+.home-about-heading { font-weight: 550; font-size: 26px; }
+.home-about h3, .pub-title { font-weight: 600; }
+
+/* Hero: warm cream with a soft glow in the logo colours (no dark block) */
+:root:not(.dark) .trm-banner {
+  background-color: #faf6f0;
+  background-image:
+    radial-gradient(55% 90% at 88% 10%, rgba(9, 105, 218, 0.10), transparent 60%),
+    radial-gradient(45% 80% at 8% 100%, rgba(255, 107, 53, 0.10), transparent 60%);
+  border-bottom: 1px solid #ebe7df;
+}
+:root:not(.dark) .trm-banner::after { display: none; }
+/* the theme darkens the hero for white text on a photo; not needed on cream */
+:root:not(.dark) .trm-banner .trm-overlay { background: none; }
+:root:not(.dark) .trm-banner h1 { color: #1f2328; text-shadow: none; }
+:root:not(.dark) .trm-banner .trm-label { color: #6f6a62; text-shadow: none; }
+.trm-banner h1 { font-weight: 600; letter-spacing: -0.035em; }
+:root:not(.dark) .trm-hero-kw > span {
+  color: #3d3d3d;
+  background: rgba(255, 255, 255, 0.75);
+  border-color: #e3ddd2;
+}
+/* dark mode: flat near-black, no glow */
+:root.dark .trm-banner { background-image: none; }
+.trm-scroll-hint-frame { display: none !important; }
+
+/* Shorter hero: 400px on home, 300px on inner pages */
+.trm-banner, .trm-banner .trm-banner-content { height: 300px; }
+body:has(.home-about) .trm-banner,
+body:has(.home-about) .trm-banner .trm-banner-content { height: 400px; }
+/* The theme lifts the sidebar card by a fixed 410px (tuned for its 560px
+   hero) so the card starts 150px from the top, below the header. Keep that
+   150px with the shorter hero. Desktop only; the theme uses -40px below 992px. */
+@media (min-width: 993px) {
+  .trm-main-card-frame:not(.fixed) { transform: translateY(-150px); }
+  body:has(.home-about) .trm-main-card-frame:not(.fixed) { transform: translateY(-250px); }
+  /* once scrolled, the theme pins the card at top: 90px with no lift */
+  .trm-main-card-frame.fixed { transform: translateY(0); }
+  .trm-main-card-frame.fixed .trm-main-card { border-radius: var(--card-border-radius) !important; }
+}
+
+/* Flat cards with warm hairline borders */
+:root:not(.dark) .trm-main-card,
+:root:not(.dark) .trm-footer-card {
+  box-shadow: none;
+  border: 1px solid #ebe7df;
+}
+:root:not(.dark) .trm-top-bar { box-shadow: none; border-bottom: 1px solid #ebe7df; }
+
+/* Publication cards follow the same hairline style */
+:root:not(.dark) .pub-thumb { border-color: #ebe7df; }
+:root:not(.dark) .pub-thumb:hover { border-color: var(--primary-50); box-shadow: 0 4px 14px rgba(9, 105, 218, 0.08); }
+:root:not(.dark) .trm-content:has(.pub-grid) h2 { border-top-color: #ebe7df; }
+
+/* News: latest items visible, the rest in a quiet "More news" toggle */
+details.home-news-more {
+  margin: 4px 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+}
+details.home-news-more summary {
+  cursor: pointer;
+  width: fit-content;
+  list-style: none;
+  padding: 0;
+  margin: 2px 0 6px;
+  background: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+}
+details.home-news-more summary::-webkit-details-marker { display: none; }
+details.home-news-more summary::after { content: " +"; }
+details.home-news-more[open] summary::after { content: " −"; }
+details.home-news-more ul.home-news { list-style: none; padding-left: 0; margin: 0; }
+
+/* Sidebar card: size to its content instead of a full-screen-tall box */
+@media (min-width: 993px) {
+  .trm-main-card-frame .trm-main-card { height: auto; }
+}
+
+/* Long venue badges (e.g. "ICLR 2026@Principled Design for Trustworthy AI")
+   wrap instead of overflowing narrow thumbnails */
+.pub-badge { max-width: calc(100% - 20px); line-height: 1.3; }
