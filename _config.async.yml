@@ -4,7 +4,7 @@
 user:
   name: Harry (Haoran) Dai
   first_name: Dai
-  last_name: Haoran
+  last_name: Harry
   email: haorand16@gmail.com
   domain: haorandai.com
   avatar: /img/haoran.jpg
@@ -12,9 +12,9 @@ user:
 
 favicon:
   logo: /img/logo.svg
-  icon16: /img/logo.svg
-  icon32: /img/logo.svg
-  apple_touch_icon: /img/logo.svg
+  icon16: /img/favicon-16.png
+  icon32: /img/favicon-32.png
+  apple_touch_icon: /img/apple-touch-icon.png
   visibilitychange: false
 
 # Top navigation
