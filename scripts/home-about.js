@@ -34,7 +34,7 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
 }, 15);
 
 /* Coffee chat button, placed under the sidebar Contact Me button on every page. */
-const COFFEE_CHAT = `<div class="text-center sidebar-chat"><a href="https://calendar.app.google/PJjm8BtGCkiXdk3x9" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg>Coffee chat</a></div>`;
+const COFFEE_CHAT = `<div class="text-center sidebar-chat"><a class="trm-btn trm-btn-outline" href="https://calendar.app.google/PJjm8BtGCkiXdk3x9" target="_blank" rel="noopener">Coffee Chat<svg viewBox="0 0 24 24" width="13" height="13" class="btn-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></a></div>`;
 
 hexo.extend.filter.register('after_render:html', function (html) {
   return html.replace(/(<a href="mailto:[^"]*" class="trm-btn">[\s\S]*?<\/a>\s*<\/div>)/, '$1' + COFFEE_CHAT);
