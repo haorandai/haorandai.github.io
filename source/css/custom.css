@@ -17,6 +17,10 @@
   --preloader-background: #0d1117;
 }
 
+/* Hairline colours shared by cards, lists, thumbnails and the timeline */
+:root { --hairline: #ebe7df; --hairline-faint: rgba(0, 0, 0, 0.055); }
+:root.dark { --hairline: rgba(255, 255, 255, 0.10); --hairline-faint: rgba(255, 255, 255, 0.06); }
+
 /* Clean GitHub/Apple-style dark hero.
    Replaces the theme's teal mountain photo (banner.png) with a neutral
    near-black canvas (#0d1117) plus a soft blue accent glow and a faint
@@ -228,7 +232,7 @@
   display: block;
   aspect-ratio: 16 / 10;
   background: #fff;
-  border: 1px solid var(--primary-30);
+  border: 1px solid var(--hairline);
   border-radius: 8px;
   overflow: hidden;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
@@ -286,7 +290,7 @@ body:has(.pub-grid) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 10
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.6;
-  border-top: 1px solid var(--primary-30);
+  border-top: 1px solid var(--hairline);
   padding-top: 14px;
   margin: 12px 0 22px;
 }
@@ -376,10 +380,10 @@ details.pub-abstract p {
   --theme-bg2-color: #f6f4ef;
   --theme-color: #1f2328;
   --body-color: #5a5a5a;
-  --border-dotted: solid 1px #ebe7df;
+  --border-dotted: solid 1px var(--hairline);
   --box-shadow: none;
   --box-shadow-hover: none;
-  --top-bar-box-shadow: 0 1px 0 #ebe7df;
+  --top-bar-box-shadow: 0 1px 0 var(--hairline);
   --card-border-radius: 14px;
 }
 body, h1, h2, h3, h4, h5, h6, .trm-label, .trm-btn, .home-about, .pub-item {
@@ -395,7 +399,7 @@ h1, h2, h3, .home-about-heading, .pub-title { letter-spacing: -0.025em; }
   background-image:
     radial-gradient(55% 90% at 88% 10%, rgba(9, 105, 218, 0.10), transparent 60%),
     radial-gradient(45% 80% at 8% 100%, rgba(255, 107, 53, 0.10), transparent 60%);
-  border-bottom: 1px solid #ebe7df;
+  border-bottom: 1px solid var(--hairline);
 }
 :root:not(.dark) .trm-banner::after { display: none; }
 /* the theme darkens the hero for white text on a photo; not needed on cream */
@@ -431,14 +435,14 @@ body:has(.home-about) .trm-banner .trm-banner-content { height: 400px; }
 :root:not(.dark) .trm-main-card,
 :root:not(.dark) .trm-footer-card {
   box-shadow: none;
-  border: 1px solid #ebe7df;
+  border: 1px solid var(--hairline);
 }
-:root:not(.dark) .trm-top-bar { box-shadow: none; border-bottom: 1px solid #ebe7df; }
+:root:not(.dark) .trm-top-bar { box-shadow: none; border-bottom: 1px solid var(--hairline); }
 
 /* Publication cards follow the same hairline style */
-:root:not(.dark) .pub-thumb { border-color: #ebe7df; }
+:root:not(.dark) .pub-thumb { border-color: var(--hairline); }
 :root:not(.dark) .pub-thumb:hover { border-color: var(--primary-50); box-shadow: 0 4px 14px rgba(9, 105, 218, 0.08); }
-:root:not(.dark) .trm-content:has(.pub-grid) h2 { border-top-color: #ebe7df; }
+:root:not(.dark) .trm-content:has(.pub-grid) h2 { border-top-color: var(--hairline); }
 
 /* News: latest items visible, the rest in a quiet "More news" toggle */
 details.home-news-more {
@@ -489,7 +493,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.6;
-  border-top: 1px solid #ebe7df;
+  border-top: 1px solid var(--hairline);
   padding-top: 14px;
   margin: 12px 0 6px;
 }
@@ -504,7 +508,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .cv-logo {
   width: 56px;
   height: 56px;
-  border: 1px solid #ebe7df;
+  border: 1px solid var(--hairline);
   border-radius: 12px;
   background: #fff;
   display: flex;
@@ -514,7 +518,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   box-sizing: border-box;
 }
 .cv-logo img { width: 100%; height: 100%; object-fit: contain; }
-.cv-item + .cv-item { border-top: 1px solid #ebe7df; }
+.cv-item + .cv-item { border-top: 1px solid var(--hairline); }
 .cv-date {
   font-size: 13px;
   line-height: 1.6;
@@ -551,7 +555,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .journey { margin: 6px 0 4px; }
 .jr-grid { position: relative; padding-left: 18px; margin-top: 14px; }
 .jr-overlay { position: absolute; left: 18px; right: 0; top: 0; bottom: 30px; pointer-events: none; }
-.jr-tick { position: absolute; left: var(--x); top: 0; bottom: 0; width: 1px; background: rgba(0, 0, 0, 0.055); }
+.jr-tick { position: absolute; left: var(--x); top: 0; bottom: 0; width: 1px; background: var(--hairline-faint); }
 .jr-now {
   position: absolute; left: var(--x); top: -4px; bottom: 0;
   border-left: 1.5px dashed rgba(9, 105, 218, 0.55);
@@ -561,7 +565,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   font-size: 10.5px; font-weight: 600; letter-spacing: 0.04em; color: var(--primary);
 }
 .jr-lane { position: relative; height: 104px; }
-.jr-lane + .jr-lane { border-top: 1px solid rgba(0, 0, 0, 0.05); }
+.jr-lane + .jr-lane { border-top: 1px solid var(--hairline-faint); }
 /* lane name as a small legend in the lane's bottom-left corner (always free of pins and labels) */
 .jr-lane-label {
   position: absolute; left: -18px; bottom: 7px;
@@ -591,7 +595,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .jr-work .jr-ongoing { color: #ff6b35; }
 .jr-pin {
   position: absolute; left: -17px; top: 50%; margin-top: -17px; width: 34px; height: 34px;
-  border-radius: 50%; background: #fff; border: 1px solid #ebe7df;
+  border-radius: 50%; background: #fff; border: 1px solid var(--hairline);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07);
   display: flex; align-items: center; justify-content: center; z-index: 2;
   transition: transform 0.18s ease, box-shadow 0.18s ease;
@@ -612,7 +616,7 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .jr-card {
   position: absolute; left: -17px; z-index: 5; min-width: 230px;
   display: flex; flex-direction: column; gap: 2px;
-  background: var(--theme-bg-color); border: 1px solid #ebe7df; border-radius: 12px;
+  background: var(--theme-bg-color); border: 1px solid var(--hairline); border-radius: 12px;
   padding: 10px 13px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
   opacity: 0; transform: translateY(4px); pointer-events: none;
   transition: opacity 0.16s ease, transform 0.16s ease;
