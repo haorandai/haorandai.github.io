@@ -14,7 +14,7 @@ const JOURNEY = [
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-function journeyHTML() {
+function journeyHTML({ heading = true, moreLink = true } = {}) {
   const today = new Date();
   const idx = ([y, m]) => y * 12 + (m - 1);
   const nowIdx = today.getFullYear() * 12 + today.getMonth();
@@ -27,7 +27,7 @@ function journeyHTML() {
   const pct = (i) => (((i - axisStart) / (axisEnd - axisStart)) * 100).toFixed(3) + '%';
   const fmt = (d) => (d ? `${MONTHS[d[1] - 1]} ${d[0]}` : 'Now');
 
-  const lanes = [['edu', 'Education'], ['work', 'Industry']].map(([lane, label]) => {
+  const lanes = [['edu', 'Academia'], ['work', 'Industry']].map(([lane, label]) => {
     const items = JOURNEY.filter((e) => e.lane === lane)
       .sort((a, b) => idx(a.start) - idx(b.start))
       .map((e, i) => {
@@ -36,8 +36,7 @@ function journeyHTML() {
         const t = e.end ? idx(e.end) : nowIdx;
         const place = i % 2 === 0 ? 'above' : 'below';
         const ongoing = e.end ? '' : ' jr-ongoing';
-        const flip = e.end ? '' : ' jr-flip';
-        return `<div class="jr-item jr-${place}${ongoing}${flip}${clipped}" style="--s:${pct(s)};--w:${(((t - s) / (axisEnd - axisStart)) * 100).toFixed(3)}%;--i:${i}" tabindex="0">`
+        return `<div class="jr-item jr-${place}${ongoing}${clipped}" style="--s:${pct(s)};--w:${(((t - s) / (axisEnd - axisStart)) * 100).toFixed(3)}%;--i:${i}" tabindex="0">`
           + `<span class="jr-bar"></span>`
           + `<span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
           + `<span class="jr-text"><b>${esc(e.short)}</b><small>${e.start[0]} – ${e.end ? e.end[0] : 'now'}</small></span>`
@@ -62,15 +61,15 @@ function journeyHTML() {
     .join('');
 
   return `
-  <h3>Education &amp; Experience</h3>
-  <div class="journey" aria-label="Education and industry timeline">
+  ${heading ? '<h3>Education &amp; Experience</h3>' : ''}
+  <div class="journey" aria-label="Academia and industry timeline">
     <div class="jr-grid">
       <div class="jr-overlay">${ticks}${now}</div>
       ${lanes}
       <div class="jr-axis">${years}</div>
     </div>
     <ol class="jr-vertical">${vertical}</ol>
-    <a class="jr-more" href="/more/">Details →</a>
+    ${moreLink ? '<a class="jr-more" href="/more/">Details →</a>' : ''}
   </div>`;
 }
 
@@ -105,6 +104,11 @@ const HOME_ABOUT = `
 ${journeyHTML()}
 </div>
 `;
+
+hexo.extend.filter.register('after_render:html', function (html, data) {
+  if (data.path !== 'more/index.html') return html;
+  return html.replace('<div class="journey-slot"></div>', journeyHTML({ heading: false, moreLink: false }));
+}, 15);
 
 hexo.extend.filter.register('after_render:html', function (html, data) {
   if (data.path !== 'index.html') return html;

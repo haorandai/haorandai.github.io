@@ -549,8 +549,8 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 
 /* ===== Education & Experience timeline (home) ===== */
 .journey { margin: 6px 0 4px; }
-.jr-grid { position: relative; padding-left: 92px; margin-top: 14px; }
-.jr-overlay { position: absolute; left: 92px; right: 0; top: 0; bottom: 30px; pointer-events: none; }
+.jr-grid { position: relative; padding-left: 18px; margin-top: 14px; }
+.jr-overlay { position: absolute; left: 18px; right: 0; top: 0; bottom: 30px; pointer-events: none; }
 .jr-tick { position: absolute; left: var(--x); top: 0; bottom: 0; width: 1px; background: rgba(0, 0, 0, 0.055); }
 .jr-now {
   position: absolute; left: var(--x); top: -4px; bottom: 0;
@@ -562,8 +562,9 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 }
 .jr-lane { position: relative; height: 104px; }
 .jr-lane + .jr-lane { border-top: 1px solid rgba(0, 0, 0, 0.05); }
+/* lane name as a small legend in the lane's bottom-left corner (always free of pins and labels) */
 .jr-lane-label {
-  position: absolute; left: -92px; top: 50%; transform: translateY(-50%);
+  position: absolute; left: -18px; bottom: 7px;
   font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
   color: var(--body-color); opacity: 0.65;
 }
@@ -605,8 +606,8 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .jr-text small { font-size: 11px; color: var(--body-color); opacity: 0.75; font-variant-numeric: tabular-nums; }
 .jr-above .jr-text { bottom: calc(50% + 20px); }
 .jr-below .jr-text { top: calc(50% + 20px); }
-/* items late on the axis put their label to the left of the pin */
-.jr-flip .jr-text { left: auto; right: calc(100% + 24px); align-items: flex-end; text-align: right; }
+/* labels sit on a page-coloured chip so year ticks and the Now line pass behind them */
+.jr-text { background: var(--theme-bg2-color); padding: 1px 5px; margin-left: -5px; border-radius: 4px; }
 /* hover card */
 .jr-card {
   position: absolute; left: -17px; z-index: 5; min-width: 230px;
@@ -616,7 +617,6 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   opacity: 0; transform: translateY(4px); pointer-events: none;
   transition: opacity 0.16s ease, transform 0.16s ease;
 }
-.jr-flip .jr-card { left: auto; right: calc(100% - 17px); }
 .jr-above .jr-card { top: calc(50% + 24px); }
 .jr-below .jr-card { bottom: calc(50% + 24px); }
 .jr-card b { font-size: 13px; font-weight: 600; color: var(--theme-color); }
@@ -664,4 +664,12 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .jr-clipped .jr-bar {
   -webkit-mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.15), #000 45%);
   mask-image: linear-gradient(90deg, rgba(0, 0, 0, 0.15), #000 45%);
+}
+
+/* More page: the same timeline above the detailed lists (desktop/tablet only;
+   on phones the detailed rows below already read as a timeline) */
+.cv-timeline { margin: 8px 0 34px; }
+.cv-timeline .jr-grid { margin-top: 22px; }
+@media (max-width: 640px) {
+  .cv-timeline, .cv-timeline-heading { display: none; }
 }

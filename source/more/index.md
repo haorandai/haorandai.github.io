@@ -6,6 +6,8 @@ banner:
 ---
 
 <div class="cv-page">
+<h2 class="cv-timeline-heading">Timeline</h2>
+<div class="cv-timeline"><div class="journey-slot"></div></div>
 <h2>Experience</h2>
 <div class="cv-list">
 <div class="cv-item"><div class="cv-date">Oct 2025 – Now</div><div class="cv-logo"><img src="/img/logos/quiver.svg" alt="Quiver AI logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">Research Scientist</div><div class="cv-org"><a href="https://quiver.ai/">Quiver AI</a></div><div class="cv-desc">SVG generation: inference optimization, post-training, data optimization, and internal tooling.</div></div></div>
