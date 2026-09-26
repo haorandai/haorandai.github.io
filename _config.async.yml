@@ -2,7 +2,7 @@
 # Based on dracewang's Async setup, customized. Keys follow async v2.2.7 (snake_case).
 
 user:
-  name: Haoran (Harry) Dai
+  name: Harry (Haoran) Dai
   first_name: Dai
   last_name: Haoran
   email: haorand16@gmail.com
@@ -30,7 +30,7 @@ top_bars:
 banner:
   index:
     banner_title: 'Trustworthy &amp; Efficient<br>Generative AI.<span class="trm-hero-kw"><span>SVG &amp; Vector Graphics</span><span>Reasoning Models</span><span>Test-time Scaling</span><span>Diffusion Models</span><span>Vision-Language Models</span><span>Backdoor Attacks</span><span>LLM Efficiency</span></span>'
-    banner_text: Hi, I'm Haoran (Harry) Dai!
+    banner_text: Hi, I'm Harry (Haoran) Dai!
   archive:
     banner_title: The Archive.
     banner_text: All my posts
@@ -58,6 +58,9 @@ sidebar:
     - name: Github
       icon: fab fa-github
       url: https://github.com/haorandai
+    - name: Google Scholar
+      icon: fas fa-graduation-cap
+      url: https://scholar.google.com/citations?user=bZXkw3QAAAAJ&hl=en
     - name: LinkedIn
       icon: fab fa-linkedin
       url: https://www.linkedin.com/in/haorandai
