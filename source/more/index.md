@@ -5,17 +5,17 @@ banner:
   banner_text: Experience and education
 ---
 
-<div class="home-about more-page">
-  <h2 class="home-about-heading">Experience</h2>
-  <ul>
-    <li><strong>Research Scientist</strong>, <a href="https://quiver.ai/">Quiver AI</a> (Oct 2025 - Now). SVG generation: inference optimization, post-training, data optimization, and internal tooling.</li>
-    <li><strong>Machine Learning Engineer Intern</strong>, Revery AI (YC S21) (Jan 2024 - Aug 2024).</li>
-    <li><strong>Software Engineer</strong>, China National Petroleum Corporation (Jul 2021 - Aug 2022).</li>
-  </ul>
-  <h2 class="home-about-heading">Education</h2>
-  <ul>
-    <li><strong>PhD, Computer Science</strong>, Illinois Institute of Technology (Aug 2024 - Now). Advisor: <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</li>
-    <li><strong>MS, Computer Science</strong>, Boston University (Aug 2022 - Jan 2024).</li>
-    <li><strong>BE, Computer Software Engineering</strong>, China University of Petroleum, Beijing (Sep 2017 - Jun 2021).</li>
-  </ul>
+<div class="cv-page">
+<h2>Experience</h2>
+<div class="cv-list">
+<div class="cv-item"><div class="cv-date">Oct 2025 – Now</div><div class="cv-body"><div class="cv-role">Research Scientist</div><div class="cv-org"><a href="https://quiver.ai/">Quiver AI</a></div><div class="cv-desc">SVG generation: inference optimization, post-training, data optimization, and internal tooling.</div></div></div>
+<div class="cv-item"><div class="cv-date">Jan 2024 – Aug 2024</div><div class="cv-body"><div class="cv-role">Machine Learning Engineer Intern</div><div class="cv-org">Revery AI (YC S21)</div></div></div>
+<div class="cv-item"><div class="cv-date">Jul 2021 – Aug 2022</div><div class="cv-body"><div class="cv-role">Software Engineer</div><div class="cv-org">China National Petroleum Corporation</div></div></div>
+</div>
+<h2>Education</h2>
+<div class="cv-list">
+<div class="cv-item"><div class="cv-date">Aug 2024 – Now</div><div class="cv-body"><div class="cv-role">PhD, Computer Science</div><div class="cv-org">Illinois Institute of Technology</div><div class="cv-desc">Advisor: <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</div></div></div>
+<div class="cv-item"><div class="cv-date">Aug 2022 – Jan 2024</div><div class="cv-body"><div class="cv-role">MS, Computer Science</div><div class="cv-org">Boston University</div></div></div>
+<div class="cv-item"><div class="cv-date">Sep 2017 – Jun 2021</div><div class="cv-body"><div class="cv-role">BE, Computer Software Engineering</div><div class="cv-org">China University of Petroleum, Beijing</div></div></div>
+</div>
 </div>
