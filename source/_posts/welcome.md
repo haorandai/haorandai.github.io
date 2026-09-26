@@ -1,4 +1,5 @@
 ---
+sitemap: false
 title: Welcome to My Website
 date: 2025-09-02 10:00:00
 tags:
