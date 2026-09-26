@@ -170,12 +170,13 @@
 .home-about li { margin: 3px 0; }
 .home-about a { color: var(--primary); }
 /* Coffee chat button under the bio (Google Calendar booking page) */
-.home-chat { margin: 16px 0 4px; }
-.home-about .home-chat a {
+/* Coffee chat button under the sidebar Contact Me button */
+.sidebar-chat { margin-top: 12px; }
+.sidebar-chat a {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 600;
   line-height: 1;
   color: var(--primary);
@@ -185,7 +186,7 @@
   text-decoration: none;
   transition: background 0.15s ease, color 0.15s ease;
 }
-.home-about .home-chat a:hover {
+.sidebar-chat a:hover {
   background: var(--primary);
   color: #fff;
 }
@@ -220,3 +221,60 @@
 .trm-content:has(.home-about) { margin-top: 24px !important; }
 /* Hide the "HOME / INDEX.HTML" breadcrumb pill in the hero */
 .trm-breadcrumbs { display: none !important; }
+
+/* Publication thumbnails: figure left, text right; stacked on narrow screens. */
+.pub-item.has-thumb {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.pub-body { min-width: 0; }
+.pub-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: #fff;
+  border: 1px solid var(--primary-30);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.pub-thumb:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 14px rgba(9, 105, 218, 0.12);
+}
+.pub-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 22px 8px 8px;
+  box-sizing: border-box;
+}
+.pub-badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: #fff;
+  background: #0b2a5b;
+  border-radius: 4px;
+  padding: 3px 6px;
+}
+/* Co-author homepage links */
+.pub-meta a:not(.pub-me) {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dotted var(--primary-50);
+}
+.pub-meta a:not(.pub-me):hover {
+  color: var(--primary);
+  border-bottom-style: solid;
+}
+@media (max-width: 700px) {
+  .pub-item.has-thumb { grid-template-columns: 1fr; gap: 12px; }
+  .pub-thumb { max-width: 420px; }
+}

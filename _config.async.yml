@@ -53,8 +53,6 @@ sidebar:
     - key: Location
       val: Chicago, IL
   social:
-    - icon: fas fa-rss
-      url: /atom.xml
     - name: Github
       icon: fab fa-github
       url: https://github.com/haorandai
