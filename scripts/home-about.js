@@ -5,7 +5,7 @@
    vertical list. Positions are computed from real start/end months. */
 const JOURNEY = [
   { lane: 'edu',  start: [2017, 9],  end: [2021, 6], logo: 'cupb.svg',   short: 'CUP Beijing',       org: 'China University of Petroleum, Beijing', role: 'BE, Computer Software Engineering' },
-  { lane: 'edu',  start: [2022, 8],  end: [2024, 1], logo: 'bu.svg',     short: 'Boston University', org: 'Boston University',                      role: 'MS, Computer Science', extra: 'Research Assistant' },
+  { lane: 'edu',  start: [2022, 8],  end: [2024, 6], logo: 'bu.svg',     short: 'Boston University', org: 'Boston University',                      role: 'MS, Computer Science', extra: 'Research Assistant' },
   { lane: 'edu',  start: [2024, 8],  end: null,      logo: 'iit.png',    short: 'Illinois Tech',     org: 'Illinois Institute of Technology',       role: 'PhD, Computer Science', extra: 'Teaching Assistant' },
   { lane: 'work', start: [2020, 7],  end: [2020, 8], logo: 'datacom.png', short: 'China DataCom',     org: 'China DataCom Corporation Limited',     role: 'SDE Intern', minor: true },
   { lane: 'work', start: [2021, 7],  end: [2022, 8], logo: 'cnpc.svg',   short: 'CNPC',              org: 'China National Petroleum Corporation',   role: 'Software Engineer' },
