@@ -90,17 +90,17 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
 const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
-  <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. His research examines the security and efficiency of modern AI systems, from attacks on diffusion and reasoning models to stable, quantization-robust inference in transformers. At Quiver AI, he works on SVG generation systems and agent harness development. He is based in Chicago, Illinois.</p>
+  <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. He studies the security and efficiency of generative AI models. At Quiver AI, he works on SVG generation and builds agent harnesses. He is based in Chicago, Illinois.</p>
   <h3>Research Themes</h3>
   <ul class="home-themes">
-    <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models, content-safety testing of text-to-image models, and attacks on reasoning models that exploit test-time scaling.</li>
-    <li><strong>Efficient and stable inference.</strong> Attention sinks and activation outliers in transformers, and how to suppress them for stable, quantization-robust inference.</li>
-    <li><strong>Vector graphics generation.</strong> Vision-language models for SVG generation, editing, and extraction from real-world images: benchmarks and reinforcement learning.</li>
+    <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models, safety testing of text-to-image generators, and attacks that exploit test-time scaling in reasoning models.</li>
+    <li><strong>Efficient and stable inference.</strong> Attention sinks and activation outliers in transformers, and suppressing them to keep inference stable and robust to quantization.</li>
+    <li><strong>Vector graphics generation.</strong> Benchmarks and reinforcement learning for vision-language models that generate, edit, and extract SVGs from text, sketches, and real-world images.</li>
   </ul>
   <h3>News</h3>
   <ul class="home-news">
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
-    <li><span class="news-date">Sep 2026</span><span>Contributed to <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, Quiver AI's SVG generation models, now launched.</span></li>
+    <li><span class="news-date">Sep 2026</span><span>Contributed to <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, Quiver AI's newly launched SVG generation models.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">OASIS</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
