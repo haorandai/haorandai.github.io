@@ -10,7 +10,7 @@ const JOURNEY = [
   { lane: 'work', start: [2020, 7],  end: [2020, 8], logo: 'datacom.png', short: 'China DataCom',     org: 'China DataCom Corporation Limited',     role: 'SDE Intern', minor: true },
   { lane: 'work', start: [2021, 7],  end: [2022, 8], logo: 'cnpc.svg',   short: 'CNPC',              org: 'China National Petroleum Corporation',   role: 'Software Engineer' },
   { lane: 'work', start: [2024, 1],  end: [2024, 8], logo: 'revery.png', short: 'Revery AI',         org: 'Revery AI (YC S21)',                     role: 'Machine Learning Engineer Intern', roleShort: 'ML Engineer Intern' },
-  { lane: 'work', start: [2025, 10], end: null,      logo: 'quiver.svg', short: 'Quiver AI',         org: 'Quiver AI',                              role: 'Research Scientist' },
+  { lane: 'work', start: [2025, 10], end: null,      logo: 'quiver.svg', short: 'QuiverAI',         org: 'QuiverAI',                              role: 'Research Scientist' },
 ];
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -91,7 +91,7 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
 const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
-  <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. He studies the security and efficiency of generative AI models. At Quiver AI, he works on SVG generation and builds agent harnesses. He is based in Chicago, Illinois.</p>
+  <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">QuiverAI</a>. He studies the security and efficiency of generative AI models. At QuiverAI, he works on SVG generation and builds agent harnesses. He is based in Chicago, Illinois.</p>
   <h3>Research Themes</h3>
   <ul class="home-themes">
     <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models, safety testing of text-to-image generators, and attacks that exploit test-time scaling in reasoning models.</li>
@@ -101,7 +101,7 @@ const HOME_ABOUT = `
   <h3>News</h3>
   <ul class="home-news">
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
-    <li><span class="news-date">Sep 2026</span><span>Contributed to <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, Quiver AI's newly launched SVG generation models.</span></li>
+    <li><span class="news-date">Sep 2026</span><span>Contributed to <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, QuiverAI's newly launched SVG generation models.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">OASIS</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
@@ -112,7 +112,7 @@ const HOME_ABOUT = `
     <ul class="home-news">
       <li><span class="news-date">Mar 2026</span><span>Began reviewing for IEEE Transactions on Dependable and Secure Computing (TDSC).</span></li>
       <li><span class="news-date">Mar 2026</span><span><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All</a> accepted at Principled Design for Trustworthy AI @ ICLR 2026.</span></li>
-      <li><span class="news-date">Oct 2025</span><span>Joined <a href="https://quiver.ai/">Quiver AI</a> as a Research Scientist, working on SVG generation systems.</span></li>
+      <li><span class="news-date">Oct 2025</span><span>Joined <a href="https://quiver.ai/">QuiverAI</a> as a Research Scientist, working on SVG generation systems.</span></li>
       <li><span class="news-date">Aug 2025</span><span><a href="https://haorandai.com/practical-t2i-backdoors/">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a> released on arXiv.</span></li>
       <li><span class="news-date">Aug 2024</span><span>Started the PhD in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</span></li>
     </ul>
@@ -140,7 +140,7 @@ hexo.extend.filter.register('after_render:html', function (html) {
 
 // Current affiliations with logos under the name in the sidebar card (LinkedIn-style)
 const AFFILIATIONS = `<ul class="sidebar-affil">`
-  + `<li><a href="https://quiver.ai/" target="_blank" rel="noopener"><img src="/img/logos/quiver.svg" alt="" width="20" height="20"><span>Quiver AI</span></a></li>`
+  + `<li><a href="https://quiver.ai/" target="_blank" rel="noopener"><img src="/img/logos/quiver.svg" alt="" width="20" height="20"><span>QuiverAI</span></a></li>`
   + `<li><a href="https://www.iit.edu/" target="_blank" rel="noopener"><img src="/img/logos/iit.png" alt="" width="20" height="20"><span>Illinois Institute of Technology</span></a></li>`
   + `</ul>`;
 

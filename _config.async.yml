@@ -8,7 +8,7 @@ user:
   email: haorand16@gmail.com
   domain: haorandai.com
   avatar: /img/haoran.jpg
-  describe: AI/ML Researcher, CS PhD Candidate at Illinois Tech, Research Scientist at Quiver AI
+  describe: AI/ML Researcher, CS PhD Candidate at Illinois Tech, Research Scientist at QuiverAI
 
 favicon:
   logo: /img/logo.svg
@@ -71,7 +71,7 @@ about:
   insert: none
   title: Trustworthy & Secure AI
   introduction: >-
-    Hi, I'm <strong>Haoran Dai</strong>, an AI Researcher at Quiver AI and a CS
+    Hi, I'm <strong>Haoran Dai</strong>, an AI Researcher at QuiverAI and a CS
     PhD student at the Illinois Institute of Technology, advised by Professor
     Binghui Wang. My research addresses security and safety challenges in
     multimodal AI.

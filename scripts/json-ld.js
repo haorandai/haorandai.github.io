@@ -8,7 +8,7 @@ const PERSON = {
   url: 'https://haorandai.com/',
   image: 'https://haorandai.com/img/haoran.jpg',
   jobTitle: 'Research Scientist',
-  worksFor: { '@type': 'Organization', name: 'Quiver AI', url: 'https://quiver.ai/' },
+  worksFor: { '@type': 'Organization', name: 'QuiverAI', url: 'https://quiver.ai/' },
   affiliation: { '@type': 'CollegeOrUniversity', name: 'Illinois Institute of Technology' },
   alumniOf: [
     { '@type': 'CollegeOrUniversity', name: 'Boston University' },
