@@ -750,3 +750,8 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
   .cv-plain li { grid-template-columns: 1fr; gap: 2px; }
   .cv-plain-text { grid-column: 1; }
 }
+
+/* Sidebar info rows: keep the key on one line, right-align a wrapping value */
+.trm-sidebar .trm-table li { gap: 16px; align-items: baseline; }
+.trm-sidebar .trm-table li > .trm-label:first-child { white-space: nowrap; }
+.trm-sidebar .trm-table .trm-label-light { text-align: right; line-height: 1.6; }

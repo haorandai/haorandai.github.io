@@ -91,19 +91,17 @@ const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
   <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">Quiver AI</a>. His research examines the security and efficiency of modern AI systems. On the security side, he develops and evaluates backdoor attacks against text-to-image and multimodal diffusion models and vision-language models, together with defenses against them. On the efficiency side, he studies reasoning models and large language models, focusing on test-time inference scaling and the attention and quantization behavior underlying their inference stability. At Quiver AI, he works on SVG generation systems, spanning inference optimization, model post-training, data curation, and the internal tooling that supports them. He is based in Chicago, Illinois.</p>
-  <h3>Research Interests</h3>
-  <ul>
-    <li>Reasoning Models and Test-Time Scaling</li>
-    <li>Efficient LLM Inference</li>
-    <li>Vector Graphics (SVG) Generation</li>
-    <li>Diffusion Model Safety</li>
-    <li>Vision-Language Model Safety</li>
+  <h3>Research Themes</h3>
+  <ul class="home-themes">
+    <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models and vision-language models, and defenses against them.</li>
+    <li><strong>Efficient reasoning.</strong> Test-time scaling for reasoning models, and the attention and quantization behavior behind stable LLM inference.</li>
+    <li><strong>Vector graphics generation.</strong> SVG generation models: post-training, inference optimization and data.</li>
   </ul>
   <h3>News</h3>
   <ul class="home-news">
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
     <li><span class="news-date">Sep 2026</span><span>OASIS also selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
-    <li><span class="news-date">Sep 2026</span><span><a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, the Quiver AI SVG generation models I contributed to, launched.</span></li>
+    <li><span class="news-date">Sep 2026</span><span>Contributed to <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, Quiver AI's SVG generation models, now launched.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> presented as a poster at ES-Reasoning @ ICLR 2026.</span></li>
   </ul>
@@ -116,6 +114,8 @@ const HOME_ABOUT = `
       <li><span class="news-date">Aug 2024</span><span>Started the PhD in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</span></li>
     </ul>
   </details>
+  <h3>Service</h3>
+  <p class="home-service">Reviewer for ICLR 2027 and IEEE Transactions on Dependable and Secure Computing (TDSC).</p>
 ${journeyHTML()}
 </div>
 `;
