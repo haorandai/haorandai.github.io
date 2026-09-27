@@ -89,12 +89,9 @@ footer:
     enable: false
   custom_text: '© Haoran Dai'
 
-# Local search
+# Site search off: three pages don't need it
 search:
-  enable: true
-  type: local
-  preload: true
-  trigger: auto
+  enable: false
 
 creative_commons:
   license: by-nc-sa

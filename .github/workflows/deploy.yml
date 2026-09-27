@@ -4,6 +4,9 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
+  # Monthly rebuild so the homepage timeline's "Now" stays current
+  schedule:
+    - cron: "0 12 1 * *"
 
 # Allow the deploy job to publish to Pages
 permissions:
