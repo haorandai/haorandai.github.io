@@ -43,8 +43,8 @@ sidebar:
   typed_text_prefix: ''
   typed_text:
     - AI/ML Researcher
-    - Research Scientist
-    - CS PhD Candidate
+    - CS PhD Candidate @ Illinois Tech
+    - Research Scientist @ QuiverAI
   info:
     - key: Focus
       val: "Trustworthy & Efficient AI"
