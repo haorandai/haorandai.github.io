@@ -100,10 +100,10 @@ const HOME_ABOUT = `
   <h3>News</h3>
   <ul class="home-news">
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
-    <li><span class="news-date">Sep 2026</span><span>OASIS also selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Contributed to <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a>, Quiver AI's SVG generation models, now launched.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
+    <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">OASIS</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
   </ul>
   <details class="home-news-more">
     <summary>More news</summary>
