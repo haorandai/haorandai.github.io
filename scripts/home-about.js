@@ -26,7 +26,8 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
   const axisStart = firstYear * 12;
   const axisEnd = lastYear * 12;
   const pct = (i) => (((i - axisStart) / (axisEnd - axisStart)) * 100).toFixed(3) + '%';
-  const fmt = (d) => (d ? `${MONTHS[d[1] - 1]} ${d[0]}` : 'Now');
+  const yearSpan = (e) => (!e.end ? `${e.start[0]} – Present` : e.end[0] === e.start[0] ? `${e.start[0]}` : `${e.start[0]} – ${e.end[0]}`);
+  const fmt = (d) => (d ? `${MONTHS[d[1] - 1]} ${d[0]}` : 'Present');
 
   const lanes = [['edu', 'Academia'], ['work', 'Industry']].map(([lane, label]) => {
     let seq = 0;
@@ -53,7 +54,7 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
         return `<div class="jr-item jr-${place}${ongoing}${clipped}" style="--s:${pct(s)};--w:${(((t - s) / (axisEnd - axisStart)) * 100).toFixed(3)}%;--i:${i}" tabindex="0">`
           + `<span class="jr-bar"></span>`
           + `<span class="jr-pin"><img src="/img/logos/${e.logo}" alt="" loading="lazy" decoding="async"></span>`
-          + `<span class="jr-text"><b>${esc(e.short)}</b><small>${e.start[0]} – ${e.end ? e.end[0] : 'now'}</small></span>`
+          + `<span class="jr-text"><b>${esc(e.short)}</b><small>${yearSpan(e)}</small></span>`
           + `<span class="jr-card" role="tooltip"><b>${esc(e.role)}</b><span>${esc(e.org)}</span>${e.extra ? `<span class="jr-extra">${esc(e.extra)}</span>` : ''}<em>${fmt(e.start)} – ${fmt(e.end)}</em></span>`
           + `</div>`;
       }).join('');
