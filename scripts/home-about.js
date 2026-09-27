@@ -103,7 +103,7 @@ const HOME_ABOUT = `
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Contributed to QuiverAI's Arrow model family: <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a> launched.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
-    <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
+    <li><span class="news-date">Aug 2026</span><span><a href="https://haorandai.com/vectorgym/">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">OASIS</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
     <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> presented as a poster at ES-Reasoning @ ICLR 2026.</span></li>
   </ul>

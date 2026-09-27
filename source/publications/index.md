@@ -43,12 +43,12 @@ banner:
 </div>
 </div>
 <div class="pub-item has-thumb">
-<a class="pub-thumb" href="https://arxiv.org/abs/2603.29852" aria-hidden="true" tabindex="-1"><img src="/img/pubs/vectorgym.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">EMNLP 2026</span></a>
+<a class="pub-thumb" href="https://haorandai.com/vectorgym/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/vectorgym.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">EMNLP 2026</span></a>
 <div class="pub-body">
-<div class="pub-title"><a href="https://arxiv.org/abs/2603.29852">VectorGym: A Multi-Task Benchmark for SVG Code Generation, Sketching and Editing</a></div>
+<div class="pub-title"><a href="https://haorandai.com/vectorgym/">VectorGym: A Multi-Task Benchmark for SVG Code Generation, Sketching and Editing</a></div>
 <div class="pub-meta">Joan Rodriguez, Haotian Zhang, Abhay Puri, <a class="pub-me" href="/">Haoran Dai</a>, Tianyang Zhang, Meng Lin, Rishav Pramanik, Xiaoqing Xie, Marco Terral Rodriguez, Darsh Kaushik, Aly Shariff, Perouz Taslakian, Spandana Gella, Sai Rajeswar, David Vazquez, Christopher Pal, Marco Pedersoli</div>
 <div class="pub-venue">EMNLP 2026</div>
-<div class="pub-links"><a href="https://arxiv.org/abs/2603.29852">Paper</a></div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2603.29852">Paper</a><a href="https://haorandai.com/vectorgym/">Project</a><a href="https://huggingface.co/datasets/ServiceNow/VectorGym">Dataset</a></div>
 <div class="pub-tldr">A multi-task benchmark for SVG generation, sketching, editing, and captioning, with a multi-task reinforcement-learning method on rendering-based rewards.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We introduce VectorGym, a comprehensive benchmark suite for Scalable Vector Graphics (SVG) that spans generation from text and sketches, complex editing, and visual understanding. VectorGym addresses the lack of realistic, challenging benchmarks aligned with professional design workflows. Our benchmark comprises four tasks with expert human-authored annotations: the novel Sketch2SVG task (VG-Sketch); a new SVG editing dataset (VG-Edit) featuring complex, multi-step edits with higher-order primitives; Text2SVG generation (VG-Text); and SVG captioning (VG-Cap). We also propose a multi-task reinforcement learning approach that jointly optimizes across all four tasks using rendering-based rewards. Our method, built on GRPO with curriculum learning, trains a Qwen3-VL 8B model that achieves state-of-the-art performance among open-source models, surpassing much larger models including Qwen3-VL 235B and matching GPT-4o.</p></details>
 </div>
