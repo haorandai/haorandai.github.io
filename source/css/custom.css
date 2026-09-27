@@ -736,3 +736,17 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .home-about p a:hover, .home-news a:hover, .cv-desc a:hover, .cv-org a:hover, .pub-tldr a:hover {
   text-decoration-color: currentColor;
 }
+
+/* More page: plain list sections (Service), aligned to the cv-item columns */
+.cv-plain { list-style: none; padding: 0; margin: 8px 0 44px; }
+.cv-plain li {
+  display: grid; grid-template-columns: 160px 56px minmax(0, 1fr); gap: 24px;
+  padding: 12px 0; font-size: 15px; line-height: 1.5; color: var(--theme-color);
+}
+.cv-plain li + li { border-top: 1px solid var(--hairline); }
+.cv-plain-role { font-size: 13px; line-height: 1.6; color: var(--text-muted); padding-top: 1px; }
+.cv-plain-text { grid-column: 3; }
+@media (max-width: 640px) {
+  .cv-plain li { grid-template-columns: 1fr; gap: 2px; }
+  .cv-plain-text { grid-column: 1; }
+}
