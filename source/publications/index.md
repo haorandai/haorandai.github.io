@@ -21,9 +21,9 @@ banner:
 </div>
 </div>
 <div class="pub-item has-thumb">
-<a class="pub-thumb" href="https://iclr.cc/virtual/2026/10013309" aria-hidden="true" tabindex="-1"><img src="/img/pubs/tides.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">ES-Reasoning @ ICLR 2026</span></a>
+<a class="pub-thumb" href="https://haorandai.com/tides-paper/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/tides.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">ES-Reasoning @ ICLR 2026</span></a>
 <div class="pub-body">
-<div class="pub-title"><a href="https://iclr.cc/virtual/2026/10013309">TIDES: Test-time Inference Drift Exploitation via Scaling</a></div>
+<div class="pub-title"><a href="https://haorandai.com/tides-paper/">TIDES: Test-time Inference Drift Exploitation via Scaling</a></div>
 <div class="pub-meta"><a class="pub-me" href="/">Haoran Dai</a>*, <a href="https://www.luor.org/">Haozheng Luo</a>*, Haotian Zhang, Meng Lin, Yan Chen, <a href="https://wangbinghui.net/">Binghui Wang</a></div>
 <div class="pub-venue">ES-Reasoning @ ICLR 2026 (poster)</div>
 <div class="pub-links"><a href="https://iclr.cc/virtual/2026/10013309">Paper</a> <a href="https://haorandai.com/tides-paper/">Project</a></div>
@@ -71,9 +71,9 @@ banner:
 
 <div class="pub-grid">
 <div class="pub-item has-thumb">
-<a class="pub-thumb" href="https://arxiv.org/abs/2508.01605" aria-hidden="true" tabindex="-1"><img src="/img/pubs/t2i-backdoor.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">arXiv 2025</span></a>
+<a class="pub-thumb" href="https://haorandai.com/practical-t2i-backdoors/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/t2i-backdoor.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">arXiv 2025</span></a>
 <div class="pub-body">
-<div class="pub-title"><a href="https://arxiv.org/abs/2508.01605">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a></div>
+<div class="pub-title"><a href="https://haorandai.com/practical-t2i-backdoors/">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a></div>
 <div class="pub-meta"><a class="pub-me" href="/">Haoran Dai</a>, Jiawen Wang, Ruo Yang, Manali Sharma, Zhonghao Liao, Yuan Hong, <a href="https://wangbinghui.net/">Binghui Wang</a></div>
 <div class="pub-venue">arXiv preprint, 2025</div>
 <div class="pub-links"><a href="https://arxiv.org/abs/2508.01605">Paper</a> <a href="https://haorandai.com/practical-t2i-backdoors/">Project</a> <a href="https://github.com/haorandai/backdoorT2I">Code</a></div>
