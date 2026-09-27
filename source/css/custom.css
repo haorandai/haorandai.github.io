@@ -701,3 +701,38 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .jr-item.is-open .jr-pin { transform: scale(1.1); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12); }
 .jr-item.is-open { z-index: 4; }
 .jr-item { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+
+/* ===== Accessibility: readable muted text (WCAG AA 4.5:1) =====
+   Muted text used opacity, which blended grey into the cream background
+   (2.1-4.1:1). Use an explicit muted colour instead: #6b665e is >=5.2:1 on
+   every light background here, #9aa3ad >=5.7:1 on the dark ones. */
+:root { --text-muted: #6b665e; }
+:root.dark { --text-muted: #9aa3ad; }
+.pub-meta { opacity: 1; }
+.pub-venue, .pub-abstract, details.pub-abstract p,
+.home-news .news-date,
+.trm-content:has(.pub-grid) h2, .cv-page h2, .cv-date,
+.jr-lane-label, .jr-text small, .jr-card em, .jr-year, .jr-v-item em {
+  opacity: 1;
+  color: var(--text-muted);
+}
+.cv-desc { opacity: 1; }
+/* faded entries stay secondary through colour, not transparency */
+.jr-minor .jr-text { opacity: 1; }
+.jr-minor .jr-text b, .jr-minor .jr-text small { color: var(--text-muted); font-weight: 500; }
+.jr-v-minor { opacity: 1; }
+.jr-v-minor b, .jr-v-minor span { color: var(--text-muted); }
+.cv-item.cv-minor { opacity: 1; }
+.cv-minor .cv-role, .cv-minor .cv-org { color: var(--text-muted); }
+.cv-minor .cv-logo, .jr-v-minor .jr-pin { opacity: 0.7; }
+
+/* Links inside running text get an underline, not colour alone */
+.home-about p a, .home-news a, .cv-desc a, .cv-org a, .pub-tldr a {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(9, 105, 218, 0.45);
+}
+.home-about p a:hover, .home-news a:hover, .cv-desc a:hover, .cv-org a:hover, .pub-tldr a:hover {
+  text-decoration-color: currentColor;
+}
