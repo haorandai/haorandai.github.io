@@ -18,8 +18,8 @@ banner:
 <h2>Education</h2>
 <div class="cv-list">
 <div class="cv-item"><div class="cv-date">Aug 2024 – Present</div><div class="cv-logo"><img src="/img/logos/iit.png" alt="Illinois Institute of Technology logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">PhD, Computer Science</div><div class="cv-org">Illinois Institute of Technology</div><div class="cv-desc">Teaching Assistant</div><div class="cv-desc">Advisor: <a href="https://wangbinghui.net/">Professor Binghui Wang</a>.</div></div></div>
-<div class="cv-item"><div class="cv-date">Aug 2022 – Jun 2024</div><div class="cv-logo"><img src="/img/logos/bu.svg" alt="Boston University logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">MS, Computer Science</div><div class="cv-org">Boston University</div><div class="cv-desc">Research Assistant</div></div></div>
-<div class="cv-item"><div class="cv-date">Sep 2017 – Jun 2021</div><div class="cv-logo"><img src="/img/logos/cupb.svg" alt="China University of Petroleum, Beijing logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">BE, Computer Software Engineering</div><div class="cv-org">China University of Petroleum, Beijing</div></div></div>
+<div class="cv-item"><div class="cv-date">Aug 2022 – Jun 2024</div><div class="cv-logo"><img src="/img/logos/bu.webp" alt="Boston University logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">MS, Computer Science</div><div class="cv-org">Boston University</div><div class="cv-desc">Research Assistant</div></div></div>
+<div class="cv-item"><div class="cv-date">Sep 2017 – Jun 2021</div><div class="cv-logo"><img src="/img/logos/cupb.webp" alt="China University of Petroleum, Beijing logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">BE, Computer Software Engineering</div><div class="cv-org">China University of Petroleum, Beijing</div></div></div>
 </div>
 <h2>Service</h2>
 <ul class="cv-plain">

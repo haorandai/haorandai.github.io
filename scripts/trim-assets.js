@@ -13,5 +13,7 @@ hexo.extend.filter.register('after_render:html', function (html) {
     // Mark the page's content column as the main landmark
     .replace('<div class="trm-page-content', '<div role="main" class="trm-page-content')
     // The sidebar name is an h5 right after the page h1; expose it as level 2
-    .replace('<h5 class="trm-name', '<h5 aria-level="2" class="trm-name');
+    .replace('<h5 class="trm-name', '<h5 aria-level="2" class="trm-name')
+    // hidden categories card links to /categories/, which is not generated (404)
+    .replace(/<!-- categories -->[\s\S]*?<!-- categories end -->\s*/, '');
 });
