@@ -95,7 +95,7 @@ const HOME_ABOUT = `
   <ul class="home-themes">
     <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models, content-safety testing of text-to-image models, and attacks on reasoning models that exploit test-time scaling.</li>
     <li><strong>Efficient and stable inference.</strong> Attention sinks and activation outliers in transformers, and how to suppress them for stable, quantization-robust inference.</li>
-    <li><strong>Vector graphics generation.</strong> Benchmarks and reinforcement learning for SVG generation, editing, and extraction from real-world images.</li>
+    <li><strong>Vector graphics generation.</strong> Vision-language models for SVG generation, editing, and extraction from real-world images: benchmarks and reinforcement learning.</li>
   </ul>
   <h3>News</h3>
   <ul class="home-news">
