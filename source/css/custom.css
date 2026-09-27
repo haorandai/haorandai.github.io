@@ -757,3 +757,9 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 .trm-sidebar .trm-table li { gap: 16px; align-items: baseline; }
 .trm-sidebar .trm-table li > .trm-label:first-child { white-space: nowrap; }
 .trm-sidebar .trm-table .trm-label-light { text-align: right; line-height: 1.6; }
+
+/* Sidebar: current affiliations with logos, LinkedIn-style */
+.sidebar-affil { list-style: none; padding: 0; margin: 16px 0 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.sidebar-affil a { display: inline-flex; align-items: center; gap: 9px; font-size: 13.5px; font-weight: 500; color: var(--theme-color); text-decoration: none; }
+.sidebar-affil a:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.sidebar-affil img { width: 20px; height: 20px; object-fit: contain; border-radius: 4px; background: #fff; box-shadow: 0 0 0 1px var(--hairline); padding: 1px; }

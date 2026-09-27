@@ -137,3 +137,13 @@ const COFFEE_CHAT = `<div class="text-center sidebar-chat"><a class="trm-btn trm
 hexo.extend.filter.register('after_render:html', function (html) {
   return html.replace(/(<a href="mailto:[^"]*" class="trm-btn">[\s\S]*?<\/a>\s*<\/div>)/, '$1' + COFFEE_CHAT);
 }, 16);
+
+// Current affiliations with logos under the name in the sidebar card (LinkedIn-style)
+const AFFILIATIONS = `<ul class="sidebar-affil">`
+  + `<li><a href="https://quiver.ai/" target="_blank" rel="noopener"><img src="/img/logos/quiver.svg" alt="" width="20" height="20"><span>Quiver AI</span></a></li>`
+  + `<li><a href="https://www.iit.edu/" target="_blank" rel="noopener"><img src="/img/logos/iit.png" alt="" width="20" height="20"><span>Illinois Institute of Technology</span></a></li>`
+  + `</ul>`;
+
+hexo.extend.filter.register('after_render:html', function (html) {
+  return html.replace(/(<span class="trm-typed-text">[\s\S]*?<\/span>\s*<\/div>)/, '$1' + AFFILIATIONS);
+});
