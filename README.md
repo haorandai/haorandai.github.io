@@ -8,7 +8,7 @@ Source of [haorandai.com](https://haorandai.com), the academic homepage of Harry
 | --- | --- |
 | Home: About, Research Themes, News, timeline | `scripts/home-about.js` (injected into the index page) |
 | Publications | `source/publications/index.md` |
-| More: timeline, experience, education, service | `source/more/index.md` |
+| Experience (`/more/`): timeline, experience, education, service | `source/more/index.md` |
 
 News items live in the News list in `scripts/home-about.js`: the visible list on the home page, and older items under "More news". The Academia/Industry timeline is generated from the `JOURNEY` array in the same file.
 

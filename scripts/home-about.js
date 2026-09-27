@@ -84,7 +84,7 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
       <div class="jr-axis">${years}</div>
     </div>
     <ol class="jr-vertical">${vertical}</ol>
-    ${moreLink ? '<a class="jr-more" href="/more/">Details →</a>' : ''}
+    ${moreLink ? '<a class="jr-more" href="/more/">Full experience →</a>' : ''}
   </div>`;
 }
 

@@ -1,5 +1,5 @@
 ---
-title: More
+title: Experience
 date: 2026-06-09 12:00:00
 banner:
   banner_text: Experience and education

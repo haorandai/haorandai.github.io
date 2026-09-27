@@ -15,5 +15,7 @@ hexo.extend.filter.register('after_render:html', function (html) {
     // The sidebar name is an h5 right after the page h1; expose it as level 2
     .replace('<h5 class="trm-name', '<h5 aria-level="2" class="trm-name')
     // hidden categories card links to /categories/, which is not generated (404)
-    .replace(/<!-- categories -->[\s\S]*?<!-- categories end -->\s*/, '');
+    .replace(/<!-- categories -->[\s\S]*?<!-- categories end -->\s*/, '')
+    // hidden post list on the home page (its category link also 404s) and its pagination
+    .replace(/<!-- newest publications -->[\s\S]*?<!-- newest publications end -->\s*(<div class="trm-pagination">[\s\S]*?<\/div>\s*)?/, '');
 });
