@@ -104,11 +104,11 @@ const HOME_ABOUT = `
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://arxiv.org/abs/2603.29852">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">OASIS</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
+    <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> presented as a poster at ES-Reasoning @ ICLR 2026.</span></li>
   </ul>
   <details class="home-news-more">
     <summary>More news</summary>
     <ul class="home-news">
-      <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> presented as a poster at ES-Reasoning @ ICLR 2026.</span></li>
       <li><span class="news-date">Mar 2026</span><span>Began reviewing for IEEE Transactions on Dependable and Secure Computing (TDSC).</span></li>
       <li><span class="news-date">Mar 2026</span><span><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All</a> accepted at Principled Design for Trustworthy AI @ ICLR 2026.</span></li>
       <li><span class="news-date">Oct 2025</span><span>Joined <a href="https://quiver.ai/">Quiver AI</a> as a Research Scientist, working on SVG generation systems.</span></li>
