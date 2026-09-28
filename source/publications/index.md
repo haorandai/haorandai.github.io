@@ -18,6 +18,15 @@ banner:
 <div class="pub-links"><a href="https://openreview.net/forum?id=yjVSLVS0Dh">Paper</a> <a href="https://arxiv.org/abs/2605.17887">arXiv</a> <a href="https://oasis-research.github.io/">Project</a> <a href="https://github.com/robinzixuan/OASIS">Code</a></div>
 <div class="pub-tldr">OASIS suppresses attention sinks and activation outliers in attention-residual transformers, improving inference stability and quantization robustness.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We propose OASIS, an outlier- and sink-aware technique built on inter-layer null signaling. As AttnResidual architectures introduce an additional depth-wise normalization channel, they improve inter-layer routing flexibility but also exacerbate attention sinks, activation outliers, and the resulting degradation in inference stability and quantization robustness. OASIS addresses this issue by introducing a Softmax1-based null space and coupling token-level null evidence to depth routing through an inter-layer null signal, thereby reducing sink-dominated routing and improving structural robustness. Theoretically, we show that the dual-normalization design of AttnResidual intensifies sink formation and quantization brittleness. Experimentally, we compare OASIS against five baselines on three real-world datasets and observe consistent improvements in both attention sink and post-quantization performance. Notably, OASIS achieves an average reduction of 9.26% in maximum infinity norm and 2.60% in average kurtosis across the evaluated settings, while lowering perplexity by 75.85% under W8A8 and improving GSM8K Pass@1 by 12.42% under W4A4.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@inproceedings{luo2026attention,
+  title     = {Attention Sinks and Outliers in Attention Residuals},
+  author    = {Haozheng Luo and Haoran Dai and Ching-Yuen Huang and Shaoyang Zhang and
+               Xi Chen and Eric Hanchen Jiang and Yijiang Li and Chenghao Qiu and
+               Chenwei Xu and Zhenyu Pan and Haotian Zhang and Binghui Wang and Yan Chen},
+  booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=yjVSLVS0Dh}
+}</code></pre></div></details>
 </div>
 </div>
 <div class="pub-item has-thumb">
@@ -29,6 +38,14 @@ banner:
 <div class="pub-links"><a href="https://iclr.cc/virtual/2026/10013309">Paper</a> <a href="https://haorandai.com/tides-paper/">Project</a></div>
 <div class="pub-tldr">A reasoning attack exposing a failure mode of test-time scaling: extending reasoning depth degrades accuracy rather than improving it.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We propose TIDES, a reasoning-attacking method that exposes a previously unrecognized failure of test-time scaling: as reasoning traces lengthen, model performance degrades sharply rather than improves. Unlike prior attacks on large reasoning models (LRMs), TIDES exploits the intrinsic properties of test-time scaling laws to manipulate reasoning trace length, producing degradations that are inherently difficult to detect. Methodologically, we define Depth-Guided Latent Tracker (DLT), a depth-based tracker that injects microscopic steering vectors into intermediate reasoning traces stealthily and combines them with on-policy distillation to precisely position LRMs under test-time scaling. Theoretically, we model latent space as a depth-indexed dynamic process and prove that under test-time scaling, small bounded perturbations introduced at intermediate layers induce non-vanishing trajectory drift, explaining why DLT remains effective yet difficult to detect in large reasoning models. Empirically, we evaluate TIDES on multiple reasoning benchmarks using two strong reasoning models, DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B, where it consistently outperforms state-of-the-art reasoning attack methods such as DecepChain and BadChain, delivering an average 30.3% improvement in attack performance over the baselines.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@inproceedings{dai2026tides,
+  title     = {{TIDES}: Test-time Inference Drift Exploitation via Scaling},
+  author    = {Haoran Dai and Haozheng Luo and Haotian Zhang and Meng Lin and
+               Yan Chen and Binghui Wang},
+  booktitle = {The First Workshop on Efficient Spatial Reasoning},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=tXRUpMp7xO}
+}</code></pre></div></details>
 </div>
 </div>
 <div class="pub-item has-thumb">
@@ -40,6 +57,17 @@ banner:
 <div class="pub-links"><a href="https://arxiv.org/abs/2603.06508">Paper</a></div>
 <div class="pub-tldr">Reveals "modality collapse" in multimodal diffusion backdoors: poisoning several modalities makes one dominate rather than reinforcing the attack.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>While diffusion models have revolutionized visual content generation, their rapid adoption has underscored the critical need to investigate vulnerabilities, e.g., to backdoor attacks. In multimodal diffusion models, it is natural to expect that attacking multiple modalities simultaneously (e.g., text and image) would yield complementary effects and strengthen the overall backdoor. In this paper, we challenge this assumption by investigating the phenomenon of Backdoor Modality Collapse, a scenario where the backdoor mechanism degenerates to rely predominantly on a subset of modalities, rendering others redundant. To rigorously quantify this behavior, we introduce two novel metrics: Trigger Modality Attribution (TMA) and Cross-Trigger Interaction (CTI). Through extensive experiments across diverse training configurations in multimodal conditional diffusion, we consistently observe a "winner-takes-all" dynamic in backdoor behavior. Our results reveal that (1) attacks often collapse into subset-modality dominance, and (2) cross-modal interaction is negligible or even negative, contradicting the intuition of synergistic vulnerability. These findings highlight a critical blind spot in current assessments, suggesting that high attack success rates often mask a fundamental reliance on a subset of modalities. This establishes a principled foundation for mechanistic analysis and future defense development.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{wang2026modality,
+  title         = {When One Modality Rules Them All: Backdoor Modality Collapse in
+                   Multimodal Diffusion Models},
+  author        = {Qitong Wang and Haoran Dai and Haotian Zhang and Christopher Rasmussen and
+                   Binghui Wang},
+  year          = {2026},
+  eprint        = {2603.06508},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2603.06508}
+}</code></pre></div></details>
 </div>
 </div>
 <div class="pub-item has-thumb">
@@ -51,6 +79,19 @@ banner:
 <div class="pub-links"><a href="https://arxiv.org/abs/2603.29852">Paper</a> <a href="https://haorandai.com/vectorgym/">Project</a> <a href="https://huggingface.co/datasets/ServiceNow/VectorGym">Dataset</a></div>
 <div class="pub-tldr">A multi-task benchmark for SVG generation, sketching, editing, and captioning, with a multi-task reinforcement-learning method on rendering-based rewards.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We introduce VectorGym, a comprehensive benchmark suite for Scalable Vector Graphics (SVG) that spans generation from text and sketches, complex editing, and visual understanding. VectorGym addresses the lack of realistic, challenging benchmarks aligned with professional design workflows. Our benchmark comprises four tasks with expert human-authored annotations: the novel Sketch2SVG task (VG-Sketch); a new SVG editing dataset (VG-Edit) featuring complex, multi-step edits with higher-order primitives; Text2SVG generation (VG-Text); and SVG captioning (VG-Cap). We also propose a multi-task reinforcement learning approach that jointly optimizes across all four tasks using rendering-based rewards. Our method, built on GRPO with curriculum learning, trains a Qwen3-VL 8B model that achieves state-of-the-art performance among open-source models, surpassing much larger models including Qwen3-VL 235B and matching GPT-4o.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{rodriguez2026vectorgym,
+  title         = {VectorGym: A Multi-Task Benchmark for SVG Code Generation, Sketching and Editing},
+  author        = {Joan Rodriguez and Haotian Zhang and Abhay Puri and Haoran Dai and
+                   Tianyang Zhang and Meng Lin and Rishav Pramanik and Xiaoqing Xie and
+                   Marco Terral Rodriguez and Darsh Kaushik and Aly Shariff and
+                   Perouz Taslakian and Spandana Gella and Sai Rajeswar and
+                   David Vazquez and Christopher Pal and Marco Pedersoli},
+  year          = {2026},
+  eprint        = {2603.29852},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.GR},
+  note          = {Accepted to EMNLP 2026}
+}</code></pre></div></details>
 </div>
 </div>
 <div class="pub-item has-thumb">
@@ -63,6 +104,17 @@ banner:
 <div class="pub-tldr">A benchmark for extracting scalable vector graphics from real images, where noise, clutter, and domain shift break current multimodal models.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We introduce the task of SVG extraction, which consists in translating specific visual inputs from an image into scalable vector graphics. Existing multimodal models achieve strong results when generating SVGs from clean renderings or textual descriptions, but they fall short in real-world scenarios where natural images introduce noise, clutter, and domain shifts. A central challenge in this direction is the lack of suitable benchmarks. To address this need, we introduce the WildSVG Benchmark, formed by two complementary datasets: Natural WildSVG, built from real images containing company logos paired with their SVG annotations, and Synthetic WildSVG, which blends complex SVG renderings into real scenes to simulate difficult conditions. We benchmark state-of-the-art multimodal models and find that current approaches perform well below what is needed for reliable SVG extraction in real scenarios.</p></details>
 </div>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{terral2026wildsvg,
+  title         = {WildSVG: Towards Reliable SVG Generation Under Real-Word Conditions},
+  author        = {Marco Terral and Haotian Zhang and Tianyang Zhang and Meng Lin and
+                   Xiaoqing Xie and Haoran Dai and Darsh Kaushik and Pai Peng and
+                   Nicklas Scharpff and David Vazquez and Joan Rodriguez},
+  year          = {2026},
+  eprint        = {2602.21416},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2602.21416}
+}</code></pre></div></details>
 </div>
 </div>
 
@@ -80,6 +132,17 @@ banner:
 <div class="pub-tldr">A backdoor attack on text-to-image diffusion models with natural, readable trigger prompts, evaluated on SD 1.4, SDXL and FLUX.1 and against several existing defenses.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Text-to-image diffusion models (T2I DMs) have achieved remarkable success in generating high-quality and diverse images from text prompts, yet recent studies have revealed their vulnerability to backdoor attacks. Existing attack methods suffer from critical limitations: 1) they rely on unnatural adversarial prompts that lack human readability and require massive poisoned data; 2) their effectiveness is typically restricted to specific models, lacking generalizability; and 3) they can be mitigated by recent backdoor defenses. To overcome these challenges, we propose a novel backdoor attack framework that achieves three key properties: 1) Practicality: our attack requires only a few stealthy backdoor samples to generate arbitrary attacker-chosen target images, while ensuring high-quality image generation in benign scenarios. 2) Generalizability: the attack is applicable across multiple T2I DMs without requiring model-specific redesign. 3) Robustness: the attack remains effective against existing backdoor defenses and adaptive defenses. Our extensive experimental results on multiple T2I DMs demonstrate that with only 10 carefully crafted backdoored samples, our attack method achieves over 90% attack success rate with negligible degradation in benign image generation quality. We also conduct human evaluation to validate our attack effectiveness. Recent backdoor detection and mitigation methods, as well as adaptive defenses tailored to our attack, are not sufficiently effective, highlighting the pressing need for more robust defense mechanisms.</p></details>
 </div>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{dai2025practical,
+  title         = {Practical, Generalizable and Robust Backdoor Attacks on
+                   Text-to-Image Diffusion Models},
+  author        = {Haoran Dai and Jiawen Wang and Ruo Yang and Manali Sharma and
+                   Zhonghao Liao and Yuan Hong and Binghui Wang},
+  year          = {2025},
+  eprint        = {2508.01605},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  url           = {https://arxiv.org/abs/2508.01605}
+}</code></pre></div></details>
 </div>
 </div>
 
@@ -97,6 +160,17 @@ banner:
 <div class="pub-tldr">A fuzzing method that automatically finds prompts driving text-to-image models to generate inappropriate content.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Text-to-image (TTI) models provide huge innovation ability for many industries, while the content security triggered by them has also attracted wide attention. Considerable research has focused on content security threats of large language models (LLMs), yet comprehensive studies on the content security of TTI models are notably scarce. This paper introduces a systematic tool, named EvilPromptFuzzer, designed to fuzz evil prompts in TTI models. For 15 kinds of fine-grained risks, EvilPromptFuzzer employs the strong knowledge-mining ability of LLMs to construct seed banks, in which the seeds cover various types of characters, interrelations, actions, objects, expressions, body parts, locations, surroundings, etc. Subsequently, these seeds are fed into the LLMs to build scene-diverse prompts, which can weaken the semantic sensitivity related to the fine-grained risks. Hence, the prompts can bypass the content audit mechanism of the TTI model, and ultimately help to generate images with inappropriate content. For the risks of violence, horrible, disgusting, animal cruelty, religious bias, political symbol, and extremism, the efficiency of EvilPromptFuzzer for generating inappropriate images based on DALL-E 3 is greater than 30%, namely, more than 30 generated images are malicious among 100 prompts. Specifically, the efficiency of horrible, disgusting, political symbols, and extremism reaches up to 58%, 64%, 71%, and 50%, respectively. Additionally, we analyzed the vulnerability of existing popular content audit platforms, including Amazon, Google, Azure, and Baidu. Even the most effective Google SafeSearch cloud platform identifies only 33.85% of malicious images across three distinct categories.</p></details>
 </div>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{he2024evilpromptfuzzer,
+  title   = {{EvilPromptFuzzer}: generating inappropriate content based on text-to-image models},
+  author  = {He, Juntao and Dai, Haoran and Sui, Runqi and Yuan, Xuejing and Liu, Dun and
+             Feng, Hao and Liu, Xinyue and Yang, Wenchuan and Cui, Baojiang and Li, Kedan},
+  journal = {Cybersecurity},
+  volume  = {7},
+  number  = {1},
+  year    = {2024},
+  month   = aug,
+  doi     = {10.1186/s42400-024-00279-9}
+}</code></pre></div></details>
 </div>
 </div>
 
@@ -113,6 +187,16 @@ banner:
 <div class="pub-links"><a href="https://arxiv.org/abs/2307.03425">Paper</a></div>
 <div class="pub-tldr">IA-VFDnet, a CNN-Transformer hybrid that performs infrared-aware visible fusion detection on unregistered images, applied to smoke and wildfire detection.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Multimodal fusion detection always places high demands on the imaging system and image pre-processing, while either a high-quality pre-registration system or image registration processing is costly. Unfortunately, the existing fusion methods are designed for registered source images, and the fusion of inhomogeneous features, which denotes a pair of features at the same spatial location that expresses different semantic information, cannot achieve satisfactory performance via these methods. As a result, we propose IA-VFDnet, a CNN-Transformer hybrid learning framework with a unified high-quality multimodal feature matching module (AKM) and a fusion module (WDAF), which work in synergy to perform high-quality infrared-aware visible fusion detection that can be applied to smoke and wildfire detection. Experiments on the M3FD dataset validate the superiority of the proposed method, and the first unregistered multimodal smoke and wildfire detection benchmark is openly available.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{guan2023registrationfree,
+  title         = {Registration-Free Hybrid Learning Empowers Simple Multimodal Imaging
+                   System for High-quality Fusion Detection},
+  author        = {Yinghan Guan and Haoran Dai and Zekuan Yu and Shouyu Wang and Yuanjie Gu},
+  year          = {2023},
+  eprint        = {2307.03425},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2307.03425}
+}</code></pre></div></details>
 </div>
 </div>
 <div class="pub-item has-thumb">
@@ -125,6 +209,18 @@ banner:
 <div class="pub-tldr">A physics-driven, Retinex-based deep model that adaptively fuses infrared and visible images.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Infrared (IR) imaging can highlight thermal radiation objects even under poor lighting or severe sheltering but suffers from low resolution, contrast, and signal-to-noise ratio. While visible (VIS) light imaging can guarantee abundant texture details of targets, it is invalid in low lighting or sheltering conditions. Therefore, IR and VIS image fusion has more extensive applications, but it is a still challenging work because conventional methods cannot balance dynamic range, edge enhancement, and lightness constancy during fusion. To overcome these drawbacks, we propose a self-supervised dataset-free method for adaptive IR and VIS image fusion named deep Retinex fusion (DRF). The key idea of DRF is first generating component priors that are disentangled from a physical model using generative networks; then combining these priors, which are captured by networks via adaptive fusion loss functions based on Retinex theory; and finally reconstructing the IR and VIS fusion results. Furthermore, to verify the effectiveness of our reported physics driven DRF, qualitative and quantitative experiments via comparing with other state-of-the-art methods are performed using public datasets and in practical applications. These results prove that DRF can provide distinctions between day and night scenes and preserve abundant texture details and high-contrast IR information. Additionally, DRF can adaptively balance IR and VIS information and has good noise immunity. Therefore, compared to large dataset trained methods, DRF, which works without any dataset, achieves the best fusion performance.</p></details>
 </div>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{gu2023physics,
+  title   = {Physics driven deep {Retinex} fusion for adaptive infrared and visible image fusion},
+  author  = {Gu, Yuanjie and Xiao, Zhibo and Guan, Yinghan and Dai, Haoran and Liu, Cheng and
+             Xue, Liang and Wang, Shouyu},
+  journal = {Optical Engineering},
+  volume  = {62},
+  number  = {08},
+  pages   = {1--13},
+  year    = {2023},
+  month   = aug,
+  doi     = {10.1117/1.oe.62.8.083101}
+}</code></pre></div></details>
 </div>
 </div>
 
@@ -142,6 +238,18 @@ banner:
 <div class="pub-tldr">A deep fusion prior for plenoptic super-resolution that reconstructs high-resolution all-in-focus images.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Plenoptic imaging offers not only two-dimensional projections but also adds light array directions, thus supporting single-shot all-in-focus imaging. Its poor spatial resolution becomes an obstacle to high-quality all-in-focus imaging performance. Although various super-resolution (SR) methods have been designed and combined with multifocus image fusion (MFIF), high-quality multifocus fused SR images can be reconstructed for various applications, almost all of them deal with MFIF and SR separately. To our best knowledge, we first unify MFIF and SR problems as the multifocus image SR fusion (MFISRF) in the optical perspective and thus propose a dataset-free unsupervised framework named deep fusion prior (DFP) to address such MFISRF, particularly for plenoptic SR all-in-focus imaging. Both numerical and practical experiments have proved that our proposed DFP approaches or even outperforms those state-of-the-art MFIF and SR method combinations. Therefore, we believe DFP can be potentially used in various computational photography applications. The DFP codes are open source and available at http://github.com/GuYuanjie/DeepFusionPrior.</p></details>
 </div>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{gu2022deep,
+  title   = {Deep fusion prior for plenoptic super-resolution all-in-focus imaging},
+  author  = {Gu, Yuanjie and Guan, Yinghan and Xiao, Zhibo and Dai, Haoran and Liu, Cheng and
+             Wang, Shouyu},
+  journal = {Optical Engineering},
+  volume  = {61},
+  number  = {12},
+  pages   = {1--16},
+  year    = {2022},
+  month   = dec,
+  doi     = {10.1117/1.oe.61.12.123103}
+}</code></pre></div></details>
 </div>
 </div>
 
@@ -154,7 +262,17 @@ banner:
 <div class="pub-venue">IEEE AIID 2021</div>
 <div class="pub-links"><a href="https://doi.org/10.1109/aiid51893.2021.9456576">Paper</a></div>
 <div class="pub-tldr">An attention-augmented autoencoder (RDUnet-A) that automatically segments fabric defects, reducing the errors of manual inspection.</div>
-<div class="pub-abstract">In industrial production, fabric products inevitably show flaws due to uncontrollable factors such as production and transportation. However, there are many problems with the manual inspection methods used by manufacturers, such as low efficiency, a high false-detection rate, and a high missed-detection rate.</div>
+<div class="pub-abstract">In industrial production, fabric products inevitably show flaws due to uncontrollable factors such as production and transportation. However, there are many problems with the manual inspection methods used by manufacturers, such as low efficiency, a high false-detection rate, and a high missed-detection rate.<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@inproceedings{chen2021rdunet,
+  title     = {{RDUnet-A}: A Deep Neural Network Method with Attention for Fabric Defect
+               Segmentation Based on Autoencoder},
+  author    = {Chen, Huaijing and Chen, Dengke and Dai, Haoran},
+  booktitle = {2021 IEEE International Conference on Artificial Intelligence and Industrial Design (AIID)},
+  pages     = {134--139},
+  year      = {2021},
+  month     = may,
+  doi       = {10.1109/aiid51893.2021.9456576}
+}</code></pre></div></details>
+</div>
 </div>
 
 <div class="pub-item">
@@ -163,6 +281,17 @@ banner:
 <div class="pub-venue">Journal of Physics: Conference Series, vol. 1738, 012123, 2021</div>
 <div class="pub-links"><a href="https://doi.org/10.1088/1742-6596/1738/1/012123">Paper</a></div>
 <div class="pub-tldr">An education study on maker spaces ("creator zones") as a setting that supports students' deep learning, in the pedagogical sense.</div>
-<div class="pub-abstract">The creator zone was a combination of practical meaning and ideas of reform and innovations. It pursued a cultural pattern of sharing, development, innovations, improvement. In the current stage of the education reform, the creator zone always supported students' deep learning and lifelong learning concept training. It constantly broadened the new territory in the students' main consciousness, and combined the classroom resources with the network resources, so that students could understand the knowledge from different angles and layers. Compared with the traditional teaching method, the creator zone education had an undeniable advantage. It could show the status of the student as the main body, stimulate the student's interest in learning, and make the student turn from a passive accepting to an active inquiring person. For this reason, based on the experience of the creator zone education, this article talked about the relationship between the creator zone and the deep learning, and provided a new teaching idea for other teachers.</div>
+<div class="pub-abstract">The creator zone was a combination of practical meaning and ideas of reform and innovations. It pursued a cultural pattern of sharing, development, innovations, improvement. In the current stage of the education reform, the creator zone always supported students' deep learning and lifelong learning concept training. It constantly broadened the new territory in the students' main consciousness, and combined the classroom resources with the network resources, so that students could understand the knowledge from different angles and layers. Compared with the traditional teaching method, the creator zone education had an undeniable advantage. It could show the status of the student as the main body, stimulate the student's interest in learning, and make the student turn from a passive accepting to an active inquiring person. For this reason, based on the experience of the creator zone education, this article talked about the relationship between the creator zone and the deep learning, and provided a new teaching idea for other teachers.<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{dai2021analysis,
+  title   = {Analysis of design points of deep learning supported by maker space},
+  author  = {Dai, Haoran and Gu, Yuanjie},
+  journal = {Journal of Physics: Conference Series},
+  volume  = {1738},
+  number  = {1},
+  pages   = {012123},
+  year    = {2021},
+  month   = jan,
+  doi     = {10.1088/1742-6596/1738/1/012123}
+}</code></pre></div></details>
+</div>
 </div>
 -->
