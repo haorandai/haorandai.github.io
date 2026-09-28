@@ -103,7 +103,6 @@ banner:
 <div class="pub-links"><a href="https://arxiv.org/abs/2602.21416">Paper</a></div>
 <div class="pub-tldr">A benchmark for extracting scalable vector graphics from real images, where noise, clutter, and domain shift break current multimodal models.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We introduce the task of SVG extraction, which consists in translating specific visual inputs from an image into scalable vector graphics. Existing multimodal models achieve strong results when generating SVGs from clean renderings or textual descriptions, but they fall short in real-world scenarios where natural images introduce noise, clutter, and domain shifts. A central challenge in this direction is the lack of suitable benchmarks. To address this need, we introduce the WildSVG Benchmark, formed by two complementary datasets: Natural WildSVG, built from real images containing company logos paired with their SVG annotations, and Synthetic WildSVG, which blends complex SVG renderings into real scenes to simulate difficult conditions. We benchmark state-of-the-art multimodal models and find that current approaches perform well below what is needed for reliable SVG extraction in real scenarios.</p></details>
-</div>
 <details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{terral2026wildsvg,
   title         = {WildSVG: Towards Reliable SVG Generation Under Real-Word Conditions},
   author        = {Marco Terral and Haotian Zhang and Tianyang Zhang and Meng Lin and
@@ -115,6 +114,7 @@ banner:
   primaryClass  = {cs.CV},
   url           = {https://arxiv.org/abs/2602.21416}
 }</code></pre></div></details>
+</div>
 </div>
 </div>
 
@@ -131,7 +131,6 @@ banner:
 <div class="pub-links"><a href="https://arxiv.org/abs/2508.01605">Paper</a> <a href="https://haorandai.com/practical-t2i-backdoors/">Project</a> <a href="https://github.com/haorandai/backdoorT2I">Code</a></div>
 <div class="pub-tldr">A backdoor attack on text-to-image diffusion models with natural, readable trigger prompts, evaluated on SD 1.4, SDXL and FLUX.1 and against several existing defenses.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Text-to-image diffusion models (T2I DMs) have achieved remarkable success in generating high-quality and diverse images from text prompts, yet recent studies have revealed their vulnerability to backdoor attacks. Existing attack methods suffer from critical limitations: 1) they rely on unnatural adversarial prompts that lack human readability and require massive poisoned data; 2) their effectiveness is typically restricted to specific models, lacking generalizability; and 3) they can be mitigated by recent backdoor defenses. To overcome these challenges, we propose a novel backdoor attack framework that achieves three key properties: 1) Practicality: our attack requires only a few stealthy backdoor samples to generate arbitrary attacker-chosen target images, while ensuring high-quality image generation in benign scenarios. 2) Generalizability: the attack is applicable across multiple T2I DMs without requiring model-specific redesign. 3) Robustness: the attack remains effective against existing backdoor defenses and adaptive defenses. Our extensive experimental results on multiple T2I DMs demonstrate that with only 10 carefully crafted backdoored samples, our attack method achieves over 90% attack success rate with negligible degradation in benign image generation quality. We also conduct human evaluation to validate our attack effectiveness. Recent backdoor detection and mitigation methods, as well as adaptive defenses tailored to our attack, are not sufficiently effective, highlighting the pressing need for more robust defense mechanisms.</p></details>
-</div>
 <details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{dai2025practical,
   title         = {Practical, Generalizable and Robust Backdoor Attacks on
                    Text-to-Image Diffusion Models},
@@ -143,6 +142,7 @@ banner:
   primaryClass  = {cs.CR},
   url           = {https://arxiv.org/abs/2508.01605}
 }</code></pre></div></details>
+</div>
 </div>
 </div>
 
@@ -159,7 +159,6 @@ banner:
 <div class="pub-links"><a href="https://link.springer.com/article/10.1186/s42400-024-00279-9">Paper</a></div>
 <div class="pub-tldr">A fuzzing method that automatically finds prompts driving text-to-image models to generate inappropriate content.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Text-to-image (TTI) models provide huge innovation ability for many industries, while the content security triggered by them has also attracted wide attention. Considerable research has focused on content security threats of large language models (LLMs), yet comprehensive studies on the content security of TTI models are notably scarce. This paper introduces a systematic tool, named EvilPromptFuzzer, designed to fuzz evil prompts in TTI models. For 15 kinds of fine-grained risks, EvilPromptFuzzer employs the strong knowledge-mining ability of LLMs to construct seed banks, in which the seeds cover various types of characters, interrelations, actions, objects, expressions, body parts, locations, surroundings, etc. Subsequently, these seeds are fed into the LLMs to build scene-diverse prompts, which can weaken the semantic sensitivity related to the fine-grained risks. Hence, the prompts can bypass the content audit mechanism of the TTI model, and ultimately help to generate images with inappropriate content. For the risks of violence, horrible, disgusting, animal cruelty, religious bias, political symbol, and extremism, the efficiency of EvilPromptFuzzer for generating inappropriate images based on DALL-E 3 is greater than 30%, namely, more than 30 generated images are malicious among 100 prompts. Specifically, the efficiency of horrible, disgusting, political symbols, and extremism reaches up to 58%, 64%, 71%, and 50%, respectively. Additionally, we analyzed the vulnerability of existing popular content audit platforms, including Amazon, Google, Azure, and Baidu. Even the most effective Google SafeSearch cloud platform identifies only 33.85% of malicious images across three distinct categories.</p></details>
-</div>
 <details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{he2024evilpromptfuzzer,
   title   = {{EvilPromptFuzzer}: generating inappropriate content based on text-to-image models},
   author  = {He, Juntao and Dai, Haoran and Sui, Runqi and Yuan, Xuejing and Liu, Dun and
@@ -171,6 +170,7 @@ banner:
   month   = aug,
   doi     = {10.1186/s42400-024-00279-9}
 }</code></pre></div></details>
+</div>
 </div>
 </div>
 
@@ -208,7 +208,6 @@ banner:
 <div class="pub-links"><a href="https://doi.org/10.1117/1.oe.62.8.083101">Paper</a></div>
 <div class="pub-tldr">A physics-driven, Retinex-based deep model that adaptively fuses infrared and visible images.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Infrared (IR) imaging can highlight thermal radiation objects even under poor lighting or severe sheltering but suffers from low resolution, contrast, and signal-to-noise ratio. While visible (VIS) light imaging can guarantee abundant texture details of targets, it is invalid in low lighting or sheltering conditions. Therefore, IR and VIS image fusion has more extensive applications, but it is a still challenging work because conventional methods cannot balance dynamic range, edge enhancement, and lightness constancy during fusion. To overcome these drawbacks, we propose a self-supervised dataset-free method for adaptive IR and VIS image fusion named deep Retinex fusion (DRF). The key idea of DRF is first generating component priors that are disentangled from a physical model using generative networks; then combining these priors, which are captured by networks via adaptive fusion loss functions based on Retinex theory; and finally reconstructing the IR and VIS fusion results. Furthermore, to verify the effectiveness of our reported physics driven DRF, qualitative and quantitative experiments via comparing with other state-of-the-art methods are performed using public datasets and in practical applications. These results prove that DRF can provide distinctions between day and night scenes and preserve abundant texture details and high-contrast IR information. Additionally, DRF can adaptively balance IR and VIS information and has good noise immunity. Therefore, compared to large dataset trained methods, DRF, which works without any dataset, achieves the best fusion performance.</p></details>
-</div>
 <details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{gu2023physics,
   title   = {Physics driven deep {Retinex} fusion for adaptive infrared and visible image fusion},
   author  = {Gu, Yuanjie and Xiao, Zhibo and Guan, Yinghan and Dai, Haoran and Liu, Cheng and
@@ -221,6 +220,7 @@ banner:
   month   = aug,
   doi     = {10.1117/1.oe.62.8.083101}
 }</code></pre></div></details>
+</div>
 </div>
 </div>
 
@@ -237,7 +237,6 @@ banner:
 <div class="pub-links"><a href="https://doi.org/10.1117/1.oe.61.12.123103">Paper</a></div>
 <div class="pub-tldr">A deep fusion prior for plenoptic super-resolution that reconstructs high-resolution all-in-focus images.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>Plenoptic imaging offers not only two-dimensional projections but also adds light array directions, thus supporting single-shot all-in-focus imaging. Its poor spatial resolution becomes an obstacle to high-quality all-in-focus imaging performance. Although various super-resolution (SR) methods have been designed and combined with multifocus image fusion (MFIF), high-quality multifocus fused SR images can be reconstructed for various applications, almost all of them deal with MFIF and SR separately. To our best knowledge, we first unify MFIF and SR problems as the multifocus image SR fusion (MFISRF) in the optical perspective and thus propose a dataset-free unsupervised framework named deep fusion prior (DFP) to address such MFISRF, particularly for plenoptic SR all-in-focus imaging. Both numerical and practical experiments have proved that our proposed DFP approaches or even outperforms those state-of-the-art MFIF and SR method combinations. Therefore, we believe DFP can be potentially used in various computational photography applications. The DFP codes are open source and available at http://github.com/GuYuanjie/DeepFusionPrior.</p></details>
-</div>
 <details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@article{gu2022deep,
   title   = {Deep fusion prior for plenoptic super-resolution all-in-focus imaging},
   author  = {Gu, Yuanjie and Guan, Yinghan and Xiao, Zhibo and Dai, Haoran and Liu, Cheng and
@@ -250,6 +249,7 @@ banner:
   month   = dec,
   doi     = {10.1117/1.oe.61.12.123103}
 }</code></pre></div></details>
+</div>
 </div>
 </div>
 
