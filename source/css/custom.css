@@ -775,3 +775,29 @@ body:has(.cv-page) .trm-banner .row > .col-lg-8 { flex: 0 0 100%; max-width: 100
 }
 /* the theme colours every element in .trm-banner-text; the title span follows the h1 instead */
 .trm-banner .trm-banner-text .trm-hero-title { color: inherit; text-shadow: inherit; }
+
+/* Publication rows: hovering (or tabbing into) a paper lifts its thumbnail
+   frame and zooms the figure slightly, so the row reads as clickable.
+   Pure CSS transitions on transform/box-shadow (GPU-composited, no JS). */
+.pub-grid .pub-thumb {
+  transition: transform 0.28s cubic-bezier(.2, .7, .2, 1), box-shadow 0.28s ease, border-color 0.2s ease;
+}
+.pub-grid .pub-thumb img { transition: transform 0.45s cubic-bezier(.2, .7, .2, 1); }
+.pub-grid .pub-title a { transition: color 0.2s ease; }
+.pub-grid .pub-item:hover .pub-thumb,
+.pub-grid .pub-item:focus-within .pub-thumb {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 24px rgba(9, 105, 218, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+.pub-grid .pub-item:hover .pub-thumb img,
+.pub-grid .pub-item:focus-within .pub-thumb img { transform: scale(1.035); }
+.pub-grid .pub-item:hover .pub-title a,
+.pub-grid .pub-item:focus-within .pub-title a { color: var(--primary); }
+:root.dark .pub-grid .pub-item:hover .pub-thumb,
+:root.dark .pub-grid .pub-item:focus-within .pub-thumb { box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45); }
+@media (prefers-reduced-motion: reduce) {
+  .pub-grid .pub-thumb, .pub-grid .pub-thumb img { transition: none; }
+  .pub-grid .pub-item:hover .pub-thumb, .pub-grid .pub-item:focus-within .pub-thumb,
+  .pub-grid .pub-item:hover .pub-thumb img, .pub-grid .pub-item:focus-within .pub-thumb img { transform: none; }
+}
