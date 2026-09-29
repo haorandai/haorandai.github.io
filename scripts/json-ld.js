@@ -18,6 +18,7 @@ const PERSON = {
     'https://scholar.google.com/citations?user=bZXkw3QAAAAJ',
     'https://github.com/haorandai',
     'https://www.linkedin.com/in/haorandai',
+    'https://x.com/HHarryD',
   ],
 };
 
