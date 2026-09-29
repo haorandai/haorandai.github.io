@@ -1,0 +1,75 @@
+<!doctype html>
+<!-- Link-preview card (Open Graph image) for haorandai.com. Render to source/img/og-card.png with render.sh. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --bg: #faf6f0;
+    --glow-blue: rgba(9, 105, 218, 0.13);
+    --glow-orange: rgba(255, 107, 53, 0.13);
+    --ink: #1f2328;
+    --text: #44403a;
+    --muted: #6b665e;
+    --chip-bg: #fffdf9;
+    --chip-border: #e6e0d5;
+    --hairline: #ebe7df;
+  }
+  html, body { margin: 0; padding: 0; }
+  .card {
+    width: 1200px; height: 630px; box-sizing: border-box; position: relative; overflow: hidden;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(55% 80% at 92% 4%, var(--glow-blue), transparent 62%),
+      radial-gradient(48% 80% at 2% 104%, var(--glow-orange), transparent 62%);
+    font-family: 'Geist', -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
+    display: flex; align-items: center; gap: 64px; padding: 0 84px 36px;
+  }
+  .photo {
+    flex: 0 0 264px; height: 264px; border-radius: 50%; overflow: hidden;
+    border: 6px solid #fffdf9;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 14px 36px rgba(31, 35, 40, .12);
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .copy { display: flex; flex-direction: column; min-width: 0; }
+  .name { font-size: 66px; font-weight: 700; letter-spacing: -0.028em; color: var(--ink); line-height: 1.04; }
+  .tagline { margin-top: 16px; font-size: 32px; font-weight: 500; letter-spacing: -0.012em; color: var(--text); }
+  .roles { margin-top: 18px; font-size: 22px; font-weight: 500; color: var(--muted); line-height: 1.45; }
+  .roles b { font-weight: 600; color: var(--text); }
+  .chips { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; max-width: 700px; }
+  .chips span {
+    font-size: 18px; font-weight: 500; color: var(--text);
+    background: var(--chip-bg); border: 1px solid var(--chip-border);
+    border-radius: 999px; padding: 7px 16px;
+  }
+  .footer {
+    position: absolute; left: 84px; right: 84px; bottom: 34px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid var(--hairline); padding-top: 20px;
+    font-size: 21px; font-weight: 500; color: var(--muted);
+  }
+  .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); font-weight: 600; letter-spacing: -0.01em; }
+  .brand img { width: 34px; height: 34px; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="photo"><img src="../../source/img/haoran.jpg" alt=""></div>
+    <div class="copy">
+      <div class="name">Harry (Haoran) Dai</div>
+      <div class="tagline">Trustworthy &amp; Efficient Generative AI</div>
+      <div class="roles"><b>CS PhD Candidate</b> @ Illinois Tech<br><b>Research Scientist</b> @ QuiverAI</div>
+      <div class="chips">
+        <span>Backdoor Attacks</span><span>Reasoning &amp; Test-time Scaling</span>
+        <span>Attention Sinks &amp; Quantization</span><span>SVG Generation</span>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="brand"><img src="../../source/img/logo.svg" alt="">haorandai.com</div>
+      <div>Open to research collaborations &amp; industry opportunities</div>
+    </div>
+  </div>
+</body>
+</html>

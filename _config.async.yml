@@ -119,5 +119,5 @@ theme:
 
 # Link previews (Hexo's built-in open_graph helper, called by the theme)
 open_graph:
-  image: /img/haoran.jpg
-  twitter_card: summary
+  image: /img/og-card.png
+  twitter_card: summary_large_image
