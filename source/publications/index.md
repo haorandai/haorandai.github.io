@@ -9,7 +9,7 @@ banner:
 
 
 <div class="pub-grid">
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="efficient">
 <a class="pub-thumb" href="https://oasis-research.github.io/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/oasis.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">NeurIPS 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a></div>
@@ -29,7 +29,7 @@ banner:
 }</code></pre></div></details>
 </div>
 </div>
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="trustworthy">
 <a class="pub-thumb" href="https://haorandai.com/tides-paper/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/tides.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">ES-Reasoning @ ICLR 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://haorandai.com/tides-paper/">TIDES: Test-time Inference Drift Exploitation via Scaling</a></div>
@@ -48,7 +48,7 @@ banner:
 }</code></pre></div></details>
 </div>
 </div>
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="trustworthy">
 <a class="pub-thumb" href="https://arxiv.org/abs/2603.06508" aria-hidden="true" tabindex="-1"><img src="/img/pubs/modality.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">Principled Design for Trustworthy AI @ ICLR 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models</a></div>
@@ -70,7 +70,7 @@ banner:
 }</code></pre></div></details>
 </div>
 </div>
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="vector">
 <a class="pub-thumb" href="https://haorandai.com/vectorgym/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/vectorgym.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">EMNLP 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://haorandai.com/vectorgym/">VectorGym: A Multi-Task Benchmark for SVG Code Generation, Sketching and Editing</a></div>
@@ -90,11 +90,12 @@ banner:
   eprint        = {2603.29852},
   archivePrefix = {arXiv},
   primaryClass  = {cs.GR},
+  url           = {https://arxiv.org/abs/2603.29852},
   note          = {Accepted to EMNLP 2026}
 }</code></pre></div></details>
 </div>
 </div>
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="vector">
 <a class="pub-thumb" href="https://arxiv.org/abs/2602.21416" aria-hidden="true" tabindex="-1"><img src="/img/pubs/wildsvg.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">arXiv 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://arxiv.org/abs/2602.21416">WildSVG: Towards Reliable SVG Generation Under Real-World Conditions</a></div>
@@ -122,7 +123,7 @@ banner:
 
 
 <div class="pub-grid">
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="trustworthy">
 <a class="pub-thumb" href="https://haorandai.com/practical-t2i-backdoors/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/t2i-backdoor.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">arXiv 2025</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://haorandai.com/practical-t2i-backdoors/">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a></div>
@@ -150,7 +151,7 @@ banner:
 
 
 <div class="pub-grid">
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="trustworthy">
 <a class="pub-thumb" href="https://link.springer.com/article/10.1186/s42400-024-00279-9" aria-hidden="true" tabindex="-1"><img src="/img/pubs/evilprompt.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">Cybersecurity 2024</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://link.springer.com/article/10.1186/s42400-024-00279-9">EvilPromptFuzzer: Generating Inappropriate Content Based on Text-to-Image Models</a></div>
@@ -178,7 +179,7 @@ banner:
 
 
 <div class="pub-grid">
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="imaging">
 <a class="pub-thumb" href="https://arxiv.org/abs/2307.03425" aria-hidden="true" tabindex="-1"><img src="/img/pubs/regfree.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">arXiv 2023</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://arxiv.org/abs/2307.03425">Registration-Free Hybrid Learning Empowers Simple Multimodal Imaging System for High-quality Fusion Detection</a></div>
@@ -199,7 +200,7 @@ banner:
 }</code></pre></div></details>
 </div>
 </div>
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="imaging">
 <a class="pub-thumb" href="https://doi.org/10.1117/1.oe.62.8.083101" aria-hidden="true" tabindex="-1"><img src="/img/pubs/drf.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">Opt. Eng. 2023</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://doi.org/10.1117/1.oe.62.8.083101">Physics-driven Deep Retinex Fusion for Adaptive Infrared and Visible Image Fusion</a></div>
@@ -228,7 +229,7 @@ banner:
 
 
 <div class="pub-grid">
-<div class="pub-item has-thumb">
+<div class="pub-item has-thumb" data-topic="imaging">
 <a class="pub-thumb" href="https://doi.org/10.1117/1.oe.61.12.123103" aria-hidden="true" tabindex="-1"><img src="/img/pubs/dfp.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">Opt. Eng. 2022</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://doi.org/10.1117/1.oe.61.12.123103">Deep Fusion Prior for Plenoptic Super-resolution All-in-focus Imaging</a></div>

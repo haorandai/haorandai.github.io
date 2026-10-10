@@ -68,8 +68,10 @@
   border-radius: 999px;
   padding: 5px 13px;
 }
+/* Centred under the centred headline on tablets and phones, a little smaller */
 @media (max-width: 992px) {
-  .trm-hero-kw { display: none; }
+  .trm-hero-kw { justify-content: center; gap: 6px; margin: 16px auto 0; }
+  .trm-hero-kw > span { font-size: 11.5px; padding: 4px 10px; }
 }
 
 /* Hide the theme's heavy date/time/author cards at the top of each post.
@@ -843,6 +845,24 @@ details.pub-bib[open] summary::after { content: " −"; }
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z'/%3E%3C/svg%3E") no-repeat center / contain;
 }
 
+/* The eight Font Awesome 5 icons the site shows, as CSS masks (outlines taken from the
+   theme's own Font Awesome Free webfonts, CC BY 4.0), so font-awesome.min.css and its
+   webfonts are not loaded at all (scripts/trim-assets.js). Same size and baseline as the font. */
+.iconfont[class*="fa-"] { display: inline-block; line-height: 1; font-style: normal; }
+.iconfont[class*="fa-"]::before {
+  content: ""; display: inline-block; width: var(--fa-w); height: 1em; vertical-align: -0.125em;
+  background-color: currentColor;
+  -webkit-mask: var(--fa-i) no-repeat center / contain; mask: var(--fa-i) no-repeat center / contain;
+}
+.fa-github { --fa-w: 0.9688em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'%3E%3Cpath d='M166 397Q166 401 161 401Q155 402 155 397Q155 394 160 394Q166 393 166 397ZM141 391Q146 392 145 396Q144 400 139 398Q133 397 134.5 393Q136 389 141 391ZM179 391Q184 391 184.5 394Q185 397 180 399Q175 400 174.5 396Q174 392 179 391ZM245 8Q313 8 371 40Q429 72 462.5 128Q496 184 496 252Q496 335 449.5 400.5Q403 466 328 491Q320 493 315.5 489Q311 485 311 479Q311 478 311 446.5Q311 415 311 395Q311 363 294 349Q316 346 328 344Q340 342 358 335Q376 328 385.5 317Q395 306 402 286Q409 266 409 238Q409 219 403 207Q397 195 383 180Q395 149 381 112Q371 109 354 115.5Q337 122 324 130L312 139Q281 130 248.5 130Q216 130 186 139Q181 135 172 129.5Q163 124 144.5 116.5Q126 109 117 112Q102 149 114 180Q91 205 91 238Q91 266 98 286Q105 306 114 317Q123 328 140 335Q157 342 169.5 344.5Q182 347 203 349Q190 361 187 383Q177 387 166.5 389Q156 391 140 385Q124 379 114 362Q108 351 98.5 344.5Q89 338 82 337L76 336Q54 336 74 351Q81 355 88 364Q95 373 98 380L102 388Q106 400 116 408Q126 416 138 418Q150 420 161 420Q172 420 179 419L186 418Q186 430 186.5 454Q187 478 187 479Q187 485 182.5 489Q178 493 170 491Q94 466 47 400.5Q0 335 0 252Q0 148 70.5 78Q141 8 245 8ZM97 353Q99 351 102 354Q105 357 103 359Q101 361 98 358Q95 355 97 353ZM86 345Q88 343 91 344Q94 346 93 348Q92 351 89 349Q85 347 86 345ZM119 380Q121 377 125 381Q129 385 127 388Q124 391 120 387Q116 383 119 380ZM107 366Q110 363 113 368Q116 372 113 374Q110 376 107.5 371.5Q105 367 107 366Z'/%3E%3C/svg%3E"); }
+.fa-linkedin { --fa-w: 0.875em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath d='M416 32Q429 32 438.5 41.5Q448 51 448 64V448Q448 461 438.5 470.5Q429 480 416 480H32Q19 480 9.5 470.5Q0 461 0 448V64Q0 51 9.5 41.5Q19 32 32 32ZM135 416H136V202H69V416ZM75 161.5Q86 173 102 173Q118 173 129.5 161.5Q141 150 141 134.5Q141 119 129.5 107.5Q118 96 102 96Q86 96 75 107.5Q64 119 64 134.5Q64 150 75 161.5ZM384 416V299Q384 275 381 258Q378 241 370 226.5Q362 212 345.5 204.5Q329 197 305 197Q282 197 265.5 207Q249 217 242 231H241V202H177V416H244V310Q244 285 252 270Q260 255 283 255Q295 255 303 260Q311 265 313.5 275Q316 285 317 292.5Q318 300 318 312V416Z'/%3E%3C/svg%3E"); }
+.fa-graduation-cap { --fa-w: 1.25em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'%3E%3Cpath d='M622 153Q640 159 640 176Q640 193 622 199L343 284Q320 292 297 284L101 224Q82 238 80 261Q96 271 96 288Q96 304 82 314L108 429Q109 436 104.5 442Q100 448 92 448H36Q28 448 23.5 442Q19 436 20 429L46 314Q32 304 32 288Q32 270 48 261Q49 235 66 214L18 199Q0 193 0 176Q0 159 18 153L297 68Q320 60 343 68ZM353 315 498 271 512 384Q512 411 456 429.5Q400 448 320 448Q240 448 184 429.5Q128 411 128 384L142 271L287 315Q320 325 353 315Z'/%3E%3C/svg%3E"); }
+.fa-envelope { --fa-w: 1.0em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M464 64Q484 64 498 78Q512 92 512 112V400Q512 420 498 434Q484 448 464 448H48Q28 448 14 434Q0 420 0 400V112Q0 92 14 78Q28 64 48 64ZM464 112H48V153Q83 181 183 259Q183 260 197 271.5Q211 283 218 287.5Q225 292 236.5 298Q248 304 256 304Q264 304 275.5 298Q287 292 294 287.5Q301 283 315 271.5Q329 260 329 259Q429 181 464 153ZM48 400H464V214Q429 242 359 297Q357 298 344.5 309Q332 320 325 325Q318 330 305 337.5Q292 345 280 348.5Q268 352 256 352Q244 352 231.5 348.5Q219 345 206.5 337Q194 329 187 324Q180 319 167.5 308.5Q155 298 153 297Q83 242 48 214Z'/%3E%3C/svg%3E"); }
+.fa-sun { --fa-w: 1.0em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M494 222Q512 234 512 255.5Q512 277 494 289L434 330L448 401Q452 422 437 437Q422 452 401 448L330 434L290 494Q277 512 255.5 512Q234 512 222 494L182 434L111 448Q90 452 75 437Q60 422 64 400L78 330L18 289Q0 277 0 255.5Q0 234 18 222L78 181L64 110Q60 89 75 74Q90 59 111 63L182 77L222 17Q234 0 256 0Q278 0 290 17L330 77L401 63Q422 59 437 74Q452 89 448 110L434 181ZM381 308 458 255 381 203 399 112 308 130 256 53 204 130 113 112 131 203 54 255 131 307 113 399 204 381 256 458 308 381 399 399ZM182.5 182.5Q213 152 256 152Q299 152 329.5 182.5Q360 213 360 256Q360 299 329.5 329.5Q299 360 256 360Q213 360 182.5 329.5Q152 299 152 256Q152 213 182.5 182.5ZM216.5 295.5Q233 312 256 312Q279 312 295.5 295.5Q312 279 312 256Q312 233 295.5 216.5Q279 200 256 200Q233 200 216.5 216.5Q200 233 200 256Q200 279 216.5 295.5Z'/%3E%3C/svg%3E"); }
+.fa-moon { --fa-w: 0.998em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 511 512'%3E%3Cpath d='M279 512Q173 512 98 437Q23 362 23 256Q23 150 98 75Q173 0 279 0Q303 0 326 4Q347 8 358 25.5Q369 43 364.5 63Q360 83 341 93Q310 111 291.5 142Q273 173 273 209Q273 272 321.5 312Q370 352 432 340Q465 334 482 362.5Q499 391 478 417Q442 462 390 487Q338 512 279 512ZM279 48Q193 48 132 109Q71 170 71 256Q71 342 132 403Q193 464 279 464Q327 464 369.5 443.5Q412 423 441 387Q357 403 291 348.5Q225 294 225 209Q225 159 250 117Q275 75 317 51Q298 48 279 48Z'/%3E%3C/svg%3E"); }
+.fa-arrows-alt-h { --fa-w: 1.0em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath d='M379 170Q379 154 394 148Q409 142 420 153L506 239Q513 246 513 256Q513 266 506 273L420 359Q409 370 394 364Q379 358 379 342V296H135V342Q135 358 120 364Q105 370 94 359L8 273Q1 266 1 256Q1 246 8 239L94 153Q105 142 120 148Q135 154 135 170V216H379Z'/%3E%3C/svg%3E"); }
+.fa-arrow-up { --fa-w: 0.873em; --fa-i: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 447 512'%3E%3Cpath d='M35 290 13 267Q6 260 6 250Q6 240 13 233L207 39Q214 32 224 32Q234 32 241 39L435 233Q442 240 442 250Q442 260 435 267L413 289Q406 297 396 296.5Q386 296 379 289L264 169V456Q264 466 257 473Q250 480 240 480H208Q198 480 191 473Q184 466 184 456V169L69 289Q62 296 52 296.5Q42 297 35 290Z'/%3E%3C/svg%3E"); }
+
 /* Compact profile card for phones (scripts/home-about.js); the theme hides the sidebar below 768px */
 .mobile-profile { display: none; }
 @media (max-width: 768px) {
@@ -862,4 +882,24 @@ details.pub-bib[open] summary::after { content: " −"; }
   .mobile-profile .mp-btn { justify-content: center; padding-left: 12px; padding-right: 12px; }
   .mobile-profile .mp-btn-outline { background: transparent; color: var(--primary); box-shadow: inset 0 0 0 1.5px var(--primary); }
   .mobile-profile .mp-btn-outline:hover { background: var(--primary); color: #fff; }
+}
+
+/* Topic chips above the paper list (scripts/pub-filter.js) */
+.pub-filter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+.pub-chip {
+  display: inline-flex; align-items: center; gap: 7px;
+  font: inherit; font-size: 13px; font-weight: 500; line-height: 1.4;
+  color: var(--theme-color); background: transparent; cursor: pointer;
+  border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 14px;
+  transition: border-color .15s, background-color .15s, color .15s;
+}
+.pub-chip span { font-size: 11.5px; opacity: .6; font-variant-numeric: tabular-nums; }
+.pub-chip:hover { border-color: var(--primary); color: var(--primary); }
+.pub-chip.is-active { background: var(--primary); border-color: var(--primary); color: #fff; }
+.pub-chip.is-active span { opacity: .85; }
+.pub-chip:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
+.pub-grid[hidden], .pub-item[hidden], .trm-content h2[hidden] { display: none !important; }
+@media (max-width: 768px) {
+  .pub-filter { gap: 6px; margin-bottom: 22px; }
+  .pub-chip { font-size: 12.5px; padding: 5px 11px; gap: 5px; }
 }

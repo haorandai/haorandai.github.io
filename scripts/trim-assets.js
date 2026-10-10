@@ -5,6 +5,8 @@ hexo.extend.filter.register('after_render:html', function (html) {
   return html
     .replace(/<link[^>]*@fancyapps\/ui[^>]*>\s*/g, '')
     .replace(/<script[^>]*@fancyapps\/ui[^>]*><\/script>\s*/g, '')
+    // Font Awesome (54 KB CSS + webfonts) for eight icons; they are CSS masks in custom.css now
+    .replace(/<link[^>]*font-awesome\.min\.css[^>]*>\s*/g, '')
     // Show content immediately on first load instead of waiting for main.js to
     // fade it in (page-to-page transitions still fade via the theme's script).
     .replace('class="trm-scroll-container" style="opacity: 0"', 'class="trm-scroll-container"')
@@ -18,4 +20,10 @@ hexo.extend.filter.register('after_render:html', function (html) {
     .replace(/<!-- categories -->[\s\S]*?<!-- categories end -->\s*/, '')
     // hidden post list on the home page (its category link also 404s) and its pagination
     .replace(/<!-- newest publications -->[\s\S]*?<!-- newest publications end -->\s*(<div class="trm-pagination">[\s\S]*?<\/div>\s*)?/, '');
+});
+
+/* source/_posts/welcome.md only exists because hexo-generator-index makes no home page
+   when there are zero posts. Its own page is stale ("Stay tuned..."), so don't publish it. */
+hexo.extend.filter.register('after_generate', function () {
+  hexo.route.remove('2025/09/02/welcome/index.html');
 });
