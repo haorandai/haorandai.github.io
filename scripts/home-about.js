@@ -132,8 +132,10 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
   return html.replace(/(<div[^>]*\bclass="trm-content"[^>]*>)/, '$1' + HOME_ABOUT);
 }, 15);
 
+const BOOKING_URL = 'https://calendar.app.google/xCTjoLaTQdL3nXgb7';
+
 /* Coffee chat button, placed under the sidebar Contact Me button on every page. */
-const COFFEE_CHAT = `<div class="text-center sidebar-chat"><a class="trm-btn trm-btn-outline" href="https://calendar.app.google/xCTjoLaTQdL3nXgb7" target="_blank" rel="noopener">Coffee Chat<svg viewBox="0 0 24 24" width="13" height="13" class="btn-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></a></div>`;
+const COFFEE_CHAT = `<div class="text-center sidebar-chat"><a class="trm-btn trm-btn-outline" href="${BOOKING_URL}" target="_blank" rel="noopener">Coffee Chat<svg viewBox="0 0 24 24" width="13" height="13" class="btn-icon" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"/><line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/></svg></a></div>`;
 
 hexo.extend.filter.register('after_render:html', function (html) {
   return html.replace(/(<a href="mailto:[^"]*" class="trm-btn">[\s\S]*?<\/a>\s*<\/div>)/, '$1' + COFFEE_CHAT);
@@ -141,10 +143,31 @@ hexo.extend.filter.register('after_render:html', function (html) {
 
 // Current affiliations with logos under the name in the sidebar card (LinkedIn-style)
 const AFFILIATIONS = `<ul class="sidebar-affil">`
-  + `<li><a href="https://quiver.ai/" target="_blank" rel="noopener"><img src="/img/logos/quiver.svg" alt="" width="20" height="20"><span>QuiverAI</span></a></li>`
   + `<li><a href="https://www.iit.edu/" target="_blank" rel="noopener"><img src="/img/logos/iit.png" alt="" width="20" height="20"><span>Illinois Institute of Technology</span></a></li>`
+  + `<li><a href="https://quiver.ai/" target="_blank" rel="noopener"><img src="/img/logos/quiver.svg" alt="" width="20" height="20"><span>QuiverAI</span></a></li>`
   + `</ul>`;
 
 hexo.extend.filter.register('after_render:html', function (html) {
   return html.replace(/(<span class="trm-typed-text">[\s\S]*?<\/span>\s*<\/div>)/, '$1' + AFFILIATIONS);
 });
+
+/* The theme hides the whole sidebar card below 768px (`hidden-sm`), which leaves
+   phones with no photo, links or contact buttons. Rebuild a compact version above
+   the home About section, shown only at that width. Avatar, social row and email
+   are copied from the rendered sidebar, so _config.async.yml stays the one source. */
+hexo.extend.filter.register('after_render:html', function (html, data) {
+  if (data.path !== 'index.html') return html;
+  const avatar = (html.match(/class="trm-avatar" src="([^"]+)"/) || [])[1];
+  const social = (html.match(/<div class="trm-social">[\s\S]*?<\/div>/) || [])[0];
+  const email = (html.match(/href="(mailto:[^"]+)" class="trm-btn"/) || [])[1];
+  if (!avatar || !social || !email) return html;
+  const card = `<div class="mobile-profile">`
+    + `<img class="mp-avatar" src="${avatar}" alt="" width="72" height="72">`
+    + `<p class="mp-name">${esc(hexo.config.author)}</p>`
+    + AFFILIATIONS
+    + social
+    + `<div class="mp-actions"><a class="mp-btn trm-btn" href="${email}">Contact Me</a>`
+    + `<a class="mp-btn mp-btn-outline trm-btn" href="${BOOKING_URL}" target="_blank" rel="noopener">Coffee Chat</a></div>`
+    + `</div>`;
+  return html.replace('<div class="home-about">', card + '<div class="home-about">');
+}, 17);
