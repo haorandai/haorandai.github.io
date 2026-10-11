@@ -27,7 +27,7 @@ banner:
 <li><span class="cv-plain-role">Fall 2026</span><span class="cv-plain-text">Data Structures and Algorithms</span></li>
 <li><span class="cv-plain-role">Fall 2026</span><span class="cv-plain-text">Fundamentals of Web Development (ITMD 361)</span></li>
 <li><span class="cv-plain-role">Spring 2026</span><span class="cv-plain-text">Intro to Deep Learning (CS 495)</span></li>
-<li><span class="cv-plain-role">Fall 2024 – Fall 2025</span><span class="cv-plain-text">Introduction to Machine Learning, three semesters (Fall 2024, Spring 2025, Fall 2025)</span></li>
+<li><span class="cv-plain-role">Fall 2024 – Fall 2025</span><span class="cv-plain-text">Introduction to Machine Learning (CS 484), three semesters (Fall 2024, Spring 2025, Fall 2025)</span></li>
 </ul>
 <h2>Service</h2>
 <ul class="cv-plain">
