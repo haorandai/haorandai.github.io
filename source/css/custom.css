@@ -1125,3 +1125,5 @@ body { letter-spacing: 0; font-weight: 400; }
 /* At QuiverAI (home): same card system as Selected Publications */
 .home-about .home-work-lead { margin: 0 0 16px; }
 .home-work .hp-authors { color: var(--body-color); }
+/* product shots are full-bleed artwork, so they fill the frame */
+.home-work .hp-thumb img { object-fit: cover; padding: 0; }
