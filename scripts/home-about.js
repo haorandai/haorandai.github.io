@@ -91,7 +91,7 @@ function journeyHTML({ heading = true, moreLink = true } = {}) {
 const HOME_ABOUT = `
 <div class="home-about">
   <h2 class="home-about-heading">About</h2>
-  <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology, advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">QuiverAI</a>. He studies the security and efficiency of generative AI models. At QuiverAI, he works on SVG generation and builds agent harnesses. He is based in Chicago, Illinois.</p>
+  <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology (expected 2027), advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">QuiverAI</a>. He studies the security and efficiency of generative AI models. At QuiverAI, he works on SVG generation and builds agent harnesses. He is based in Chicago, Illinois.</p>
   <h3>Research Themes</h3>
   <ul class="home-themes">
     <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models, safety testing of text-to-image generators, and attacks that exploit test-time scaling in reasoning models.</li>
