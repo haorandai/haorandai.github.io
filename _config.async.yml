@@ -79,7 +79,7 @@ about:
     Binghui Wang. My research addresses security and safety challenges in
     multimodal AI.
   blog: '<ul class="trm-list"><li>Built with Hexo</li><li>Theme: hexo-theme-async</li></ul>'
-  privacy: This website does not track visitors and does not collect any personal information.
+  privacy: This website uses Cloudflare Web Analytics (cookie-free page counts) and StatCounter, which logs each visit's IP address, network, approximate location and referrer for 14 days. The data is only used to see how the site is visited.
 
 # Minimal footer: a single custom line, no powered-by or theme credit.
 footer:

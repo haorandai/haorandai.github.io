@@ -38,6 +38,7 @@ Restart the server after editing `_config.yml` or `_config.async.yml`; Hexo does
   - `og-image-meta.js`: width, height and alt for the link-preview image
   - `first-load.js`: turns off the theme's full-screen spinner on direct page loads
   - `web-analytics.js`: Cloudflare Web Analytics beacon
+  - `statcounter.js`: StatCounter visitor log (IP, network, location, referrer; free plan keeps 14 days; Swup page changes are recorded by counter.js itself)
   - `timeline-tap.js`: tap-to-open timeline cards on touch screens
   - `trim-assets.js`: drops unused theme assets (banner photo, Fancybox, Font Awesome, the column toggle), keeps the stale Welcome post unpublished, and fixes a few accessibility attributes in the rendered HTML
 - **Assets.** Avatar `source/img/haoran.jpg`, HD monogram `source/img/logo.svg`, favicons in `source/img/`, publication thumbnails (WebP) in `source/img/pubs/`, organization logos in `source/img/logos/`, Arrow artwork from QuiverAI's public blog in `source/img/quiver/`.
