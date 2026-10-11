@@ -208,6 +208,7 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
   const card = `<div class="mobile-profile">`
     + `<img class="mp-avatar" src="${avatar}" alt="" width="72" height="72">`
     + `<p class="mp-name">${esc(hexo.config.author)}</p>`
+    + `<div class="trm-label mp-role" aria-hidden="true"><span class="mp-typed"></span></div>`
     + AFFILIATIONS
     + social
     + `<div class="mp-actions"><a class="mp-btn trm-btn" href="${email}">Contact Me</a>`
@@ -215,3 +216,21 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
     + `</div>`;
   return html.replace('<div class="home-about">', card + '<div class="home-about">');
 }, 17);
+
+/* The theme's typewriter only drives the first .trm-typed-text, the sidebar one, which is
+   hidden on phones. Mirror its text into the phone card so both show the same line. */
+hexo.extend.injector.register('body_end', `<script>
+(function () {
+  var obs;
+  function mirror() {
+    if (obs) obs.disconnect();
+    var src = document.querySelector('.trm-main-card .trm-typed-text'), dst = document.querySelector('.mobile-profile .mp-typed');
+    if (!src || !dst) return;
+    dst.textContent = src.textContent;
+    obs = new MutationObserver(function () { dst.textContent = src.textContent; });
+    obs.observe(src, { childList: true, characterData: true, subtree: true });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', mirror); else mirror();
+  document.addEventListener('swup:contentReplaced', mirror);
+})();
+</script>`, 'home');

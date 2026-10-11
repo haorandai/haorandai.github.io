@@ -876,6 +876,9 @@ details.pub-bib[open] summary::after { content: " −"; }
   }
   .mobile-profile .mp-avatar { width: 72px; height: 72px; border-radius: 50%; object-fit: cover; }
   .mobile-profile .mp-name { margin: 0; font-size: 18px; font-weight: 600; color: var(--theme-color); }
+  /* typed role line, mirrored from the sidebar; same label style and blinking caret */
+  .mobile-profile .mp-role { margin: -6px 0 0; min-height: 18px; white-space: nowrap; font-size: clamp(10px, 3.3vw, 12px); letter-spacing: 0.14em; }
+  .mobile-profile .mp-typed::after { content: "|"; font-weight: 200; animation: hd-caret 1s ease infinite; }
   .mobile-profile .sidebar-affil { margin: 0; }
   .mobile-profile .trm-social { margin: 0; display: flex; justify-content: center; gap: 26px; font-size: 20px; }
   .mobile-profile .trm-social a { margin: 0; color: var(--theme-color); }
@@ -948,6 +951,7 @@ details.pub-bib[open] summary::after { content: " −"; }
 .hd-logo-intro .hd-logo path:nth-child(2) { animation-delay: 0.3s, 1.15s; }
 .hd-logo-intro .hd-logo path:nth-child(3) { animation-delay: 0.5s, 1.3s; }
 @keyframes hd-draw { to { stroke-dashoffset: 0; } }
+@keyframes hd-caret { 50% { opacity: 0; } }
 @keyframes hd-fill { to { fill-opacity: 1; stroke-width: 0; } }
 
 /* B: illustrative attention on the hero title (desktop pointers) */
