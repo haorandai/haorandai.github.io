@@ -98,6 +98,7 @@ const HOME_ABOUT = `
     <li><strong>Efficient and stable inference.</strong> Attention sinks and activation outliers in transformers, and suppressing them to keep inference stable and robust to quantization.</li>
     <li><strong>Vector graphics generation.</strong> Benchmarks and reinforcement learning for vision-language models that generate, edit, and extract SVGs from text, sketches, and real-world images.</li>
   </ul>
+  <div class="home-pubs-slot"></div>
   <h3>News</h3>
   <ul class="home-news">
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
@@ -105,7 +106,7 @@ const HOME_ABOUT = `
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://haorandai.com/vectorgym/">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">OASIS</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
-    <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> presented as a poster at ES-Reasoning @ ICLR 2026.</span></li>
+    <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> selected as a spotlight at ES-Reasoning @ ICLR 2026.</span></li>
   </ul>
   <details class="home-news-more">
     <summary>More news</summary>
@@ -131,6 +132,44 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
   if (data.path !== 'index.html') return html;
   return html.replace(/(<div[^>]*\bclass="trm-content"[^>]*>)/, '$1' + HOME_ABOUT);
 }, 15);
+
+/* Selected publications on the home page. The cards are read from
+   source/publications/index.md (matched by title link), so title, authors, venue
+   and thumbnail stay in one place; long author lists are shortened around Harry. */
+const SELECTED_PUBS = [
+  'https://oasis-research.github.io/',
+  'https://haorandai.com/tides-paper/',
+  'https://haorandai.com/practical-t2i-backdoors/',
+];
+
+function selectedPubsHTML() {
+  const md = require('fs').readFileSync(require('path').join(hexo.source_dir, 'publications', 'index.md'), 'utf8')
+    .replace(/<!--[\s\S]*?-->/g, '');
+  const cards = md.split('<div class="pub-item').slice(1);
+  const rows = SELECTED_PUBS.map((url) => {
+    const card = cards.find((c) => c.includes(`<div class="pub-title"><a href="${url}">`));
+    if (!card) throw new Error(`home-about.js: no paper with title link ${url} in publications/index.md`);
+    const pick = (re) => (card.match(re) || [])[1];
+    const title = pick(/<div class="pub-title"><a href="[^"]+">([\s\S]*?)<\/a>/);
+    const img = pick(/<img src="([^"]+)"/);
+    const venue = pick(/<div class="pub-venue">([\s\S]*?)<\/div>/);
+    let authors = pick(/<div class="pub-meta">([\s\S]*?)<\/div>/).split(', ');
+    if (authors.length > 7) {
+      const me = authors.findIndex((a) => a.includes('pub-me'));
+      const keep = new Set([0, 1, 2, me, authors.length - 2, authors.length - 1]);
+      authors = authors.map((a, i) => (keep.has(i) ? a : null))
+        .filter((a, i, all) => a !== null || all[i - 1] !== null).map((a) => a ?? '…');
+    }
+    return `<li><a class="hp-thumb" href="${url}" tabindex="-1" aria-hidden="true"><img src="${img}" alt="" loading="lazy" decoding="async"></a>`
+      + `<div><a class="hp-title" href="${url}">${title}</a><div class="hp-authors">${authors.join(', ')}</div><div class="hp-venue">${venue}</div></div></li>`;
+  }).join('');
+  return `<h3>Selected Publications</h3><ul class="home-pubs">${rows}</ul><a class="home-pubs-all" href="/publications/">All publications →</a>`;
+}
+
+hexo.extend.filter.register('after_render:html', function (html, data) {
+  if (data.path !== 'index.html') return html;
+  return html.replace('<div class="home-pubs-slot"></div>', selectedPubsHTML());
+}, 16);
 
 const BOOKING_URL = 'https://calendar.app.google/xCTjoLaTQdL3nXgb7';
 

@@ -903,3 +903,23 @@ details.pub-bib[open] summary::after { content: " −"; }
   .pub-filter { gap: 6px; margin-bottom: 22px; }
   .pub-chip { font-size: 12.5px; padding: 5px 11px; gap: 5px; }
 }
+
+/* Selected publications on the home page (scripts/home-about.js) */
+.home-about ul.home-pubs { list-style: none; padding: 0; margin: 0 0 10px; display: grid; gap: 18px; }
+.home-pubs li { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 18px; align-items: start; }
+.home-pubs .hp-thumb {
+  display: block; aspect-ratio: 16 / 10; background: #fff; overflow: hidden;
+  border: 1px solid var(--hairline); border-radius: 8px; transition: border-color .15s;
+}
+.home-pubs .hp-thumb:hover { border-color: var(--primary); }
+.home-pubs .hp-thumb img { width: 100%; height: 100%; object-fit: contain; padding: 6px; box-sizing: border-box; }
+.home-about .home-pubs .hp-title { display: block; font-size: 15.5px; font-weight: 600; line-height: 1.4; color: var(--theme-color); text-decoration: none; }
+.home-about .home-pubs .hp-title:hover { color: var(--primary); }
+.home-pubs .hp-authors { font-size: 13.5px; line-height: 1.5; margin-top: 4px; color: var(--body-color); }
+.home-about .home-pubs .hp-authors a:not(.pub-me) { color: inherit; text-decoration: none; }
+.home-pubs .hp-venue { font-size: 13px; margin-top: 2px; color: var(--body-color); opacity: .7; }
+.home-about .home-pubs-all { display: inline-block; font-size: 14px; font-weight: 600; margin: 4px 0 6px; }
+@media (max-width: 576px) {
+  .home-pubs li { grid-template-columns: 96px minmax(0, 1fr); gap: 12px; }
+  .home-pubs .hp-thumb img { padding: 3px; }
+}

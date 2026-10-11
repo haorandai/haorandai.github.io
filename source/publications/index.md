@@ -34,7 +34,7 @@ banner:
 <div class="pub-body">
 <div class="pub-title"><a href="https://haorandai.com/tides-paper/">TIDES: Test-time Inference Drift Exploitation via Scaling</a></div>
 <div class="pub-meta"><a class="pub-me" href="/">Haoran Dai</a>*, <a href="https://www.luor.org/">Haozheng Luo</a>*, Haotian Zhang, Meng Lin, Yan Chen, <a href="https://wangbinghui.net/">Binghui Wang</a></div>
-<div class="pub-venue">ES-Reasoning @ ICLR 2026 (poster)</div>
+<div class="pub-venue">ES-Reasoning @ ICLR 2026 (spotlight)</div>
 <div class="pub-links"><a href="https://iclr.cc/virtual/2026/10013309">Paper</a> <a href="https://haorandai.com/tides-paper/">Project</a></div>
 <div class="pub-tldr">A reasoning attack exposing a failure mode of test-time scaling: extending reasoning depth degrades accuracy rather than improving it.</div>
 <details class="pub-abstract"><summary>Abstract</summary><p>We propose TIDES, a reasoning-attacking method that exposes a previously unrecognized failure of test-time scaling: as reasoning traces lengthen, model performance degrades sharply rather than improves. Unlike prior attacks on large reasoning models (LRMs), TIDES exploits the intrinsic properties of test-time scaling laws to manipulate reasoning trace length, producing degradations that are inherently difficult to detect. Methodologically, we define Depth-Guided Latent Tracker (DLT), a depth-based tracker that injects microscopic steering vectors into intermediate reasoning traces stealthily and combines them with on-policy distillation to precisely position LRMs under test-time scaling. Theoretically, we model latent space as a depth-indexed dynamic process and prove that under test-time scaling, small bounded perturbations introduced at intermediate layers induce non-vanishing trajectory drift, explaining why DLT remains effective yet difficult to detect in large reasoning models. Empirically, we evaluate TIDES on multiple reasoning benchmarks using two strong reasoning models, DeepSeek-R1-Distill-Qwen-7B and DeepSeek-R1-Distill-Llama-8B, where it consistently outperforms state-of-the-art reasoning attack methods such as DecepChain and BadChain, delivering an average 30.3% improvement in attack performance over the baselines.</p></details>
@@ -98,7 +98,7 @@ banner:
 <div class="pub-item has-thumb" data-topic="vector">
 <a class="pub-thumb" href="https://arxiv.org/abs/2602.21416" aria-hidden="true" tabindex="-1"><img src="/img/pubs/wildsvg.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">arXiv 2026</span></a>
 <div class="pub-body">
-<div class="pub-title"><a href="https://arxiv.org/abs/2602.21416">WildSVG: Towards Reliable SVG Generation Under Real-World Conditions</a></div>
+<div class="pub-title"><a href="https://arxiv.org/abs/2602.21416">WildSVG: Towards Reliable SVG Generation Under Real-Word Conditions</a></div>
 <div class="pub-meta">Marco Terral, Haotian Zhang, Tianyang Zhang, Meng Lin, Xiaoqing Xie, <a class="pub-me" href="/">Haoran Dai</a>, Darsh Kaushik, Pai Peng, Nicklas Scharpff, David Vazquez, Joan Rodriguez</div>
 <div class="pub-venue">arXiv preprint, 2026</div>
 <div class="pub-links"><a href="https://arxiv.org/abs/2602.21416">Paper</a></div>
