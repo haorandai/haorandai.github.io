@@ -94,9 +94,9 @@ const HOME_ABOUT = `
   <p><strong>Harry (Haoran) Dai</strong> is a PhD candidate in Computer Science at the Illinois Institute of Technology (expected 2027), advised by <a href="https://wangbinghui.net/">Professor Binghui Wang</a>, and a Research Scientist at <a href="https://quiver.ai/">QuiverAI</a>. He studies the security and efficiency of generative AI models. At QuiverAI, he works on SVG generation and builds agent harnesses. He is based in Chicago, Illinois.</p>
   <h3>Research Themes</h3>
   <ul class="home-themes">
-    <li><strong>Trustworthy generative AI.</strong> Backdoor attacks on text-to-image and multimodal diffusion models, safety testing of text-to-image generators, and attacks that exploit test-time scaling in reasoning models.</li>
-    <li><strong>Efficient and stable inference.</strong> Attention sinks and activation outliers in transformers, and suppressing them to keep inference stable and robust to quantization.</li>
-    <li><strong>Vector graphics generation.</strong> Benchmarks and reinforcement learning for vision-language models that generate, edit, and extract SVGs from text, sketches, and real-world images.</li>
+    <li><a class="theme-link" href="/publications/?topic=trustworthy"><strong>Trustworthy generative AI.</strong></a> Backdoor attacks on text-to-image and multimodal diffusion models, safety testing of text-to-image generators, and attacks that exploit test-time scaling in reasoning models.</li>
+    <li><a class="theme-link" href="/publications/?topic=efficient"><strong>Efficient and stable inference.</strong></a> Attention sinks and activation outliers in transformers, and suppressing them to keep inference stable and robust to quantization.</li>
+    <li><a class="theme-link" href="/publications/?topic=vector"><strong>Vector graphics generation.</strong></a> Benchmarks and reinforcement learning for vision-language models that generate, edit, and extract SVGs from text, sketches, and real-world images.</li>
   </ul>
   <div class="home-pubs-slot"></div>
   <h3>News</h3>
@@ -104,15 +104,15 @@ const HOME_ABOUT = `
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Contributed to QuiverAI's Arrow model family: <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a> launched.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
-    <li><span class="news-date">Aug 2026</span><span><a href="https://haorandai.com/vectorgym/">VectorGym</a>, a multi-task benchmark for SVG code generation, sketching and editing, accepted at EMNLP 2026.</span></li>
+    <li><span class="news-date">Aug 2026</span><span><a href="https://haorandai.com/vectorgym/">VectorGym: A Multi-Task Benchmark for SVG Code Generation, Sketching and Editing</a> accepted at EMNLP 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
-    <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES</a> selected as a spotlight at ES-Reasoning @ ICLR 2026.</span></li>
+    <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES: Test-time Inference Drift Exploitation via Scaling</a> selected as a spotlight at ES-Reasoning @ ICLR 2026.</span></li>
   </ul>
   <details class="home-news-more">
     <summary>More news</summary>
     <ul class="home-news">
       <li><span class="news-date">Mar 2026</span><span>Began reviewing for IEEE Transactions on Dependable and Secure Computing (TDSC).</span></li>
-      <li><span class="news-date">Mar 2026</span><span><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All</a> accepted at Principled Design for Trustworthy AI @ ICLR 2026.</span></li>
+      <li><span class="news-date">Mar 2026</span><span><a href="https://arxiv.org/abs/2603.06508">When One Modality Rules Them All: Backdoor Modality Collapse in Multimodal Diffusion Models</a> accepted at Principled Design for Trustworthy AI @ ICLR 2026.</span></li>
       <li><span class="news-date">Feb 2026</span><span><a href="https://quiver.ai/blog/announcing-our-seed-round">Arrow 1.0</a>, QuiverAI's first SVG generation model, launched in public beta.</span></li>
       <li><span class="news-date">Oct 2025</span><span>Joined <a href="https://quiver.ai/">QuiverAI</a> as a Research Scientist before its public launch, working on SVG generation systems.</span></li>
       <li><span class="news-date">Aug 2025</span><span><a href="https://haorandai.com/practical-t2i-backdoors/">Practical, Generalizable and Robust Backdoor Attacks on Text-to-Image Diffusion Models</a> released on arXiv.</span></li>
@@ -142,9 +142,13 @@ const SELECTED_PUBS = [
   'https://haorandai.com/practical-t2i-backdoors/',
 ];
 
-function selectedPubsHTML() {
-  const md = require('fs').readFileSync(require('path').join(hexo.source_dir, 'publications', 'index.md'), 'utf8')
+// Publications source without the papers hidden in an HTML comment
+function pubsMarkdown() {
+  return require('fs').readFileSync(require('path').join(hexo.source_dir, 'publications', 'index.md'), 'utf8')
     .replace(/<!--[\s\S]*?-->/g, '');
+}
+
+function selectedPubsHTML(md) {
   const cards = md.split('<div class="pub-item').slice(1);
   const rows = SELECTED_PUBS.map((url) => {
     const card = cards.find((c) => c.includes(`<div class="pub-title"><a href="${url}">`));
@@ -168,7 +172,8 @@ function selectedPubsHTML() {
 
 hexo.extend.filter.register('after_render:html', function (html, data) {
   if (data.path !== 'index.html') return html;
-  return html.replace('<div class="home-pubs-slot"></div>', selectedPubsHTML());
+  const md = pubsMarkdown();
+  return html.replace('<div class="home-pubs-slot"></div>', selectedPubsHTML(md));
 }, 16);
 
 const BOOKING_URL = 'https://calendar.app.google/xCTjoLaTQdL3nXgb7';
