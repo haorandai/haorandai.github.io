@@ -10,7 +10,7 @@ banner:
 
 <div class="pub-grid">
 <div class="pub-item has-thumb" data-topic="efficient">
-<a class="pub-thumb" href="https://oasis-research.github.io/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/oasis.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">NeurIPS 2026</span></a>
+<a class="pub-thumb" href="https://oasis-research.github.io/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/oasis.webp" alt="" loading="eager" fetchpriority="high" decoding="async"><span class="pub-badge">NeurIPS 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a></div>
 <div class="pub-meta"><a href="https://www.luor.org/">Haozheng Luo</a>*, <a class="pub-me" href="/">Haoran Dai</a>*, Ching-Yuen Huang*, Shaoyang Zhang, Xi Chen, Eric Hanchen Jiang, Yijiang Li, Chenghao Qiu, Chenwei Xu, Zhenyu Pan, Haotian Zhang, <a href="https://wangbinghui.net/">Binghui Wang</a>, Yan Chen</div>
