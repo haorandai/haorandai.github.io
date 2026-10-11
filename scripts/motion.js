@@ -102,11 +102,14 @@ hexo.extend.injector.register('body_end', `<script>
     var sink = document.createElement('span');
     sink.className = 'hd-tok hd-sink'; sink.textContent = '<s>';
     note.appendChild(sink);
-    note.appendChild(document.createTextNode(' takes most of the attention · illustrative'));
+    note.appendChild(document.createTextNode(' attention sink · illustrative weights'));
     var toks = [sink];
+    // each token carries its weight label (shown under the word; next to <s> in the caption)
+    function weightLabel(t) { var l = document.createElement('span'); l.className = 'hd-wt'; t.appendChild(l); }
+    weightLabel(sink);
     words.forEach(function (w, i) {
       var t = document.createElement('span');
-      t.className = 'hd-tok'; t.textContent = w;
+      t.className = 'hd-tok'; t.textContent = w; weightLabel(t);
       title.appendChild(t); toks.push(t);
       if (i < words.length - 1) title.appendChild(document.createTextNode(i === words.length - 2 ? '\\u00a0' : ' '));
     });
@@ -119,6 +122,7 @@ hexo.extend.injector.register('body_end', `<script>
       toks.forEach(function (t, k) {
         t.style.setProperty('--hd-w', Math.min(0.42, (raw[k] / sum) * 0.95).toFixed(3));
         t.classList.toggle('hd-q', k === q);
+        t.lastChild.textContent = k <= q ? (raw[k] / sum).toFixed(2) : '';
       });
     }
     toks.slice(1).forEach(function (t, i) { t.addEventListener('mouseenter', function () { show(i + 1); }); });
@@ -161,7 +165,9 @@ hexo.extend.injector.register('body_end', `<script>
       if (!raf) { cur = target; draw(); }
     }
     function kick() { if (!raf) raf = requestAnimationFrame(tick); }
-    banner.addEventListener('pointermove', function (e) { var r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top; target = 1; kick(); });
+    banner.addEventListener('pointermove', function (e) { var r = cv.getBoundingClientRect(); mx = e.clientX - r.left; my = e.clientY - r.top;
+      // stay calm while the pointer is on the title, so the grid and the attention view never stack
+      target = e.target.closest && e.target.closest('.trm-hero-title') ? 0 : 1; kick(); });
     banner.addEventListener('pointerleave', function () { target = 0; kick(); });
     size(); draw();
     new ResizeObserver(function () { size(); draw(); }).observe(banner);

@@ -969,6 +969,20 @@ details.pub-bib[open] summary::after { content: " −"; }
 .trm-banner .trm-banner-text .hd-attn-note { color: inherit; }
 .hd-attn-note .hd-sink { padding: 1px 4px; margin: 0; border-radius: 4px; box-shadow: inset 0 0 0 1px currentColor; }
 .hd-attn-on .hd-attn-note { opacity: 0.62; transform: none; }
+/* weight under each word: the title's colour, small mono, appears with the view */
+.hd-tok { position: relative; }
+.hd-wt {
+  position: absolute; left: 50%; top: 100%; margin-top: 0.12em; transform: translate(-50%, -2px);
+  font: 500 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0; white-space: nowrap;
+  opacity: 0; pointer-events: none; transition: opacity var(--hd-med) var(--hd-ease), transform var(--hd-med) var(--hd-ease);
+}
+.hd-attn-on .hd-wt { opacity: 0.7; transform: translate(-50%, 0); }
+.hd-tok.hd-q .hd-wt { opacity: 1; color: var(--hd-on); }
+.trm-banner .trm-banner-text .hd-wt { color: inherit; }
+.trm-banner .trm-banner-text .hd-tok.hd-q .hd-wt { color: var(--hd-on); }
+/* in the caption the sink's weight sits inline, inside its chip */
+.hd-sink .hd-wt { position: static; transform: none; margin: 0 0 0 5px; font-size: inherit; }
+.hd-sink .hd-wt:empty { display: none; }
 
 /* C: banner dot grid that brightens near the cursor (replaces the static dark-mode grid) */
 .hd-dots {
