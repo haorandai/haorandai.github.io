@@ -22,6 +22,13 @@ banner:
 <div class="cv-item"><div class="cv-date">Aug 2022 – Jan 2024</div><div class="cv-logo"><img src="/img/logos/bu.webp" alt="Boston University logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">MS, Computer Science</div><div class="cv-org">Boston University</div><div class="cv-desc">Research Assistant</div></div></div>
 <div class="cv-item"><div class="cv-date">Sep 2017 – Jun 2021</div><div class="cv-logo"><img src="/img/logos/cupb.webp" alt="China University of Petroleum, Beijing logo" loading="lazy" decoding="async"></div><div class="cv-body"><div class="cv-role">BE, Computer Software Engineering</div><div class="cv-org">China University of Petroleum, Beijing</div></div></div>
 </div>
+<h2>Teaching Assistant</h2>
+<ul class="cv-plain">
+<li><span class="cv-plain-role">Fall 2026</span><span class="cv-plain-text">Data Structures and Algorithms</span></li>
+<li><span class="cv-plain-role">Fall 2026</span><span class="cv-plain-text">Fundamentals of Web Development (ITMD 361)</span></li>
+<li><span class="cv-plain-role">Spring 2026</span><span class="cv-plain-text">Intro to Deep Learning (CS 495)</span></li>
+<li><span class="cv-plain-role">Fall 2024 – Fall 2025</span><span class="cv-plain-text">Introduction to Machine Learning, three semesters (Fall 2024, Spring 2025, Fall 2025)</span></li>
+</ul>
 <h2>Service</h2>
 <ul class="cv-plain">
 <li><span class="cv-plain-role">Reviewer</span><span class="cv-plain-text">ICLR 2027</span></li>

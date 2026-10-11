@@ -1121,3 +1121,7 @@ body { letter-spacing: 0; font-weight: 400; }
 /* Dark mode: paper thumbnails are white figures; take the glare off without changing them */
 :root.dark .pub-thumb, :root.dark .home-pubs .hp-thumb { background: #e8ecf1; border-color: rgba(255, 255, 255, 0.08); }
 :root.dark .pub-thumb img, :root.dark .home-pubs .hp-thumb img { filter: brightness(0.9) contrast(1.02); }
+
+/* At QuiverAI (home): same card system as Selected Publications */
+.home-about .home-work-lead { margin: 0 0 16px; }
+.home-work .hp-authors { color: var(--body-color); }
