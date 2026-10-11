@@ -1,5 +1,5 @@
 /* Topic chips on the Publications page. Each .pub-item carries data-topic in
-   source/publications/index.md; the chip row and its counts are built from those
+   source/publications/index.md; the chip row is built from those
    at render time, so adding a paper only needs its data-topic. Picking a chip hides
    the other papers and any year left empty, and records it as ?topic= in the URL;
    a link with ?topic= opens the page already filtered. One delegated listener, so
@@ -16,10 +16,11 @@ hexo.extend.filter.register('after_render:html', function (html, data) {
   const count = t => (html.match(new RegExp(`data-topic="${t}"`, 'g')) || []).length;
   const total = (html.match(/<div class="pub-item[^"]*" data-topic="/g) || []).length;
   if (!total) return html;
-  const chip = (t, label, n, on) => `<button type="button" class="pub-chip${on ? ' is-active' : ''}" data-topic="${t}" aria-pressed="${on}">${label}<span>${n}</span></button>`;
+  // no counts on the chips: the list is short, and the numbers draw attention to that
+  const chip = (t, label, on) => `<button type="button" class="pub-chip${on ? ' is-active' : ''}" data-topic="${t}" aria-pressed="${on}">${label}</button>`;
   const bar = `<div class="pub-filter" role="group" aria-label="Filter papers by topic">`
-    + chip('all', 'All', total, true)
-    + TOPICS.map(([t, label]) => chip(t, label, count(t), false)).join('')
+    + chip('all', 'All', true)
+    + TOPICS.filter(([t]) => count(t)).map(([t, label]) => chip(t, label, false)).join('')
     + `</div>`;
   return html.replace(/<h2 id="\d{4}">/, m => bar + m);
 });
