@@ -1,5 +1,6 @@
 ---
 title: Experience
+description: Experience and education of Harry (Haoran) Dai, Research Scientist at QuiverAI and CS PhD candidate at the Illinois Institute of Technology, plus reviewing service.
 date: 2026-06-09 12:00:00
 banner:
   banner_text: Experience and education

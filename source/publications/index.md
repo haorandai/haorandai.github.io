@@ -1,5 +1,6 @@
 ---
 title: Publications
+description: Papers by Harry (Haoran) Dai on trustworthy generative AI, efficient inference and vector graphics generation, with abstracts, code and BibTeX.
 date: 2026-06-09 10:00:00
 banner:
   banner_text: Selected papers and preprints
