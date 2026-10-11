@@ -420,7 +420,7 @@ h1, h2, h3, .home-about-heading, .pub-title { letter-spacing: -0.025em; }
 :root.dark .trm-banner { background-image: none; }
 .trm-scroll-hint-frame { display: none !important; }
 
-/* Shorter hero: 400px on home, 300px on inner pages */
+/* Shorter hero: 400px on home (340px on desktop, below), 300px on inner pages */
 .trm-banner, .trm-banner .trm-banner-content { height: 300px; }
 body:has(.home-about) .trm-banner,
 body:has(.home-about) .trm-banner .trm-banner-content { height: 400px; }
@@ -429,7 +429,10 @@ body:has(.home-about) .trm-banner .trm-banner-content { height: 400px; }
    150px with the shorter hero. Desktop only; the theme uses -40px below 992px. */
 @media (min-width: 993px) {
   .trm-main-card-frame:not(.fixed) { transform: translateY(-150px); }
-  body:has(.home-about) .trm-main-card-frame:not(.fixed) { transform: translateY(-250px); }
+  /* Home hero is 340px on desktop (text plus keyword chips, no dead band above About) */
+  body:has(.home-about) .trm-banner,
+  body:has(.home-about) .trm-banner .trm-banner-content { height: 340px; }
+  body:has(.home-about) .trm-main-card-frame:not(.fixed) { transform: translateY(-190px); }
   /* once scrolled, the theme pins the card at top: 90px with no lift */
   .trm-main-card-frame.fixed { transform: translateY(0); }
   .trm-main-card-frame.fixed .trm-main-card { border-radius: var(--card-border-radius) !important; }
