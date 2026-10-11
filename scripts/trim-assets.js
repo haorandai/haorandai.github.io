@@ -16,6 +16,8 @@ hexo.extend.filter.register('after_render:html', function (html) {
     .replace(/<img[^>]*class="trm-banner-cover"[^>]*>\s*/, '')
     // Size the header logo so the layout doesn't shift when it loads
     .replace('<img alt="logo" src="/img/logo.svg">', '<img alt="logo" src="/img/logo.svg" width="32" height="32">')
+    // The single/double-column toggle (⟷) is unclear to visitors; keep only back-to-top
+    .replace(/<div class="trm-fixed-btn hidden-md"[^>]*onclick="asyncFun\.switchSingleColumn\(\)">[\s\S]*?<\/div>\s*/, '')
     // Mark the page's content column as the main landmark
     .replace('<div class="trm-page-content', '<div role="main" class="trm-page-content')
     // The sidebar name is an h5 right after the page h1; expose it as level 2

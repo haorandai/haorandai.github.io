@@ -1063,3 +1063,50 @@ details.pub-bib[open] summary::after { content: " −"; }
   .hd-tok, .hd-attn-note, .hd-pal-backdrop, .hd-pal-panel, .hd-pal-toast, .pub-thumb, .home-pubs .hp-thumb, .pub-thumb::after, .home-pubs .hp-thumb::after { transition: none; }
   .pub-thumb:hover, .home-pubs .hp-thumb:hover { transform: none; }
 }
+
+/* ===== Type and chrome polish ===== */
+/* Body text in Geist's own spacing and regular weight (the theme sets 0.05em and 500 on body);
+   uppercase labels keep their own tracking */
+body { letter-spacing: 0; font-weight: 400; }
+.home-about p strong, .home-themes strong { font-weight: 600; }
+
+/* News: paper names read as text, the link shows on hover */
+.home-about .home-news a { color: var(--theme-color); font-weight: 500; text-decoration: none; transition: color var(--hd-fast) ease; }
+.home-about .home-news a:hover { color: var(--primary); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: currentColor; }
+
+/* Back-to-top in the site's neutral style (the theme draws a pink-lilac gradient) */
+#trm-back-top {
+  background: var(--theme-bg-color) !important; background-image: none !important;
+  border: 1px solid var(--hairline); box-shadow: none !important; border-radius: 12px; color: var(--body-color);
+  transition: color var(--hd-fast) ease, border-color var(--hd-fast) ease;
+}
+#trm-back-top:hover { color: var(--primary); border-color: var(--primary-50); }
+#trm-back-top::before, #trm-back-top::after { display: none !important; }
+
+/* Sidebar info rows in sentence case; the typed role line above keeps its style */
+.trm-table li { align-items: baseline; }
+.trm-table .trm-label { text-transform: none; letter-spacing: 0; font-size: 13.5px; line-height: 1.45; }
+.trm-table .trm-label:not(.trm-label-light) { font-weight: 500; color: var(--body-color); }
+.trm-table .trm-label-light { font-weight: 500; color: var(--theme-color); text-align: right; }
+
+/* Footer: a hairline and one line, not a card */
+.footer-divider { display: none; }
+.trm-footer-card {
+  background: none !important; border: 0 !important; border-top: 1px solid var(--hairline) !important;
+  border-radius: 0 !important; box-shadow: none !important; padding: 22px 0 6px !important; margin-top: 8px;
+}
+.trm-footer-card .trm-footer-item { font-size: 13px; color: var(--body-color); }
+
+/* Home sections use the same small uppercase label on a hairline as Publications and Experience */
+.home-about > h3 {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase;
+  color: var(--body-color); border-top: 1px solid var(--hairline); padding-top: 14px; margin: 34px 0 16px;
+}
+.home-about-heading { margin-bottom: 16px; }
+
+/* Phones: more room under the header, less under the keyword chips */
+@media (max-width: 992px) {
+  body:has(.home-about) .trm-banner .trm-banner-content { padding-top: 112px; align-items: flex-start; }
+  body:has(.home-about) .trm-banner,
+  body:has(.home-about) .trm-banner .trm-banner-content { height: 410px; }
+}
