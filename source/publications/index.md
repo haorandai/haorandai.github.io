@@ -10,15 +10,35 @@ banner:
 
 
 <div class="pub-grid">
+<div class="pub-item has-thumb" data-topic="trustworthy">
+<a class="pub-thumb" href="https://arxiv.org/abs/2610.24058" aria-hidden="true" tabindex="-1"><img src="/img/pubs/under-the-skin.webp" alt="" loading="eager" fetchpriority="high" decoding="async"><span class="pub-badge">arXiv 2026</span></a>
+<div class="pub-body">
+<div class="pub-title"><a href="https://arxiv.org/abs/2610.24058">Under the Skin: Backdoor Infection in Multimodal Large Language Models</a></div>
+<div class="pub-meta">Jiawen Wang, Ruo Yang, <a class="pub-me" href="/">Haoran Dai</a>, <a href="https://wangbinghui.net/">Binghui Wang</a>, Ning Luo</div>
+<div class="pub-venue">arXiv preprint, 2026</div>
+<div class="pub-links"><a href="https://arxiv.org/abs/2610.24058">Paper</a></div>
+<div class="pub-tldr">Studies cross-modal backdoor infection: a trigger in an unpoisoned modality activates a backdoor previously implanted in another modality, without changing the model.</div>
+<details class="pub-abstract"><summary>Abstract</summary><p>Multimodal Large Language Models (MLLMs) have achieved impressive performance in generating text conditioned on inputs from different modalities. In this work, we introduce backdoor infection, a cross-modal attack framework targeting MLLMs. Starting from a model already injected with a backdoor in one modality, our attack constructs a corresponding trigger in another modality, called the infected modality. Exploiting the model's shared latent space, the trigger in the infected modality reliably activates the malicious behavior, without modifying or poisoning the infected modality during training. We further develop a lightweight, constraint-aware optimization method for efficient and practical trigger generation. Extensive experiments across several state-of-the-art MLLMs, including LLaVA, InternVL, Qwen-VL, and Gemma, demonstrate that our approach identifies cross-modal triggers that are more efficient, effective, and less detectable than direct optimization baselines, highlighting a critical new threat vector in multimodal systems.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@misc{wang2026skin,
+  title         = {Under the Skin: Backdoor Infection in Multimodal Large Language Models},
+  author        = {Jiawen Wang and Ruo Yang and Haoran Dai and Binghui Wang and Ning Luo},
+  year          = {2026},
+  eprint        = {2610.24058},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CR},
+  url           = {https://arxiv.org/abs/2610.24058}
+}</code></pre></div></details>
+</div>
+</div>
 <div class="pub-item has-thumb" data-topic="efficient">
-<a class="pub-thumb" href="https://oasis-research.github.io/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/oasis.webp" alt="" loading="eager" fetchpriority="high" decoding="async"><span class="pub-badge">NeurIPS 2026</span></a>
+<a class="pub-thumb" href="https://oasis-research.github.io/" aria-hidden="true" tabindex="-1"><img src="/img/pubs/oasis.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">NeurIPS 2026</span></a>
 <div class="pub-body">
 <div class="pub-title"><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a></div>
 <div class="pub-meta"><a href="https://www.luor.org/">Haozheng Luo</a>*, <a class="pub-me" href="/">Haoran Dai</a>*, Ching-Yuen Huang*, Shaoyang Zhang, Xi Chen, Eric Hanchen Jiang, Yijiang Li, Chenghao Qiu, Chenwei Xu, Zhenyu Pan, Haotian Zhang, <a href="https://wangbinghui.net/">Binghui Wang</a>, Yan Chen</div>
 <div class="pub-venue">NeurIPS 2026 (poster) · Spotlight at Efficient Reasoning @ COLM 2026</div>
 <div class="pub-links"><a href="https://openreview.net/forum?id=yjVSLVS0Dh">Paper</a> <a href="https://arxiv.org/abs/2605.17887">arXiv</a> <a href="https://oasis-research.github.io/">Project</a> <a href="https://github.com/robinzixuan/OASIS">Code</a></div>
 <div class="pub-tldr">OASIS suppresses attention sinks and activation outliers in attention-residual transformers, improving inference stability and quantization robustness.</div>
-<details class="pub-abstract"><summary>Abstract</summary><p>We propose OASIS, an outlier- and sink-aware technique built on inter-layer null signaling. As AttnResidual architectures introduce an additional depth-wise normalization channel, they improve inter-layer routing flexibility but also exacerbate attention sinks, activation outliers, and the resulting degradation in inference stability and quantization robustness. OASIS addresses this issue by introducing a Softmax1-based null space and coupling token-level null evidence to depth routing through an inter-layer null signal, thereby reducing sink-dominated routing and improving structural robustness. Theoretically, we show that the dual-normalization design of AttnResidual intensifies sink formation and quantization brittleness. Experimentally, we compare OASIS against five baselines on three real-world datasets and observe consistent improvements in both attention sink and post-quantization performance. Notably, OASIS achieves an average reduction of 9.26% in maximum infinity norm and 2.60% in average kurtosis across the evaluated settings, while lowering perplexity by 75.85% under W8A8 and improving GSM8K Pass@1 by 12.42% under W4A4.</p></details>
+<details class="pub-abstract"><summary>Abstract</summary><p>We propose OASIS, an outlier- and sink-aware method that stabilizes dual-normalized attention-residual architectures through explicit null routing and token-to-depth null coupling. AttnResidual introduces an additional depth-wise normalization channel that improves inter-layer routing flexibility but can also amplify attention sinks, activation outliers, and low-bit quantization error. OASIS builds on explicit Softmax1-based null routes at both the token and depth levels and uses token-level null evidence to downweight depth branches exhibiting stronger null behavior. Theoretically, we characterize a conditional mechanism for sink-like attention concentration under dual normalization, offering insight into the low-bit sensitivity observed in AttnResidual. Experimentally, we compare OASIS against five baselines on three language-model backbones and multiple language-modeling, reasoning, and long-context benchmarks and observe consistent improvements in both attention sink mitigation and post-quantization performance. Notably, relative to Vanilla AttnResidual, OASIS reduces maximum infinity norm by 81.75% and average kurtosis by 95.90%, lowers W8A8 perplexity by 82.00%, and improves W4A4 GSM8K Pass@1 by 42.11% on average across LLaMA-3.2-1B, Qwen3-0.6B, and Phi-4.</p></details>
 <details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@inproceedings{luo2026attention,
   title     = {Attention Sinks and Outliers in Attention Residuals},
   author    = {Haozheng Luo and Haoran Dai and Ching-Yuen Huang and Shaoyang Zhang and
@@ -27,6 +47,25 @@ banner:
   booktitle = {The Fortieth Annual Conference on Neural Information Processing Systems},
   year      = {2026},
   url       = {https://openreview.net/forum?id=yjVSLVS0Dh}
+}</code></pre></div></details>
+</div>
+</div>
+<div class="pub-item has-thumb" data-topic="trustworthy">
+<a class="pub-thumb" href="https://openreview.net/forum?id=0PofruEAiM" aria-hidden="true" tabindex="-1"><img src="/img/pubs/craft.webp" alt="" loading="lazy" decoding="async"><span class="pub-badge">Efficient Reasoning @ COLM 2026</span></a>
+<div class="pub-body">
+<div class="pub-title"><a href="https://openreview.net/forum?id=0PofruEAiM">CRAFT: Reinforcement Learning from What Models Think, Not What They Say</a></div>
+<div class="pub-meta"><a href="https://www.luor.org/">Haozheng Luo</a>*, Yimin Wang*, <a class="pub-me" href="/">Haoran Dai</a>, Jiahao Yu, <a href="https://wangbinghui.net/">Binghui Wang</a>, Yan Chen</div>
+<div class="pub-venue">Efficient Reasoning @ COLM 2026 (spotlight)</div>
+<div class="pub-links"><a href="https://openreview.net/forum?id=0PofruEAiM">Paper</a></div>
+<div class="pub-tldr">Combines contrastive representation learning with reinforcement learning over hidden states to align reasoning traces and final responses for jailbreak robustness.</div>
+<details class="pub-abstract"><summary>Abstract</summary><p>We propose CRAFT, a red-teaming alignment framework that leverages model reasoning capabilities and hidden representations to improve robustness against jailbreak attacks. Unlike prior defenses that operate primarily at the output level, CRAFT aligns large reasoning models to generate safety-aware reasoning traces by explicitly optimizing objectives defined over the hidden state space. Methodologically, CRAFT integrates contrastive representation learning with reinforcement learning to separate safe and unsafe reasoning trajectories, yielding a latent-space geometry that supports robust, reasoning-level safety alignment. Theoretically, we show that incorporating latent–textual consistency into GRPO eliminates superficially aligned policies by ruling them out as local optima. Empirically, we evaluate CRAFT on multiple safety benchmarks using two strong reasoning models, Qwen3-4B-Thinking and R1-Distill-Llama-8B, where it consistently outperforms state-of-the-art defenses such as IPO and SafeKey. Notably, CRAFT delivers an average 82.1% improvement in reasoning safety and 89.6% improvement in final-response safety over the base models, demonstrating the effectiveness of hidden-space reasoning alignment.</p></details>
+<details class="pub-bib"><summary>BibTeX</summary><div class="pub-bib-box"><button type="button" class="pub-bib-copy">Copy</button><pre><code>@inproceedings{luo2026craft,
+  title     = {{CRAFT}: Reinforcement Learning from What Models Think, Not What They Say},
+  author    = {Haozheng Luo and Yimin Wang and Haoran Dai and Jiahao Yu and
+               Binghui Wang and Yan Chen},
+  booktitle = {COLM 2026 Workshop on Efficient Reasoning},
+  year      = {2026},
+  url       = {https://openreview.net/forum?id=0PofruEAiM}
 }</code></pre></div></details>
 </div>
 </div>

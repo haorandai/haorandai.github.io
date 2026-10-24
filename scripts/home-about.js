@@ -107,10 +107,12 @@ const HOME_ABOUT = `
   </ul>
   <h3>News</h3>
   <ul class="home-news">
+    <li><span class="news-date">Oct 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) featured by Xinzhiyuan (新智元). <a href="https://www.aitntnews.com/newDetail.html?newId=30494">Coverage (Chinese, reprint)</a>.</span></li>
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Contributed to QuiverAI's Arrow model family: <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a> launched.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://haorandai.com/vectorgym/">VectorGym: A Multi-Task Benchmark for SVG Code Generation, Sketching and Editing</a> accepted at EMNLP 2026.</span></li>
+    <li><span class="news-date">Aug 2026</span><span><a href="https://openreview.net/forum?id=0PofruEAiM">CRAFT: Reinforcement Learning from What Models Think, Not What They Say</a> selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
     <li><span class="news-date">Aug 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) selected as a spotlight at Efficient Reasoning @ COLM 2026.</span></li>
     <li><span class="news-date">Apr 2026</span><span><a href="https://haorandai.com/tides-paper/">TIDES: Test-time Inference Drift Exploitation via Scaling</a> selected as a spotlight at ES-Reasoning @ ICLR 2026.</span></li>
   </ul>
