@@ -107,7 +107,6 @@ const HOME_ABOUT = `
   </ul>
   <h3>News</h3>
   <ul class="home-news">
-    <li><span class="news-date">Oct 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) featured by Xinzhiyuan (新智元). <a href="https://www.aitntnews.com/newDetail.html?newId=30494">Coverage (Chinese, reprint)</a>.</span></li>
     <li><span class="news-date">Sep 2026</span><span><a href="https://oasis-research.github.io/">Attention Sinks and Outliers in Attention Residuals</a> (OASIS) accepted at NeurIPS 2026.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Contributed to QuiverAI's Arrow model family: <a href="https://quiver.ai/blog/introducing-arrow-2-0">Arrow 2 and Arrow 2 Telos</a> launched.</span></li>
     <li><span class="news-date">Sep 2026</span><span>Reviewing for ICLR 2027.</span></li>
